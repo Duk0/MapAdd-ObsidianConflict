@@ -1,0 +1,158 @@
+js_coop_waterworks_ttc_v4
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"spawn_Rebels" {}
+			"sv_cheats0" {}
+			"npc_hp" {}
+			"ending_relay" {}
+		}
+		Origin
+		{
+			"1522 -367.5 373.5" {}
+			"4930.44 482.226 227" {}
+			"6767.72 -326.615 -454.065" {}
+			"4677.88 411.632 221.968" {}
+			"4792.24 425.778 226.459" {}
+			"4787.77 437.021 226.459" {}
+		}
+	}
+	Add
+	{
+		"trigger_multiple"
+		{
+			"model" "*54"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnStartTouch" "@spawnonline,LightOn,,0,-1"
+			"OnEndTouch" "@spawnonline,LightOff,,0,-1"
+			"origin" "1522 -367.5 373.5"
+		}
+		"logic_relay"
+		{
+			"targetname" "ending_relay"
+			"spawnflags" "1"
+			"OnTrigger" "gg_text,Display,,0,-1 "
+			"OnTrigger" "server_say,Command,say =====> good game  =),4,-1"
+			"OnTrigger" "cheer,PlaySound,,4,1"
+			"OnTrigger" "gg,EndGame,,12,-1"
+			"origin" "6682.83 -316.615 -440.2"
+		}
+		"point_servercommand"
+		{
+			"targetname" "server_say"
+			"origin" "7032 -306.615 -356.285"
+		}
+		"game_text"
+		{
+			"targetname" "gg_text"
+			"spawnflags" "1"
+			"channel" "1"
+			"fxtime" "0.25"
+			"holdtime" "4.2"
+			"fadeout" "0.5"
+			"fadein" "1.5"
+			"color2" "240 110 0"
+			"color" "100 250 200"
+			"y" "0.2"
+			"x" "-1"
+			"message" "You have killed the boss good game!"
+			"origin" "1000 -126.615 -254.065"
+		}
+		"ambient_generic"
+		{
+			"targetname" "cheer"
+			"message" "vo/coast/odessa/male01/nlo_cheer04.wav"
+			"spawnflags" "49"
+			"radius" "6050"
+			"cspinup" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"lforate" "0"
+			"lfotype" "0"
+			"spindown" "0"
+			"spinup" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"fadeout" "0"
+			"fadein" "0"
+			"volstart" "0"
+			"preset" "0"
+			"health" "10"
+			"origin" "1550 -2000 -100"
+		}
+		"item_ammo_ar2_large"
+		{
+			"angles" "90 -90 0"
+			"origin" "4711 298 247"
+		}
+		"item_ammo_ar2_large"
+		{
+			"angles" "90 -90 0"
+			"origin" "4701 298 247"
+		}
+		"item_ammo_ar2_large"
+		{
+			"angles" "90 -90 0"
+			"origin" "4691 298 247"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "7"
+			"angles" "0 -90 0"
+			"origin" "1100 382 -1019"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 -90 0"
+			"origin" "1170 382 -1019"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "1"
+			"angles" "0 180 0"
+			"origin" "-810 221 -982"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 180 0"
+			"origin" "-810 156 -982"
+		}
+		"weapon_smg1"
+		{
+			"angles" "90 -180 0"
+			"origin" "-1231 -159 -970"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "5"
+			"angles" "0 0 0"
+			"origin" "-3109 -541 -737.5"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_shotgun" "1"
+		"weapon_healer" "1"
+		"weapon_smg1" "1"
+		"weapon_357" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

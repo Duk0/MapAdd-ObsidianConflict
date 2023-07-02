@@ -1,0 +1,130 @@
+js_coop_island_v6f
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"CHEAT_ON" {}
+		}
+		Origin
+		{
+			// model *176
+			"-63.99 -15563 1453.99" {}
+
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "BUGGY_SPAWN18,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN17,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN11,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN9,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN8,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN7,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN16,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN15,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN14,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN13,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN12,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN10,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN2,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN3,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN4,ForceSpawn,,0,-1"
+			"OnMapSpawn" "BUGGY_SPAWN6,ForceSpawn,,0,-1"
+			"origin" "-63.99 -15563 1493.99"
+		}
+		"point_clientcommand"
+		{
+			"targetname" "client01"
+			"origin" "151 12176 1392"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "-455 -14857 1459"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "-525 -14857 1459"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "-595 -14857 1459"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "-15 0 0"
+			"AmmoType" "7"
+			"origin" "9122 11134 7281.2"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "12245 9696 7618"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "1"
+			"origin" "12180 9696 7618"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "5"
+			"ItemClass" "weapon_slam"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"angles" "0 -90 0"
+			"origin" "12614 9646 7624"
+		}
+		"weapon_smg1"
+		{
+			"angles" "0 90 0"
+			"origin" "12133 9694 7624"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"manhack02" { "sleepstate" "0" }
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+	//	"weapon_frag" "1"
+	//	"weapon_shotgun" "1"
+	//	"weapon_smg1" "1"
+		"weapon_pistol" "1"
+		"weapon_357" "1"
+		"weapon_healer" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "1"
+		"item_battery" "2"
+	}
+}

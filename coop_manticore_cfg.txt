@@ -1,0 +1,22 @@
+coop_manticore
+{
+	"sk_headcrab_health" "80"
+	"sk_headcrab_melee_dmg" "15"
+	"sk_headcrab_fast_health" "60"
+	"sk_antlion_health" "75"
+	"sk_antlionguard_dmg_shove" "50"
+	"sk_antlionguard_dmg_charge" "50"
+	"sk_antlionguard_health" "3000"
+	"sk_antlion_swipe_damage" "10"
+	"sk_zombie_dmg_one_slash" "28"
+	"sk_zombie_dmg_both_slash" "45"
+	"sk_zombie_health" "120"
+	"zombie_stepfreq" "10"
+	"sk_headcrab_poison_health" "50"
+	"sk_zombie_poison_health" "200"
+	"sk_zombie_poison_dmg_spit" "50"
+	"sk_vortigaunt_dmg_claw" "25"
+	"sk_vortigaunt_dmg_rake" "30"
+	"sk_vortigaunt_dmg_zap" "20"
+	"sk_vortigaunt_health" "200"
+}

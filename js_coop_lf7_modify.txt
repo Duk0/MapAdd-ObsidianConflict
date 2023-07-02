@@ -1,0 +1,127 @@
+js_coop_lf7
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"CHEAT_ON" {}
+		}
+		Origin
+		{
+			// model *1
+			"-352 72 -256"
+
+			// model *11
+			"-364 74 -305" {}
+
+			// model *13
+			"-364 74 -325" {}
+		}
+	}
+	Add
+	{
+		"trigger_push"
+		{
+			"model" "*11"
+			"pushdir" "0 0 0"
+			"speed" "150"
+			"spawnflags" "1"
+			"origin" "-364 74 -305"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -180 0"
+			"AmmoType" "1"
+			"origin" "47 -25 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -180 0"
+			"AmmoType" "3"
+			"origin" "47 36 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -180 0"
+			"AmmoType" "7"
+			"origin" "47 97 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "4"
+			"origin" "87 -25 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "2"
+			"origin" "87 36 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "6"
+			"origin" "87 97 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "142 1036 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "6"
+			"origin" "212 1036 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "1"
+			"origin" "282 1036 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "2"
+			"origin" "2070 -273 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 180 0"
+			"AmmoType" "7"
+			"origin" "3499 524 -320"
+		}
+	}
+	Modify
+	{
+		Origin
+		{
+			//	"OnStartTouch" "Music_1,PlaySound,,0,1"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crossbow" "1"
+		"weapon_357" "1"
+		"weapon_shotgun" "1"
+		"weapon_ar2" "1"
+		"weapon_frag" "1"
+		"weapon_healer" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "2"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "1"
+	}
+}

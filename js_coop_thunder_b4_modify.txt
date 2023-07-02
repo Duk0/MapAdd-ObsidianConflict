@@ -1,0 +1,78 @@
+js_coop_thunder_b4
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"HP" {}
+		}
+		Origin
+		{
+			"-4048 -6656 -1808" {}
+		}
+	}
+	Add
+	{
+		"trigger_push"
+		{
+			"model" "*209"
+			"spawnflags" "1"
+			"alternateticksfix" "0"
+			"speed" "200"
+			"pushdir" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-4048 -6656 -1808"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-2500 -6013 -102"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "-2832 -5776 -134"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-3435 -7433 -165"
+		}
+		"ai_relationship"
+		{
+			"StartActive" "1"
+			"target" "npc_vortigaunt"
+			"subject" "npc_manhack"
+			"disposition" "4"
+			"origin" "10 10 10"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_shotgun" "1"
+	//	"weapon_ar2" "1"
+		"weapon_357" "1"
+	//	"weapon_crossbow" "1"
+		"weapon_slam" "1"
+	//	"weapon_rpg" "1"
+		"wepon_frag" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "2"
+		"item_ammo_357" "2"
+		"item_ammo_crossbow" "1"
+		"item_box_buckshot" "1"
+	}
+}

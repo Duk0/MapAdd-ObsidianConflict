@@ -1,0 +1,186 @@
+// MapAdd by apachoo @ 'dedo mraz' (ICQ: 306869981)
+// Last modification on 5. 2. 2011
+// Complete
+
+js_coop_shore
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"HP" {}
+		}
+	}
+	Add
+	{
+		"ai_relationship"
+		{
+			"Reciprocal" "1"
+			"StartActive" "1"
+			"rank" "99"
+			"spawnflags" "0"
+			"target" "npc_antlion"
+			"subject" "npc_vortigaunt"
+			"disposition" "4"
+			"origin" "10 10 10"
+		}
+		"ai_relationship"
+		{
+			"Reciprocal" "1"
+			"StartActive" "1"
+			"rank" "99"
+			"spawnflags" "0"
+			"target" "npc_vortigaunt"
+			"subject" "npc_antlion"
+			"disposition" "4"
+			"origin" "20 20 20"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "7"
+			"angles" "0 90 0"
+			"OnUsed" "equip_spawn,EquipActivator,,0.3,-1"
+			"origin" "1120 -4237 -264"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 -90 0"
+			"OnUsed" "equip_spawn,EquipActivator,,0.3,-1"
+			"origin" "1120 -3682 -264"
+		}
+		"game_player_equip"
+		{
+			"targetname" "equip_spawn"
+			"spawnflags" "1"
+			"item_rpg_round" "1"
+			"item_ammo_pistol" "4"
+			"item_ammo_smg1" "4"
+			"item_ammo_ar2" "3"
+			"item_ammo_357" "1"
+			"origin" "10 20 30"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "5"
+			"angles" "0 90 0"
+			"origin" "678 -565 285"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 -90 0"
+			"origin" "-1130 -61 190"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 -90 0"
+			"origin" "-1070 -61 190"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "1"
+			"angles" "0 -90 0"
+			"origin" "-1010 -61 190"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 180 0"
+			"origin" "-2540 1320 -68"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "5"
+			"angles" "0 180 0"
+			"origin" "-2540 1380 -68"
+		}
+		"item_item_crate"
+		{
+			"angles" "0 285 0"
+			"ItemClass" "item_ammo_crossbow"
+			"ItemCount" "4"
+			"physdamagescale" "0.1"
+			"inertiaScale" "1.0"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"PerformanceMode" "0"
+			"fadescale" "1"
+			"origin" "-673 3943 -80"
+		}
+		"item_item_crate"
+		{
+			"angles" "0 135 0"
+			"ItemClass" "item_ammo_357"
+			"ItemCount" "3"
+			"physdamagescale" "0.1"
+			"inertiaScale" "1.0"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"PerformanceMode" "0"
+			"fadescale" "1"
+			"origin" "-673 4070 -80"
+		}
+		"item_item_crate"
+		{
+			"angles" "0 150 0"
+			"ItemClass" "item_box_buckshot"
+			"ItemCount" "2"
+			"physdamagescale" "0.1"
+			"inertiaScale" "1.0"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"PerformanceMode" "0"
+			"fadescale" "1"
+			"origin" "-1413 4809 -35"
+		}
+		"item_item_crate"
+		{
+			"angles" "0 7 0"
+			"ItemClass" "item_box_buckshot"
+			"ItemCount" "2"
+			"physdamagescale" "0.1"
+			"inertiaScale" "1.0"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"PerformanceMode" "0"
+			"fadescale" "1"
+			"origin" "-1007 3326 131"
+		}
+		"item_item_crate"
+		{
+			"angles" "0 -3 0"
+			"ItemClass" "weapon_frag"
+			"ItemCount" "4"
+			"physdamagescale" "0.1"
+			"inertiaScale" "1.0"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"PerformanceMode" "0"
+			"fadescale" "1"
+			"origin" "-1007 3326 161"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"weapon_357" "1"
+		"weapon_crossbow" "1"
+		"weapon_shotgun" "1"
+		"weapon_healer" "1"
+	//	"item_battery" "4"
+		"item_box_buckshot" "1"
+		"item_ammo_pistol" "6"
+		"item_ammo_357" "2"
+		"item_ammo_crossbow" "1"
+	}
+}

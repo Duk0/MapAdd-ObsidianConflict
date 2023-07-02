@@ -1,0 +1,99 @@
+js_coop_rocks_v11
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"CHEAT_ON" {}
+		}
+		Origin
+		{
+			"-12.99 -3952.5 320.8" {}
+		}
+	}
+	Add
+	{
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "4"
+			"origin" "490 -2760 326"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "1"
+			"origin" "425 -2760 326"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "360 -2760 326"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 180 0"
+			"AmmoType" "6"
+			"origin" "508 -3570 326"
+		}
+	}
+	Modify
+	{
+		Origin
+		{
+			"-970.19 2643.37 86.7788"
+			{
+				"classname" "item_ammo_crossbow"
+			}
+			"-973.1 2562.42 86.7788"
+			{
+				"classname" "item_ammo_crossbow"
+			}
+			"-972.41 2484.8 86.7788"
+			{
+				"classname" "item_ammo_crossbow"
+			}
+			"-666.93 5807.34 96.6198"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 0 90"
+			}
+			"-734.315 5807.38 96.6198"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 0 90"
+			}
+			"-805.723 5807.29 96.6198"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 0 90"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_shotgun" "1"
+		"weapon_ar2" "1"
+		"weapon_357" "1"
+		"weapon_crossbow" "1"
+	//	"weapon_rpg" "1"
+		"item_battery" "2"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

@@ -1,0 +1,155 @@
+js_coop_tbr_cave_v7a
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+		}
+		Origin
+		{
+			"126 -2064 -543.78" {}
+			"140 -2034 -528" {}
+			"557 941.5 455" {}
+			"-9793.71 419.682 -615.541" {}
+		}
+	}
+	Add
+	{
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "7"
+			"origin" "-9833 471 -608"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-13065 1420 -680"
+		}
+		"item_ammo_smg1_large"
+		{
+			"angles" "0 0 0"
+			"origin" "-13065 1395 -680"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 0 0"
+			"origin" "-13065 1375 -680"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 0 0"
+			"origin" "-13065 1368 -680"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 180 0"
+			"origin" "-12207 2574 -690"
+		}
+		"weapon_smg1"
+		{
+			"angles" "90 0 0"
+			"origin" "-12198 1700 -690"
+		}
+		"item_rpg_round"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "318 -1724 -614.785"
+		}
+		"item_rpg_round"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "318 -1739 -614.785"
+		}
+		"item_rpg_round"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "318 -1754 -614.785"
+		}
+		"item_ammo_crossbow"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "196 -1700 -614.785"
+		}
+		"item_ammo_crossbow"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "196 -1710 -614.785"
+		}
+		"item_ammo_crossbow"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "196 -1720 -614.785"
+		}
+		"item_ammo_crossbow"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "196 -1730 -614.785"
+		}
+		"weapon_hopwire"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"OnPlayerPickup" "hopwire,Display,,0,1"
+			"origin" "439 -2626 -450"
+		}
+		"game_text"
+		{
+			"targetname" "hopwire"
+			"spawnflags" "1"
+			"channel" "1"
+			"fxtime" "0.25"
+			"holdtime" "3.0"
+			"effect" "0"									
+			"fadeout" "0.5"
+			"fadein" "1.0"
+			"color2" "250 130 0"
+			"color" "90 70 250"
+			"y" "0.2"
+			"x" "-1"
+			"message" "You are found Hopwire... ;)"
+			"origin" "10 100 100"
+		}
+	}
+	SpawnItems
+	{
+	//	"weapon_crowbar" "1"
+	//	"weapon_pistol" "1"
+		"weapon_smg1" "1"
+	//	"weapon_ar2" "1"
+	//	"weapon_shotgun" "1"
+		"weapon_357" "1"
+		"weapon_crossbow" "1"
+		"weapon_healer" "1"
+	//	"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

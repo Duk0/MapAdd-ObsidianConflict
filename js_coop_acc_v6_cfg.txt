@@ -1,0 +1,25 @@
+js_coop_acc_v6
+{
+	"sk_zombie_health" "250"
+	"sk_zombie_dmg_both_slash" "85"
+	"sk_zombie_dmg_one_slash" "48"
+	"sk_antlion_health" "200"
+	"sk_antlion_jump_damage" "83"
+	"sk_antlion_swipe_damage" "52"
+	"sk_headcrab_fast_health" "350"
+	"sk_headcrab_melee_dmg" "20"
+	"sk_headcrab_health" "350"
+	"sk_vortigaunt_health" "200"
+	"sk_vortigaunt_dmg_zap" "20"
+	"sk_vortigaunt_dmg_rake" "30"
+	"sk_vortigaunt_dmg_claw" "40"
+	"sk_manhack_melee_dmg" "43"
+	"sk_manhack_health" "150"
+	"sk_fastzombie_health" "200"
+
+	"sk_max_crossbow" "30"
+	"sk_max_buckshot" "60"
+
+	"zombie_stepfreq" "10"
+	"mp_flashlight" "1"
+}

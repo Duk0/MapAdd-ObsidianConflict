@@ -1,0 +1,50 @@
+coop_tim-1
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+		}
+		TargetName
+		{
+		}
+		Origin
+		{
+			"-244 -224 -592" {}
+			"1568 -688 -752" {}
+		}
+	}
+	Add
+	{
+
+	}
+	Modify
+	{
+		ClassName
+		{
+
+		}
+		TargetName
+		{
+
+		}
+		Origin
+		{
+
+		}
+	}
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_357" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

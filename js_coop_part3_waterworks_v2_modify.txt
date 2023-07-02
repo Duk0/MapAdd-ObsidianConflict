@@ -1,0 +1,138 @@
+js_coop_part3_waterworks_v2
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"npc_hp" {}
+			"spawn_Rebels" {}
+		}
+
+	}
+	Add
+	{
+		"trigger_multiple"
+		{
+			"model" "*10"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnStartTouch" "@spawnonline,LightOn,,0,-1"
+			"OnEndTouch" "@spawnonline,LightOff,,0,-1"
+			"origin" "-49 -273.5 -38.86"
+		}
+		"game_text_quick"
+		{
+			"y" "0.40"
+			"x" "-1"
+			"targetname" "text"
+			"spawnflags" "1"
+			"message" "empty"
+			"holdtime" "8"
+			"fxtime" "0.25"
+			"fadeout" "0.5"
+			"fadein" "1"
+			"effect" "0"
+			"color2" "240 110 0"
+			"color" "255 80 60"
+			"channel" "1"
+			"origin" "10 10 10"
+		}
+		"game_text_quick"
+		{
+			"y" "0.30"
+			"x" "-1"
+			"targetname" "text2"
+			"spawnflags" "0"
+			"message" "empty"
+			"holdtime" "8"
+			"fxtime" "0.25"
+			"fadeout" "0.5"
+			"fadein" "1"
+			"effect" "0"
+			"color2" "240 110 0"
+			"color" "100 255 80"
+			"channel" "2"
+			"origin" "100 100 100"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"vortigaunt_evilspawn"
+			{
+				"MaxLiveChildren" "2"
+				"SpawnFrequency" "1"
+			}
+			"npc_headcrab_blackitsnow01spawn"
+			{
+				"OnAllSpawnedDead" "text,DisplayText,LIFT BUTTON UNLOCKED.,0,-1"
+			}
+			"We_antlions_1"
+			{
+				"OnHitMax" "text,DisplayText,DOOR OPEN!,0,-1"
+			}
+			"We_antlions_2"
+			{
+				"OnHitMax" "text,DisplayText,DOOR OPEN!,0,-1"
+			}
+			"ending_relay"
+			{
+				"OnTrigger" "text,DisplayText,=====> good game  =) <=====,0,-1"
+			}
+			"additsupnowxD"
+			{
+				"OnHitMax" "text,DisplayText,Opened FireDoor!!!,0,-1"
+			}
+			"additsupnowxD1"
+			{
+				"OnHitMax" "text,DisplayText,Opened FireDoor!!!,0,-1"
+			}
+			"additsupnowxD2"
+			{
+				"OnHitMax" "text,DisplayText,Door unlocked by boss of waterworks ....,0,-1"
+			}
+			"We_antlions_1xddd"
+			{
+				"OnHitMax" "text,DisplayText,DOOR OPEN!,0,-1"
+			}
+			"welldone_itsover"
+			{
+				"OnTrigger" "text,DisplayText,security@REDMESA your teleporting to redmes@space.,0,-1"
+			}
+		}
+		Origin
+		{
+			"453 -818 108.5"
+			{
+				"OnStartTouch" "text2,DisplayText,REDMESA@SPACE(CONTROL-TELEPORT FOR WATERWORKS AREA3 : Teleport one now opened!...,0,1"
+			}
+			"-1666.25 13757 233.25"
+			{
+				"OnTrigger" "text,DisplayText,REDMESA@SPACE: Warning teleport over load..,0,-1"
+				"OnTrigger" "text,DisplayText,security@REDMESA: We can't stop it!!!,3,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_357" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

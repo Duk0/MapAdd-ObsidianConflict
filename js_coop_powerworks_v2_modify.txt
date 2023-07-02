@@ -1,0 +1,151 @@
+js_coop_powerworks_v2
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"spawn_Rebels" {}
+			"spawn_ffs" {}
+			"sv_cheats0" {}
+			"npc_hp" {}
+		}
+		Origin
+		{
+			"-684 346.5 178" {}
+		}
+	}
+	Add
+	{
+		"trigger_muliple"
+		{
+			"model" "*10"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnStartTouch" "@spawnonline,LightOn,,0,-1"
+			"OnEndTouch" "@spawnonline,LightOff,,0,-1"
+			"origin" "-684 346.5 178"	
+		}
+		"point_servercommand"
+		{
+			"targetname" "sv_cmd"
+			"origin" "335 214 74"
+		}
+		"npc_template_maker"
+		{
+			"spawnflags" "0"
+			"TemplateName" "guard_the_end_ffs"
+			"targetname" "spawn_ffs"
+			"MinSpawnDistance" "0"
+			"CriterionDistance" "2"
+			"CriterionVisibility" "2"
+			"Radius" "256"
+			"MaxLiveChildren" "1"
+			"SpawnFrequency" "5"
+			"MaxNPCCount" "3"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"OnAllSpawnedDead" "end_the_damn_game,EndGame,,12,1"
+			"OnAllSpawnedDead" "sv_cmd,Command,say === > (REDMESA) WELL DONE! GOOD GAME!,0,-1"
+			"origin" "990.477 -11725.4 -357.902"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "1"
+			"origin" "-335 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "4"
+			"origin" "-272 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "3"
+			"origin" "-209 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "0"
+			"origin" "-146 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "-83 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "2"
+			"origin" "-20 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "6"
+			"origin" "43 514 -74"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "1"
+			"origin" "664 -10222 -272"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"adduP_nowz"
+			{
+				"OnHitMax" "sv_cmd,Command,say (SECURITY:REDMESA) Now safe! DOOR UNLOCKED PASS:3953303030459,0,-1"
+			}
+			"adduP_nowz02"
+			{
+				"OnHitMax" "sv_cmd,Command,say (SECURITY:REDMESA) Now safe! DOOR UNLOCKED,0,-1"
+			}
+			"antlion_antliona"
+			{
+				"OnHitMax" "sv_cmd,Command,say (SECURITY:REDMESA) DOOR OPENED BY BOSS OF REDMESA; WINDOW DOOR CLOSING!!!,0,-1"
+			}
+			"gman_come_One"
+			{
+				"OnTrigger" "sv_cmd,Command,say  (SECURITY:REDMESA)  BLOCK BULLETS ONLINE!!!,0,-1"
+			}
+		}
+		Origin
+		{
+			"3122 -8189.5 -184.5"
+			{
+				"OnStartTouch" "sv_cmd,Command,say  (SECURITY:REDMESA)  BLOCK BULLETS OFFLINE!!!,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+	//	"weapon_shotgun" "1"
+		"weapon_smg1" "1"
+		"weapon_pistol" "1"
+		"weapon_rpg" "1"
+		"weapon_357" "1"
+		"weapon_healer" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "1"
+	}
+}

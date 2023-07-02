@@ -1,0 +1,54 @@
+coop_citadel_escape_v7
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+		}
+		Origin
+		{
+			"4024 226 -13" {}
+		}
+	}
+	Add
+	{
+		
+	}
+	Modify
+	{
+		ClassName
+		{
+			
+		}
+		TargetName
+		{
+			
+		}
+		Origin
+		{
+			
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_357" "1"
+		"weapon_healer" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

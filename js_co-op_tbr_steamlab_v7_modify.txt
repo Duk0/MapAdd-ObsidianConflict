@@ -1,0 +1,146 @@
+// MapAdd for Obsidian Conflict 1.35 created by apachoo @ dedo mraz
+// Last update:  20:56 7. 2. 2011
+
+js_co-op_tbr_steamlab_v7
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_combine" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+		}
+		Origin
+		{
+			"-545.44 555 981" {}
+			"-980.519 1035.64 902.804" {}
+			"-2003.51 2370.46 832.459" {}
+			"-2047.29 2402.28 834.373" {}
+			"-2041.55 2393.11 834.373" {}
+			"-2039.13 2359.08 834.804" {}
+			"-2080.79 2391.47 833.471" {}
+			"-2075.02 2355.9 833.471" {}
+		}
+	}
+	Add
+	{
+		"trigger_multiple"
+		{
+			"model" "*14"
+			"spawnflags" "1"
+			"wait" "5"
+			"StartDisabled" "0"
+			"OnTrigger" "Mission,Display,,0,-1"
+			"origin" "-545.44 555 981"
+		}
+		"trigger_push"
+		{
+			"model" "*14"
+			"pushdir" "0 90 0"
+			"speed" "200"
+			"spawnflags" "1"
+			"origin" "-545.44 555 961"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "6"
+			"origin" "-1057 1284 908"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "2"
+			"origin" "-997 1284 908"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "7"
+			"origin" "-937 1284 908"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "0"
+			"origin" "-877 1284 908"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "3"
+			"origin" "-817 1284 908"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "4"
+			"origin" "-757 1284 908"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "1"
+			"origin" "-697 1284 908"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 -90 0"
+			"origin" "-2025.14 2261.45 862.85"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 90 0"
+			"origin" "-2024.87 2263.20 832.84"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-1614 1987 1172"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 90 0"
+			"origin" "-1909.90 2079.90 1074.65"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "2122.66 2194.51 1074.70"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-2157.26 2194.80 1076.64"
+		}
+		"item_ammo_pistol"
+		{
+			"angles" "0 -90 0"
+			"origin" "-2123.11 2192.52 1046.70"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 90 0"
+			"origin" "-1914.29 2082.05 1038.67"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_healer" "1"
+		"weapon_smg1" "1"
+	//	"weapon_stunstick" "1"
+		"weapon_slam" "1"
+		"item_battery" "2"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+	}
+}

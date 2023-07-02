@@ -1,0 +1,298 @@
+js_coop_part2_waterworks_v3
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"sv_cheats0" {}
+			"spawn_Rebels" {}
+			"npc_hp" {}
+			"ending_relay" {}
+			"end_the_damn_game" {}
+		}
+		Origin
+		{
+			"4849.5 -624.5 189.07" {}
+			"4731.96 445.717 222.944" {}
+			"4729.27 449.835 222.944" {}
+			"4730.02 452.093 222.944" {}
+			"4727.4 454.121 222.944" {}
+			"4727.1 459.091 222.944" {}
+			"4726.49 462.224 222.944" {}
+			"4685.99 478.054 225.14" {}
+			"4686 474.494 225.14" {}
+			"4684.78 469.448 225.14" {}
+			"4685.53 469.145 225.14" {}
+			"4686.73 464.211 225.14" {}
+			"4686.15 462.835 225.14" {}
+			"4687.81 459.189 225.14" {}
+			"4688.74 456.341 225.14" {}
+			"4689.4 453.619 225.14" {}
+			"1546 -3784 -118" {}
+		}
+	}
+	Add
+	{
+		"trigger_multiple"
+		{
+			"model" "*73"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnStartTouch" "@spawnonline,LightOn,,0,-1"
+			"OnEndTouch" "@spawnonline,LightOff,,0,-1"
+			"origin" "4849.5 -624.5 189.07"
+		}
+
+	//	"item_ammo_crate"
+	//	{
+	//		"angles" "0 -90 0"
+	//		"AmmoType" "7"
+	//		"origin" "-455 -14857 1459"
+	//	}
+
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "4"
+			"origin" "4348.2 210.4 234.0"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "6"
+			"origin" "4348.2 280.4 234.0"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 -90 0"
+			"AmmoType" "2"
+			"origin" "2281. -715.9 149.5"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 90 0"
+			"AmmoType" "4"
+			"origin" "2281. -899.9 149.5"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "2202.68 27.8 180.5"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "2202.68 127.8 180.5"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "2202.68 227.8 180.5"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "2202.68 327.8 180.5"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "2202.68 427.8 180.5"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "4825.9 421.4 225.9"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "4825.9 411.4 225.9"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "4825.9 401.4 225.9"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "1410.8 2127.1 329.0"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-50.1 1477.5 -53.9"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-146.0 -1436.7 -53.9"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "27.1 -1966.4 -53.9"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "1534.7 -1135.5 4.0"
+		}
+		"item_ammo_ar2_large"
+		{
+			"angles" "0 0 90"
+			"origin" "974.9 -1135.5 -30.0"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "1169.5 -542.5 -16.9"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "1663.6 -1137.7 -30.9"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "1706.1 -4084.0 -50.9"
+		}
+		"item_ammo_ar2_large"
+		{
+			"angles" "0 0 90"
+			"origin" "880 -1134 -70"
+		}
+		"ai_relationship"
+		{
+			"Reciprocal" "0"
+			"radius" "0"
+			"rank" "50"
+			"spawnflags" "0"
+			"StartActive" "1"
+			"target" "npc_antlionguard"
+			"subject" "npc_headcrab"
+			"disposition" "3"
+			"origin" "1546 -3784 -20"
+		}
+		"ai_relationship"
+		{
+			"Reciprocal" "0"
+			"radius" "0"
+			"rank" "50"
+			"spawnflags" "0"
+			"StartActive" "1"
+			"target" "npc_headcrab"
+			"subject" "npc_antlionguard"
+			"disposition" "3"
+			"origin" "1546 -3784 0"
+		}
+		"npc_antlionguard"
+		{
+			"spawnflags" "2820"
+			"incavern" "No"
+			"cavernbreed" "No"
+			"allowbark" "No"
+			"startburrowed" "No"
+			"physdamagescale" "1.0"
+			"ignoreunseenenemies" "0"
+			"wakesquad" "0"
+			"wakeradius" "0"
+			"sleepstate" "0"
+			"hintlimiting" "0"
+			"disableshadows" "0"
+			"disablereceiveshadows" "0"
+			"rendercolor" "255 255 255"
+			"renderamt" "255"
+			"rendermode" "0"
+			"renderfx" "0"
+			"targetname" "guard_the_end_ffs"
+			"angles" "0 180 0"
+			"OnDeath" "gg,EndGame,,10,1"
+			"OnDeath" "lazy_head_crab_spawn,Spawn,,0,-1"
+			"OnHalfHealth" "lazy_head_crab_spawn,Spawn,,0,-1"
+			"OnFoundEnemy" "lazy_head_crab_spawn,Spawn,,0,-1"
+			"OnLostEnemy" "lazy_head_crab_spawn,Spawn,,0,-1"
+			"OnDeath" "score_high,ApplyScore,,0,-1"
+			"OnDeath" "gg_text,Display,,0,-1"
+			"OnDeath" "server_say,Command,say =====> good game  =),4,-1"
+			"origin" "1546 -3784 -118"
+		}
+		"point_servercommand"
+		{
+			"targetname" "server_say"
+			"origin" "7032.46 -326.615 -376.285"
+		}
+	}
+	Modify
+	{
+		Origin
+		{
+			"4689.51 452.806 225.14"
+			{
+				"classname" "item_ammo_pistol_large"
+				"angles" "0 90 0"
+			}
+			"4710.97 407.701 226.459"
+			{
+				"classname" "item_rpg_round"
+				"angles" "0 180 0"
+			}
+			"4710.72 397.464 226.459"
+			{
+				"classname" "item_rpg_round"
+				"angles" "0 180 0"
+			}
+			"4710.41 393.11 226.459"
+			{
+				"classname" "item_rpg_round"
+				"angles" "0 180 0"
+			}
+			"4765.72 464.014 228.804"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 180 0"
+			}
+			"4766.1 453.362 228.804"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 180 0"
+			}
+			"4765.39 449.078 228.804"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 180 0"
+			}
+			"4772.81 440.733 228.804"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "0 180 0"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+	//	"weapon_smg1" "1"
+		"weapon_crossbow" "1"
+		"weapon_357" "1"
+		"weapon_shotgun" "1"
+		"weapon_ar2" "1"
+		"weapon_healer" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

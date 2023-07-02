@@ -1,0 +1,175 @@
+// MapAdd for Obsidian Conflict 1.35 created by apachoo @ dedo mraz
+// Last update:  15:59 5. 2. 2011
+
+js_coop_combine2_ttc_v7
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_combine" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			//	"model" "*13"
+			"alien_hp" {}
+		}
+		Origin
+		{
+			//	"model" "*64"
+			"-4608 6388 409.5" {}
+
+			"-4298.09 6968.34 414" {}
+			"-4137.02 707.96 -195.2" {}
+		}
+	}
+	Add
+	{
+		"trigger_multiple"
+		{
+			"model" "*12"
+			"spawnflags" "1"
+			"wait" "2"
+			"StartDisabled" "0"
+			"OnTrigger" "Mission,Display,,0,-1"
+			"origin" "-4298.09 6968.34 414"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "6"
+			"origin" "-5029 6560 341"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "7"
+			"origin" "-5029 6620 341"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "0"
+			"origin" "-5029 6680 341"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "4"
+			"origin" "-5029 6740 341"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "1"
+			"origin" "-5029 6800 341"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "4"
+			"ItemClass" "item_ammo_smg1_grenade"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"spawnflags" "256"
+			"angles" "0 -90 0"
+			"origin" "-4331 6440 349"
+		}
+	}
+	Modify
+	{
+
+		Origin
+		{
+			"-4303 6936 354.5"
+			{
+				"speed" "130"
+				"pushdir" "0 180 0"
+			}
+			"-4290 3072 1824.5"
+			{
+				"speed" "500"
+				"pushdir" "0 0 0"
+			}
+			"-2253 2869 1776.28"
+			{
+				"AmmoType" "2"
+			}
+			"-2192 3244 1776.28"
+			{
+				"AmmoType" "4"
+			}
+			"30.98 1997.28 1882.8"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "90 0 0"
+			}
+			"31.97 1983.35 1882.8"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "90 0 0"
+			}
+			"28.89 2014.86 1875.97"
+			{
+				"classname" "item_ammo_crossbow"
+			}
+			"16.89 2061.14 1833.37"
+			{
+				"classname" "item_box_buckshot"
+			}
+			"-68 3071 103"
+			{
+				"origin" "-195 2692 1843"
+			}
+			 "22 3241 103"
+			{
+				"origin" "-20 3241 1843"
+			}
+			"58 3073 103"
+			{
+				"origin" "-99 2486 1843"
+			}
+			"-4104.89 708.49 -196.53"
+			{
+				"classname" "item_ammo_smg1_large"
+			}
+			"-4166.16 611.69 -195.2"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "90 0 0"
+			}
+			"-4179.86 570.09 -195.2"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "90 0 0"
+			}
+			"-4175.49 556.76 -195.2"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "90 0 0"
+			}
+			"-4153.18 714.45 -195.63"
+			{
+				"classname" "item_box_buckshot"
+				"angles" "0 0 0"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_pistol" "1"
+		"weapon_crowbar" "1"
+		"weapon_slam" "1"
+		"weapon_smg1" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

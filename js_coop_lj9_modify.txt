@@ -1,0 +1,131 @@
+js_coop_lj9
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"CHEAT_ON" {}
+		}
+		Origin
+		{
+			// model *3
+			"-2016 200 -256" {}
+
+			// model *15
+			"-2028 202 -325" {}
+		}
+	}
+	Add
+	{
+		"trigger_multiple"
+		{
+			"model" "*3"
+			"spawnflags" "1"
+			"wait" "0"
+			"StartDisabled" "0"
+			"OnTrigger" "Mission,Display,,0,-1"
+		//	"OnTrigger" "combine_s1_spawn,Spawn,,0,-1"
+			"origin" "-2016 200 -256"
+		}
+		"trigger_once"
+		{
+			"model" "*13"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnStartTouch" "manhack_spawner,Spawn,,0,-1"
+			"origin" "-2028 202 -305"
+		}
+		"ambient_generic"
+		{
+			"targetname" "music2"
+			"message" "music/hl2_song3.mp3"
+			"spawnflags" "49"
+			"radius" "5000"
+			"cspinup" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"lforate" "0"
+			"lfotype" "0"
+			"spindown" "0"
+			"spinup" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"fadeout" "0"
+			"fadein" "0"
+			"volstart" "0"
+			"preset" "0"
+			"health" "10"
+			"origin" "-1796 284 -325"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 180 0"
+			"AmmoType" "7"
+			"origin" "-1140 531 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 180 0"
+			"AmmoType" "2"
+			"origin" "-1140 461 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 90 0"
+			"AmmoType" "4"
+			"origin" "-1555 -329 -320"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 90 0"
+			"AmmoType" "1"
+			"origin" "-1625 -329 -320"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"NO"
+			{
+				"origin" "-1601 -135 -278"
+				"iRadiusOverride" "180"
+				"iMagnitude" "500"
+			}
+		}
+		Origin
+		{
+			"-2576 1183 -264"
+			{
+				"spawnflags" "1025"
+				"OnPressed" "music2,PlaySound,,5,1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+	//	"weapon_pistol" "1"
+		"weapon_smg1" "1"
+	//	"weapon_crossbow" "1"
+		"weapon_357" "1"
+		"weapon_shotgun" "1"
+		"weapon_ar2" "1"
+		"weapon_frag" "1"
+		"weapon_healer" "1"
+	//	"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "2"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "1"
+	}
+}

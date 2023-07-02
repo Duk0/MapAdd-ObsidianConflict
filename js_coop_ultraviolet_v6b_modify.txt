@@ -1,0 +1,37 @@
+js_coop_ultraviolet_v6b
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"CHEAT_ON" {}
+		}
+		Origin
+		{
+			"3053.01 -1852.68 145.06" {}
+			"3041.01 -1851.73 208.08" {}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_crossbow" "1"
+	//	"weapon_crowbar" "1"
+	//	"weapon_stunstick" "1"
+		"weapon_smg1" "1"
+		"weapon_357" "1"
+		"item_battery" "4"
+		"item_ammo_ar2" "2"
+		"item_ammo_357" "1"
+		"item_ammo_crossbow" "1"
+		"item_ammo_smg1_large" "1"
+	}
+}
