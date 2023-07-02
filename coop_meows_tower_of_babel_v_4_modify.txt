@@ -1,0 +1,94 @@
+coop_meows_tower_of_babel_v_4
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"player_weaponstrip" {}
+			"game_score" {}
+			"logic_auto" {}
+		}
+		TargetName
+		{
+		//	"npc_vortigaunt_1" {}
+			"npc_vortigaunt_1_math_counter" {}
+		}
+		Origin
+		{
+			"-5093 5195 64" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "hate,ApplyRelationship,,0.01,1"
+			"origin" "-5145.54 5031.24 131.2"
+		}
+		"point_servercommand"
+		{
+			"targetname" "sv_cmd"
+			"origin" "1 2 3"
+		}
+		"math_counter"
+		{
+			"max" "20"
+			"targetname" "npc_vortigaunt_1_math_counter_fix"
+			"OnHitMax" "button6,Unlock,,0.3,-1"
+			"OnHitMax" "floor_6,Break,,0.2,-1"
+			"OnHitMax" "explosion_6,Explode,,0,-1"
+			"OnHitMax" "move_on,Display,,0,-1"
+		//	"OnHitMax" "sv_cmd,Command,say vort hm,0,-1"
+			"origin" "-5736 7121 1820"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+
+		}
+		TargetName
+		{
+			"npc_vortigaunt_1_template_maker"
+			{
+				"OnAllSpawnedDead" "npc_vortigaunt_1_math_counter_fix,Add,1,0,-1"
+			}
+			"npc_zombie_2_template_maker"
+			{
+				"TemplateName" "npc_zombie_2"
+			}
+			"floor_*"
+			{
+				"spawnflags" "1"
+				"material" "3"
+			}
+		}
+		Origin
+		{
+			"-5129.98 5025.83 88.43"
+			{
+				"Reciprocal" "1"
+			}
+			"-5068.35 5254.01 1856.99"
+			{
+				"wait" "4"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_357" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

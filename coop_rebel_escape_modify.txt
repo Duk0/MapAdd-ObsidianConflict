@@ -1,0 +1,77 @@
+coop_rebel_escape
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+		}
+		Origin
+		{
+			"3.99 -32 69" {}
+			"-2320 3632 -400" {}
+		}
+	}
+	Add
+	{
+		"trigger_once"
+		{
+			"model" "*68"
+			"StartDisabled" "0"
+			"spawnflags" "1"
+			"OnStartTouch" "npc_helicopterspawn,Enable,,11,-1"
+			"OnStartTouch" "wall_explode,Explode,,10,-1"
+			"OnStartTouch" "helo_break,Break,,10,-1"
+			"origin" "-2320 3632 -400"
+		}
+		"ai_relationship"
+		{
+			"disposition" "3"
+			"radius" "0"
+			"rank" "99"
+			"StartActive" "1"
+			"Reciprocal" "1"
+			"target" "npc_*"
+			"subject" "npc_vortigaunt"
+			"spawnflags" "0"
+			"origin" "168 0 -168"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+
+		}
+		TargetName
+		{
+			"weaponstrigger"
+			{
+				"OnStartTouch" "weaponsgive,EquipActivator,,0.5,-1"
+			}
+		}
+		Origin
+		{
+
+		}
+	}
+	SpawnItems
+	{
+	//	"weapon_crowbar" "1"
+	//	"weapon_smg1" "1"
+	//	"weapon_357" "1"
+		"weapon_pistol" "1"
+		"weapon_healer" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+	}
+}

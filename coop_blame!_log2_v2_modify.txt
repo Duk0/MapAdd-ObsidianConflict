@@ -1,0 +1,159 @@
+coop_blame!_log2_v2
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"game_score" {}
+			"logic_auto" {}
+			"player_weaponstrip" {}
+		}
+		TargetName
+		{
+			"makerebel" {}
+			"makerebelcases" {}
+			"client" {}
+			"speakziel" {}
+			"bmusic" {}
+			"music2" {}
+			"musicshark" {}
+			"shipboostcounter" {}
+			"shipboost" {}
+		}
+	}
+	Add
+	{
+		"game_score"
+		{
+			"spawnflags" "0"
+			"targetname" "pt07"
+			"points" "7"
+			"origin" "-764.7 -352.6 -435.6"
+		}
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "modcharge,AddOutput,rendermode 1,0,-1"
+			"OnMapSpawn" "gantzteleporter0,Teleport,,0,-1"
+			"OnMapSpawn" "gnuship,DisableRotorSound,,0,-1"
+			"origin" "-731.953 -516.8 -465.952"
+		}
+		"ambient_generic"
+		{
+			"message" "blame!_houseelectrocrop"
+			"targetname" "speakziel"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "4903.18 6886.3 3864"
+		}
+		"ambient_generic"
+		{
+			"message" "blame!_tbeat"
+			"targetname" "bmusic"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "4588 6946 3864"
+		}
+		"ambient_generic"
+		{
+			"fadeinsecs" "0.2"
+			"message" "blame!_sync"
+			"targetname" "music2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-51.8398 3197.55 -494.385"
+		}
+		"ambient_generic"
+		{
+			"message" "blame!_shark"
+			"targetname" "musicshark"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-458.769 -840 -81.3066"
+		}
+		"ai_relationship"
+		{
+			"spawnflags" "3"
+			"StartActive" "1"
+			"rank" "42"
+			"radius" "40000"
+			"target" "npc_*"
+			"subject" "npc_vortigaunt"
+			"targetname" "hate"
+			"disposition" "3"
+			"Reciprocal" "1"
+			"origin" "-731 -452 -166"
+		}
+		"ai_relationship"
+		{
+			"spawnflags" "3"
+			"StartActive" "1"
+			"rank" "42"
+			"radius" "40000"
+			"target" "npc_antlion"
+			"subject" "npc_rollermine"
+			"targetname" "hate"
+			"disposition" "3"
+			"Reciprocal" "1"
+			"origin" "100 100 100"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"mapversion" "3"
+			}
+		}
+		TargetName
+		{
+			"lionhit*"
+			{
+				"OnBreak" "pt07,ApplyScore,,0,1"
+			}
+			"vorthit*"
+			{
+				"OnBreak" "pt07,ApplyScore,,0,1"
+			}
+			"equipper1"
+			{
+				"weapon_healer" "1"
+			}
+			"equipper2"
+			{
+				"weapon_healer" "1"
+			}
+			"equipper3"
+			{
+				"weapon_healer" "1"
+			}
+		}
+		Origin
+		{
+			"-731.953 -452.8 -466.952"
+			{
+				"Reciprocal" "1"
+			}
+			"-85.3686 4212 -1507"
+			{
+				"OnUsed" "weprelay,Trigger,,0,-1"
+			}
+		}
+	}
+	SpawnItems {}
+}

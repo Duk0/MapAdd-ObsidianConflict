@@ -1,0 +1,79 @@
+syn_urbanchaos
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"music_*" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-422 -270 -319"
+		}
+		"weapon_smg1"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "90 0 90"
+			"origin" "5772 -1058 -6.37332"
+		}
+		"ambient_generic"
+		{
+			"targetname" "music_1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song1"
+			"health" "10"
+			"origin" "607 -125 -311"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "music_2"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song12_long"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"cspinup" "0"
+			"origin" "2068 -1536.64 -277"
+		}
+	}
+	Modify
+	{
+		Origin
+		{
+			"7139.93 -1185.24 -163"
+			{
+				"origin" "7174.52 -1286.06 -33.44"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

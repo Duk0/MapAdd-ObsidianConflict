@@ -1,0 +1,219 @@
+// MapAdd for Obsidian Conflict 1.35 created by apachoo @ dedo mraz
+// Last update:  21:45 6. 2. 2011
+
+js_coop_save_dog_tbr_v5
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_deathmatch" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"npc_hp" {}
+			"sv_cheats0" {}
+			"sv_cheats1" {}
+			"spawn_Rebels" {}
+			"tospawnroom" {}
+			"spawn1" {}
+			"spawn2" {}
+			"spawn3" {}
+			"spawn4" {}
+			"spawn5" {}
+			"spawn6" {}
+			"spawn7" {}
+			"spawn8" {}
+		}
+		Origin
+		{
+			// model *36
+		//	"134.35 -363.44 175.49" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "283 -371.42 80"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "232 -372 81"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "189 -375 79"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "138 -375.58 80"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "103 -377 77"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "52 -377.58 78"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "9 -380.58 76"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-42 -381.16 77"
+		}
+
+		"item_rpg_round"
+		{
+			"angles" "0 0 0"
+			"origin" "714 -235 90"
+		}
+		"item_rpg_round"
+		{
+			"angles" "0 0 0"
+			"origin" "714 -225 90"
+		}
+		"item_rpg_round"
+		{
+				"angles" "0 0 0"
+			"origin" "714 -215 90"
+		}
+		"item_rpg_round"
+		{
+			"angles" "0 0 0"
+			"origin" "714 -205 90"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "631 -230 90"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "646 -230 90"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "631 -210 90"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "646 -210 90"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "572 -211 90"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "582 -211 90"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "592 -211 90"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 90 0"
+			"origin" "612 -211 90"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "395 -370 100"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "395 -382 100"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "407 -370 100"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "407 -382 100"
+		}
+		"item_ammo_smg1_large"
+		{
+			"angles" "0 0 0"
+			"origin" "445 -222 90"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 90 0"
+			"AmmoType" "2"
+			"origin" "550 -399 60.9"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 90 0"
+			"AmmoType" "0"
+			"origin" "614 -399 60.9"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 180 0"
+			"AmmoType" "7"
+			"origin" "5610 897 402"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "2"
+			"origin" "9858 1575 1301"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "4"
+			"origin" "9858 1635 1301"
+		}
+		"item_ammo_crate"
+		{
+			"angles" "0 0 0"
+			"AmmoType" "1"
+			"origin" "9858 1695 1301"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_shotgun" "1"
+		"weapon_ar2" "1"
+		"weapon_357" "1"
+		"weapon_crossbow" "1"
+		"weapon_healer" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "2"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "1"
+	}
+}

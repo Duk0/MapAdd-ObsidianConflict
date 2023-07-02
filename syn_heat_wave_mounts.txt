@@ -1,0 +1,4 @@
+syn_heat_wave
+{
+	"MountEpisodeTwo" "1"
+}

@@ -1,0 +1,125 @@
+coop_meows_house_to_house
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"player_weaponstrip" {}
+			"game_score" {}
+			"logic_auto" {}
+		}
+		TargetName
+		{
+			"logic_start" {}
+			"game_player_equip_1" {}
+			"equipperitems3" {}
+		}
+		Origin
+		{
+			"-5336.42 5169.81 147.6" {}
+			"-5336.42 5169.81 171.38" {}
+			"-5336.42 5169.81 109.47" {}
+		}
+	}
+	Add
+	{
+		"ai_relationship"
+		{
+			"disposition" "3"
+			"spawnflags" "3"
+			"targetname" "hate"
+			"subject" "npc_vortigaunt"
+			"target" "npc_*"
+			"radius" "40000"
+			"rank" "99"
+			"StartActive" "1"
+			"Reciprocal" "1"
+			"origin" "-5520 5089 10"
+		}
+		"ai_relationship"
+		{
+			"disposition" "3"
+			"spawnflags" "3"
+			"targetname" "hate"
+			"subject" "npc_headcrab_fast"
+			"target" "npc_headcrab_black"
+			"radius" "40000"
+			"rank" "99"
+			"StartActive" "1"
+			"Reciprocal" "1"
+			"origin" "-5520 5089 20"
+		}
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "hate,ApplyRelationship,,0.01,1"
+			"OnMapSpawn" "npc_strider_1,EnableAggressiveBehavior,,0,-1"
+			"OnMapSpawn" "door_1_b,Lock,,0.1,1"
+			"OnMapSpawn" "door_2_g,Lock,,0.1,1"
+			"origin" "-5521 5238 163"
+		}
+		"trigger_push"
+		{
+			"model" "*18"
+			"spawnflags" "1"
+			"alternateticksfix" "0"
+			"speed" "150"
+			"pushdir" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "-5336.42 5169.81 109.47"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"npc_headcrab_1_math_counter"
+			{
+				"OnHitMax" "door_1_b,Unlock,,0,1"
+			}
+			"npc_vortigaunt_1_math_counter"
+			{
+				"OnHitMax" "door_2_g,Unlock,,0,1"
+			}
+			"heli03"
+			{
+				"OnDeath" "heli_SOUND,StopSound,,0.2,-1"
+			}
+		}
+		Origin
+		{
+			"-5525.73 5222.62 120.905"
+			{
+				"Reciprocal" "1"
+			}
+			"-5520.45 5089.72 120.475"
+			{
+				"disposition" "1"
+			}
+			"-6838 5552 278.281"
+			{
+				"targetname" "door_1_b"
+				"spawnflags" "10240"
+			}
+			"-6603 4607.61 150"
+			{
+				"targetname" "door_2_g"
+				"spawnflags" "10240"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_357" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

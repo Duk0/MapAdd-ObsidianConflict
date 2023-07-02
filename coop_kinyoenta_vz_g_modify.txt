@@ -1,0 +1,62 @@
+coop_kinyoenta_vz_g
+{
+	Remove
+	{
+		TargetName
+		{
+			"init_equip" {}
+		}
+	}
+	Add
+	{
+		"item_ammo_crate"
+		{
+			"AmmoType" "1"
+			"angles" "0 -90 0"
+			"origin" "-4388 4326 846"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 -90 0"
+			"origin" "-4323 4326 846"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"item_suitcharger"
+			{
+			//	"spawnflags" "8192"
+				"OnEmpty" "!self,Recharge,,0.2,-1"
+			}
+		}
+		TargetName
+		{
+			"ds_breakable01"
+			{
+				"health" "9000"
+			}
+		}
+		Origin
+		{
+			"1170.5 -906 2152"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_physcannon" "1"
+		"weapon_ar2" "1"
+		"weapon_pistol" "1"
+		"weapon_stunstick" "1"
+		"item_ammo_ar2" "2"
+		"item_ammo_smg1" "2"
+		"item_ammo_pistol" "2"
+		"weapon_healer" "1"
+	}
+}

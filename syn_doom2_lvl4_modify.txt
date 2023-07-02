@@ -1,0 +1,89 @@
+syn_doom2_lvl4
+{
+	Remove
+	{
+		ClassName
+		{
+			"trigger_weapon_strip" {}
+			"game_end" {}
+		//	"weapon_mp5k" {}
+		//	"weapon_melee" {}
+		}
+	//	TargetName
+	//	{
+	//	}
+	}
+	Add
+	{
+		"weapon_scripted"
+		{
+			"angles" "0 0 0"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"spawnflags" "0"
+			"customweaponscript" "custom_syn_mp5k"
+			"origin" "-948 -942 537"
+		}
+		"weapon_scripted"
+		{
+			"angles" "0 0 0"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"spawnflags" "0"
+			"customweaponscript" "custom_syn_mp5k"
+			"origin" "-1013 -828 537"
+		}
+		"logic_relay"
+		{
+			"spawnflags" "0"
+			"StartDisabled" "1"
+			"targetname" "rel_1"
+			"OnTrigger" "sec_text_1,Display,,0.1,-1"
+			"OnTrigger" "son_fin,PlaySound,,0.15,-1"
+			"OnTrigger" "end_next_map,Command,changelevel syn_doom2_lvl5_b1,7,-1"
+			"origin" "-1223 310 612"
+		}
+		"point_servercommand"
+		{
+			"targetname" "end_next_map"
+			"origin" "616 -391 625"
+		}
+	}
+	Modify
+	{
+//		ClassName
+//		{
+//			"weapon_medkit"
+//			{
+//				"classname" "item_healthvial"
+//			}
+//		}
+		TargetName
+		{
+			"rel_1"
+			{
+				"OnTrigger" "end_next_map,Command,changelevel syn_doom2_lvl5_b1,7,-1"
+			}
+	}
+	SpawnItems
+	{
+
+	//	"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+	//	"weapon_357" "1"
+	//	"weapon_smg1" "1"
+	//	"weapon_shotgun" "1"
+		"item_ammo_pistol" "10"
+		"item_ammo_smg1" "5"
+		"item_ammo_357" "6"
+		"item_box_buckshot" "4"
+		"weapon_healer" "1"
+	}
+	SoundCache
+	{
+		"Base_BASE" "1"
+		"Base_SYN" "1"
+	//	"Base_HL1" "1"
+		"Base_NPC" "1"
+	}
+}

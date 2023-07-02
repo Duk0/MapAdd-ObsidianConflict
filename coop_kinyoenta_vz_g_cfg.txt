@@ -1,0 +1,8 @@
+coop_kinyoenta_vz_g
+{
+	"sk_headcrab_health" "50"
+	"sk_vortigaunt_dmg_claw" "40"
+	"sk_vortigaunt_dmg_rake" "50"
+	"sk_vortigaunt_dmg_zap" "10"
+	"sk_vortigaunt_health" "200"
+}

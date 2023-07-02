@@ -1,0 +1,126 @@
+syn_canal_escape_part1
+{
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"targetname" "sewer_entrance_checkpoint"
+			"StartDisabled" "1"
+			"angles" "0 25 0"
+			"origin" "-900 3992 -444"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "antlion_checkpoint"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2844 3742.65 -688"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "start_spawn"
+			"angles" "0 239 0"
+			"origin" "128 256 16"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "start_spawn"
+			"angles" "0 0 0"
+			"origin" "-127.944 -196 4"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3372 5390 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3372 5402 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3366 5390 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3366 5402 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3366 5414 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3372 5414 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3366 5426 -767.285"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "3372 5426 -767.285"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_physcannon"
+			"maxpieces" "0"
+			"origin" "0 0 0"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_crowbar"
+			"maxpieces" "0"
+			"origin" "0 10 0"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"sewerfastzombie_template_maker"
+			{
+				"OnAllSpawned" "start_spawn,Disable,,0,-1"
+				"OnAllSpawned" "sewer_entrance_checkpoint,Enable,,0,-1"
+			}
+			"sewers_antliontemplatemaker"
+			{
+				"OnAllSpawned" "sewer_entrance_checkpoint,Disable,,0,-1"
+				"OnAllSpawned" "antlion_checkpoint,Enable,,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_physcannon" "1"
+		"weapon_pistol" "1"
+		"weapon_smg1" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

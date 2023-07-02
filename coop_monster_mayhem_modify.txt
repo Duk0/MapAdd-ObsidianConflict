@@ -1,0 +1,78 @@
+coop_monster_mayhem
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+			"logic_auto" {}
+		}
+		Origin
+		{
+			"-2215 -220 -3.94" {}
+			"-2215 -218.5 -9.5" {}
+		}
+	}
+	Add
+	{
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_box_buckshot"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 0 0"
+			"origin" "-2437 2471 -343"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "2"
+			"ItemClass" "item_ammo_smg1"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 0 0"
+			"origin" "-980 2513 -343"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_ammo_357"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 90 0"
+			"origin" "32 1374 -343"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_shotgun" "1"
+		"weapon_frag" "1"
+		"weapon_smg1" "1"
+		"weapon_pistol" "1"
+		"weapon_357" "1"
+		"weapon_crossbow" "1"
+	//	"weapon_slam" "1"
+		"weapon_crowbar" "1"
+	//	"weapon_stunstick" "1"
+		"item_ammo_crossbow" "1"
+		"item_ammo_357_large" "1"
+		"item_ammo_smg1_grenade" "1"
+		"item_ammo_smg1" "2"
+		"item_ammo_pistol" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

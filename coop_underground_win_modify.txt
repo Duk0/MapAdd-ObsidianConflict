@@ -1,0 +1,167 @@
+coop_underground_win
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"CHEAT_ON" {}
+			"CHEAT OFF" {}
+			"X" {}
+			"Music" {}
+			"GOOD_GAME" {}
+		}
+		Origin
+		{
+			// model *46
+			"-78.5 -61 63.67" {}
+
+			// model *17
+			"-164 -160 80.01" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "det_pack_respawn,ForceSpawn,,0,1"
+			"origin" "-164 -160 77"
+		}
+		"trigger_multiple"
+		{
+			"model" "*37"
+			"StartDisabled" "0"
+			"wait" "1"
+			"spawnflags" "1"
+			"OnTrigger" "vortigaunt01_spawner1,Spawn,,0,-1"
+			"OnTrigger" "antlion01_spawner,Spawn,,0,-1"
+			"OnTrigger" "fastcrab04_spawner,Spawn,,0,-1"
+			"OnTrigger" "vortigaunt04_spawner2,Spawn,,0,-1"
+			"OnTrigger" "heacrab01_spawner,Spawn,,0,-1"
+			"origin" "792 -1064 80"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "7"
+			"angles" "0 180 0"
+			"origin" "458 -64 16"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 180 0"
+			"origin" "458 -134 16"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "1"
+			"angles" "0 90 0"
+			"origin" "390 -202 16"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 90 0"
+			"origin" "320 -202 16"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "5"
+			"angles" "0 90 0"
+			"origin" "250 -202 16"
+		}
+		"weapon_crowbar"
+		{
+			"angles" "0 90 0"
+			"origin" "1510 -608 26"
+		}
+		"weapon_pistol"
+		{
+			"angles" "0 90 0"
+			"origin" "320 -134 26"
+		}
+		"ai_relationship"
+		{
+			"disposition" "3"
+			"radius" "0"
+			"rank" "99"
+			"StartActive" "1"
+			"Reciprocal" "1"
+			"target" "npc_*"
+			"subject" "npc_vortigaunt"
+			"origin" "708 -286 247"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"break_text"
+			{
+				"message" "This gate can be broken only by a mine."
+				"holdtime" "2.2"
+				"color" "255 40 0"
+				"y" "0.3"
+			}
+			"tele_door1_text"
+			{
+				"message" "Teleport door (1/2) open"
+				"y" "0.8"
+			}
+			"tele_door2_text"
+			{
+				"message" "Teleport door (2/2) open"
+				"y" "0.8"
+			}
+			"det_pack_gonna_blow"
+			{
+				"message" "Bomb Activated RUN !!!!"
+				"y" "0.3"
+			}
+			"geheim_text"
+			{
+				"message" "Nearby is a Secret Room"
+				"y" "0.8"
+			}
+			"geheim_text1"
+			{
+				"message" "You found it!!!"
+				"y" "0.3"
+			}
+		}
+		Origin
+		{
+			"-949 1237 17"
+			{
+			//	"AmmoType" "3"
+				"angles" "0 180 0"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+	//	"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"weapon_ar2" "1"
+		"weapon_357" "1"
+	//	"weapon_crossbow" "1"
+		"weapon_shotgun" "1"
+		"item_ammo_smg1_large" "1"
+		"item_box_buckshot" "1"
+	//	"item_ammo_357" "1"
+		"item_battery" "2"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_crossbow" "1"
+		"weapon_healer" "1"
+	}
+}

@@ -1,0 +1,212 @@
+coop_swampthing_v6
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"info_player_rebel" {}
+			"game_score" {}
+		//	"player_weaponstrip" {}
+		}
+		TargetName
+		{
+			"makerebelcases" {}
+			"music*" {}
+			"speakziel" {}
+			"heliboostcounter" {}
+			"heliboost" {}
+		}
+		Origin
+		{
+			"95.839 -312 -439" {}
+			"-1005.88 -5210.4 28.8016" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+		//	"OnMapSpawn" "uhsexty,AddOutput,health 6060,0,1"
+		//	"OnMapSpawn" "scanners,AddOutput,health 666,0,1"
+		//	"OnMapSpawn" "headcrabs,AddOutput,health 50,0,1"
+			"OnMapSpawn" "thumperrepel,Disable,,0,1"
+			"OnMapSpawn" "thethumper,Disable,,0,1"
+			"OnMapSpawn" "picchoose,PickRandomShuffle,,0,1"
+			"OnMapSpawn" "deathwandtrail,HideSprite,,0,1"
+			"OnMapSpawn" "diswandtrail,HideSprite,,0,1"
+			"OnMapSpawn" "beamwandtrail,HideSprite,,0,1"
+			"origin" "95 -312 -439"
+		}
+		"game_score"
+		{
+			"spawnflags" "0"
+			"targetname" "points007"
+			"points" "7"
+			"origin" "-344 -620 297"
+		}
+		"ambient_generic"
+		{
+			"message" "music_swampthing1"
+			"targetname" "music1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-236 -315 -439"
+		}
+		"ambient_generic"
+		{
+			"message" "music_swampthing2"
+			"targetname" "music2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-243 -294 -439"
+		}
+		"ambient_generic"
+		{
+			"message" "music_swampthing3"
+			"targetname" "music3"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-251 -270 -439"
+		}
+		"ambient_generic"
+		{
+			"message" "wardogs_houseelectrocrop"
+			"targetname" "speakziel"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-1197 -6734 7048"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 90 0"
+			"origin" "-1124 -6895 24"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 90 0"
+			"origin" "-1124 -6885 24"
+		}	
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 90 0"
+			"origin" "-1124 -6875 24"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-1124 -6845 22"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-1124 -6835 22"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-1124 -6825 22"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 90 0"
+			"origin" "-918 -6895 22"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 90 0"
+			"origin" "-918 -6880 22"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 90 0"
+			"origin" "-918 -6865 22"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 90 0"
+			"origin" "-918 -6850 22"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 90 0"
+			"origin" "-918 -6835 22"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-531 -6052 22"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-1516 -6049 22"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 180 0"
+			"origin" "-1054 -5841 790"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 180 0"
+			"origin" "-1039 -5841 790"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 180 0"
+			"origin" "-1024 -5841 790"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 180 0"
+			"origin" "-1009 -5841 790"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 180 0"
+			"origin" "-994 -5841 790"
+		}
+	}
+	Modify
+	{
+		"equipper"
+		{
+			"weapon_healer" "1"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_frag" "1"
+		"weapon_smg1" "1"
+		"weapon_stunstick" "1"
+		"weapon_pistol" "1"
+		"weapon_ar2" "1"
+	//	"weapon_357" "1"
+	//	"item_battery" "4"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357_large" "1"
+		"item_ammo_smg1_grenade" "1"
+	//	"item_ammo_crossbow" "1"
+		"item_box_buckshot" "1"
+		"item_ammo_ar2" "1"
+		"weapon_healer" "1"
+	}
+}

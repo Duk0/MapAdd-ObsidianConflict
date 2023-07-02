@@ -1,0 +1,146 @@
+ep2_oc_outhouse_1r2
+{
+    Remove
+    {
+        Origin
+        {
+            "-13490.5 3176.5 -84" {}
+            "-13770.5 4315.5 -106.11" {}
+        }
+    }
+    Add
+    {
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerRadius" "400"
+            "OnStartTouch" "PlayerSpawnGroup_MoveSpawns_Forward,Trigger,,0,1"
+            "OnStartTouch" "!activator,AddOutput,targetname noteleport,0,-1"
+            "OnEndTouch" "playerbranch_restore,Test,,0,-1"
+            "origin" "-13760 4328 -145"
+        }
+        "info_node_hint"
+        {
+            "angles" "0 0 0"
+            "hinttype" "100"
+            "IgnoreFacing" "2"
+            "MaximumState" "3"
+            "MinimumState" "1"
+            "nodeFOV" "180"
+            "nodeid" "1559"
+            "TargetNode" "-1"
+            "origin" "-13900 3920 -153"
+        }
+        "info_node_hint"
+        {
+            "angles" "0 0 0"
+            "hinttype" "100"
+            "IgnoreFacing" "2"
+            "MaximumState" "3"
+            "MinimumState" "1"
+            "nodeFOV" "180"
+            "nodeid" "1560"
+            "TargetNode" "-1"
+            "origin" "-13812 3919 -153"
+        }
+        "info_node_hint"
+        {
+            "angles" "0 0 0"
+            "hinttype" "100"
+            "IgnoreFacing" "2"
+            "MaximumState" "3"
+            "MinimumState" "1"
+            "nodeFOV" "180"
+            "nodeid" "1561"
+            "TargetNode" "-1"
+            "origin" "-13698.7 3920.37 -153"
+        }
+        "info_node_hint"
+        {
+            "angles" "0 0 0"
+            "hinttype" "100"
+            "IgnoreFacing" "2"
+            "MaximumState" "3"
+            "MinimumState" "1"
+            "nodeFOV" "180"
+            "nodeid" "1562"
+            "TargetNode" "-1"
+            "origin" "-13610 3916 -153"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "140"
+            "OnStartTouch" "sergeant_touchrelay,Disable,,0,1"
+            "OnStartTouch" "gruntwall,Disable,,15,1"
+            "OnStartTouch" "gruntspawns3,ForceSpawn,,0,1"
+            "OnStartTouch" "sergeant_touchrelay,Enable,,15,1"
+            "origin" "-13457 3177 -145"
+        }
+        "env_entity_maker"
+        {
+            "angles" "0 0 0"
+            "EntityTemplate" "template_combine_s_ar2"
+            "PostSpawnDirection" "0 0 0"
+            "PostSpawnDirectionVariance" "0.15"
+            "spawnflags" "0"
+            "targetname" "combinespawnsr_tunnel"
+            "origin" "-7619 1753 -283"
+        }
+        "env_entity_maker"
+        {
+            "angles" "0 0 0"
+            "EntityTemplate" "template_hunter"
+            "PostSpawnDirection" "0 0 0"
+            "PostSpawnDirectionVariance" "0.15"
+            "spawnflags" "0"
+            "targetname" "combinespawnsr_tunnel"
+            "origin" "-7702 1787 -283"
+        }
+        "logic_player_branch"
+        {
+            "InitialValue" "1"
+            "StrictEqualto" "1"
+            "targetname" "playerbranch_restore"
+            "OnFalse" "Momentary_Rot_Movelinear_3,Close,,0,-1"
+            "origin" "-13959.3 4307.32 -145"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "1526"
+            }
+        }
+        TargetName
+        {
+
+            "teleport1relay"
+            {
+                "OnTrigger" "lives_manager,GiveLivesToDeadPlayers,1,3,1"
+            }
+            "gruntwall"
+            {
+                "origin" "-13760 3886 -133"
+            }
+            "bullsquidteleport1_h"
+            {
+                "MaxLiveChildren" "2"
+                "OnSpawnNPC" "relation,ApplyRelationship,,0,-1"
+            }
+            "bullsquidteleport2_h"
+            {
+                "MaxLiveChildren" "2"
+                "OnSpawnNPC" "relation,ApplyRelationship,,0,-1"
+            }
+        }
+
+SpawnItems
+{
+    "weapon_crowbar" "1"
+}
+}

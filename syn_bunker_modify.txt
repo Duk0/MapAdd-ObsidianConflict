@@ -1,0 +1,62 @@
+syn_bunker
+{
+	Remove
+	{
+		TargetName
+		{
+			"subway_antlion_song" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"origin" "-256 -5056 352"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_physcannon"
+			"maxpieces" "0"
+			"origin" "0 0 0"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_crowbar"
+			"maxpieces" "0"
+			"origin" "0 10 0"
+		}
+		"ambient_generic"
+		{
+			"targetname" "subway_antlion_song"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song0"
+			"health" "10"
+			"origin" "-11648 7088 -1856"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"antlionworker2_maker"
+			{
+				"origin" "-467 6943 -232"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_pistol" "1"
+		"weapon_physcannon" "1"
+		"weapon_frag" "1"
+		"weapon_crowbar" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

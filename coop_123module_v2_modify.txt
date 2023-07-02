@@ -1,0 +1,61 @@
+coop_123module_v2
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"player_weaponstrip" {}
+			"game_player_equip" {}
+			"logic_auto" {}
+		}
+		TargetName
+		{
+			"points003" {}
+			"points005" {}
+			"client" {}
+			"playercommand" {}
+			"makecombinecases" {}
+			"fightmusic" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "modcharge,AddOutput,rendermode 1,0,1"
+			"OnMapSpawn" "gantzteleporter123,Teleport,,0,1"
+			"origin" "-2176 2808 -1976"
+		}
+		"ambient_generic"
+		{
+			"message" "singe_antlionfight"
+			"targetname" "fightmusic"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "1662.1 42.7307 718.607"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_ar2" "1"
+		"weapon_crossbow" "1"
+		"weapon_frag" "5"
+		"weapon_pistol" "1"
+		"weapon_shotgun" "1"
+		"weapon_smg1" "1"
+		"weapon_stunstick" "1"
+		"weapon_healer" "1"
+		"item_ammo_ar2_large" "1"
+		"item_ammo_crossbow" "1"
+		"item_ammo_pistol" "8"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_smg1_grenade" "3"
+		"item_box_buckshot" "2"
+		"weapon_physcannon" "1"
+	}
+}

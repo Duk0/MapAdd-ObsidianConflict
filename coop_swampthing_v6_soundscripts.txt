@@ -1,0 +1,43 @@
+"music_swampthing1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#swampthing/swampthing1.mp3"
+}
+
+"music_swampthing2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#swampthing/swampthing2.mp3"
+}
+
+"music_swampthing3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#swampthing/swampthing3.mp3"
+}
+
+"wardogs_houseelectrocrop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#wardogs/houseelectrocrop.mp3"
+}

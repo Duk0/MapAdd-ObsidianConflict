@@ -1,0 +1,115 @@
+syn_oldcanals
+{
+	Remove
+	{
+		ClassName
+		{
+			"game_player_equip" {}
+		}
+		TargetName
+		{
+			// stop cop_deck_killcivy
+			// stop cop_jump1
+			"template_deck1" {}
+			"3flare_train_start5" {}
+		}
+	}
+	Add
+	{
+		"path_track"
+		{
+			"speed" "100"
+			"spawnflags" "0"
+			"targetname" "3flare_train_start5"
+			"orientationtype" "1"
+			"angles" "0 0 0"
+			"origin" "2255.17 29.99 572"
+		}
+		"trigger_player_count"
+		{
+
+			"model" "*145"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"wait" "1.5"
+			"VolumeName" "Game End"
+			"ConstantAnnounce" "1"
+			"OnTrigger" "antirush_text,Display,,1,-1"
+			"OnAllPlayersEntered" "end,EndGame,,3,-1"
+			"OnAllPlayersEntered" "end_fade,Fade,,0,-1"
+			"OnAllPlayersEntered" "!self,Disable,,1,1"
+			"origin" "4964 -6270 -25"
+		}
+		"game_text"
+		{
+			"spawnflags" "0"
+			"targetname" "antirush_text"
+			"message" "Need More Players to Continue. . ."
+			"channel" "0"
+			"effect" "2"
+			"x" "-1"
+			"y" "0.85"
+			"color" "100 100 100"
+			"color2" "0 110 240"
+			"fadein" "0.03"
+			"fadeout" "1.25"
+			"holdtime" "2"
+			"fxtime" "0.25"
+			"origin" "0 0 0"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"skyname" "sky_day01_05_hdr"
+			}
+		}
+	//	TargetName
+	//	{
+	//		"cp_pre_ambush_barrel_1"
+	//		"cp_pre_ambush_barrel_2"
+	//		"barrel_coptrap_R"
+	//		"barrel_coptrap_L"
+	//		"barrelshelf1"
+	//		"barrelshelf2"
+	//		"barrelshelf3"
+	//		"barrelshelf4"
+	//		"barrelshelf5"
+	//	}
+		Origin
+		{
+			"4964 -6270 -25" {}
+	//		"2210.5 -2193.5 322"
+	//		"2210.5 -2209.5 368"
+	//		"2210.5 -2227.5 322"
+	//		"3789 -1524 193"
+	//		"3790 -1251 193"
+	//		"3930 -1287 193"
+	//		"3988 -1391 193"
+	//		"4004 -1324 193"
+	//		"3972 -1594 193"
+	//		"3871 -1367 193"
+	//		"842 -3608 360"
+	//		"810 -3454 360"
+	//		"372 364 40"
+	//		"352 300 76"
+	//		"2440 -3135.86 122"
+	//		"2268 -2872 122"
+	//		"2060.5 -3148 122.281"
+	//		"2100.5 -3104 122.281"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_pistol" "1"
+		"weapon_frag" "1"
+		"item_ammo_smg1" "2"
+		"item_ammo_pistol" "2"
+		"weapon_healer" "1"
+	}
+}

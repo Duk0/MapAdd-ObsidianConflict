@@ -1,0 +1,406 @@
+coop_the_escape_part2_beta6
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_deathmatch" {}
+		}
+		TargetName
+		{
+			"logic_case_rebel" {}
+			"zu_combine_p" {}
+			"zu_combine_css" {}
+		//	"zu_combine_cs" {}
+			"Punkte1" {}
+			"Punkte10" {}
+		}
+		Origin
+		{
+			"-1518 -7128.12 9589.08" {}
+			"3547.2 -15006 9058" {}
+		}
+	}
+	Add
+	{
+		"info_player_red"
+		{
+			"angles" "0 90 0"
+			"OnPlayerSpawn" "pl_equip_red,EquipActivator,,0,-1"
+			"origin" "3016 -15340 9078"
+		}
+		"info_player_red"
+		{
+			"angles" "0 90 0"
+			"OnPlayerSpawn" "pl_equip_red,EquipActivator,,0,-1"
+			"origin" "3096 -15340 9078"
+		}
+		"info_player_red"
+		{
+			"angles" "0 90 0"
+			"OnPlayerSpawn" "pl_equip_red,EquipActivator,,0,-1"
+			"origin" "3176 -15340 9078"
+		}
+		"info_player_red"
+		{
+			"angles" "0 90 0"
+			"OnPlayerSpawn" "pl_equip_red,EquipActivator,,0,-1"
+			"origin" "3256 -15340 9078"
+		}
+		"info_player_blue"
+		{
+			"angles" "0 270 0"
+			"OnPlayerSpawn" "pl_equip_blue,EquipActivator,,0,-1"
+			"origin" "3256 -15436 9078"
+		}
+		"info_player_blue"
+		{
+			"angles" "0 270 0"
+			"OnPlayerSpawn" "pl_equip_blue,EquipActivator,,0,-1"
+			"origin" "3176 -15436 9078"
+		}
+		"info_player_blue"
+		{
+			"angles" "0 270 0"
+			"OnPlayerSpawn" "pl_equip_blue,EquipActivator,,0,-1"
+			"origin" "3096 -15436 9078"
+		}
+		"info_player_blue"
+		{
+			"angles" "0 270 0"
+			"OnPlayerSpawn" "pl_equip_blue,EquipActivator,,0,-1"
+			"origin" "3016 -15436 9078"
+		}
+		"trigger_once"
+		{
+			"model" "*327"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnTrigger" "info_nextlevel,Display,,0,-1"
+			"OnTrigger" "sv_cmd,Command,changelevel coop_the_escape_part3_beta5,20,1"
+			"OnTrigger" "EndGame,EndGame,,30,1"
+			"origin" "-1518 -7128.12 9589.08"
+		}
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "kameraachse1,Toggle,,2,-1"
+			"OnMapSpawn" "zaehlerschieber,Toggle,,0,-1"
+			"OnMapSpawn" "kameraachse3,Toggle,,2,-1"
+		//	"OnMapSpawn" "debuginfo1,Display,,20,-1"
+			"OnMapSpawn" "kameraachse2,Toggle,,2,-1"
+			"origin" "3080 -14770 9070"
+		}
+		"point_servercommand"
+		{
+			"targetname" "sv_cmd"
+			"origin" "3050 -14790 9070"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "2"
+			"ItemClass" "item_box_buckshot"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 60 0"
+			"origin" "-2291 -9277 9420"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_ammo_ar2"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 60 0"
+			"origin" "-3871 -5741 10050"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "2"
+			"ItemClass" "item_ammo_smg1_grenade"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 110 0"
+			"origin" "-3529 -4290 10041"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_ammo_ar2"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 60 0"
+			"origin" "-2304 -10212 9425"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "2"
+			"ItemClass" "item_rpg_round"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 110 0"
+			"origin" "-1560 -10812 9405"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "-3524 -4155 10044"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "2"
+			"ItemClass" "item_ammo_ar2"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 60 0"
+			"origin" "203 195 11246"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 -90 0"
+			"origin" "205 -24 11240"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "weapon_frag"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 100 0"
+			"origin" "212 -1291 11246"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "-354 -13050 11764"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "232 -13532 11546"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "242 -13532 11546"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "-3668.10 -4109.70 9995.79"
+		}
+		"npc_maker"
+		{
+			"targetname" "npc-maker-rollermine01"
+			"additionalequipment" "0"
+			"angles" "0 0 0"
+			"MaxLiveChildren" "1"
+			"MaxNPCCount" "5"
+			"npchealth" "0"
+			"npcname" "Rollermine"
+		//	"teamnumber" "2"
+			"NPCSquadname" "roll"
+			"NPCType" "npc_rollermine"
+			"spawnflags" "0"
+			"SpawnFrequency" "10"
+			"StartDisabled" "1"
+			"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			"origin" "734.2 -13592 12590"
+		}
+		"npc_maker"
+		{
+			"targetname" "npc-maker-rollermine02"
+			"additionalequipment" "0"
+			"angles" "0 0 0"
+			"MaxLiveChildren" "1"
+			"MaxNPCCount" "5"
+			"npchealth" "0"
+			"npcname" "Rollermine"
+		//	"teamnumber" "2"
+			"NPCSquadname" "roll"
+			"NPCType" "npc_rollermine"
+			"spawnflags" "0"
+			"SpawnFrequency" "10"
+			"StartDisabled" "1"
+			"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			"origin" "734.2 -13564 12590"
+		}
+		"math_counter"
+		{
+			"max" "14"
+			"targetname" "manhack01_spawn_counter"
+			"OnHitMax" "manhack01_spawn_button,Lock,,0,-1"
+			"origin" "536 626.145 11300"
+		}
+		"math_counter"
+		{
+			"max" "7"
+			"targetname" "manhack02_spawn_counter"
+			"OnHitMax" "manhack_spawngeraet02_knopf,Lock,,0,-1"
+			"origin" "-3791.2 -5912.15 10090"
+		}
+		"player_weaponstrip"
+		{
+			"targetname" "weaponstrip"
+			"origin" "50 0 50"
+		}
+		"game_player_equip"
+		{
+			"targetname" "pl_equip_blue"
+			"spawnflags" "1"
+			"weapon_stunstick" "1"
+			"origin" "0 0 0"
+		}
+		"game_player_equip"
+		{
+			"targetname" "pl_equip_red"
+			"spawnflags" "1"
+			"weapon_crowbar" "1"
+			"origin" "0 0 0"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"teamplay" "1"
+			}
+		}
+		TargetName
+		{
+			"zu_combine_cs"
+			{
+				"OnTrigger" "!activator,SetTeam,2,0,-1"
+			}
+			"zu_rebel_f1"
+			{
+				"OnTrigger" "!activator,SetTeam,3,0,-1"
+			}
+			"manhack_spawngeraet01"
+			{
+				"wait" "-1"
+			}
+			"manhack_spawngeraet02"
+			{
+				"wait" "-1"
+			}
+			"npc-maker-manhack01"
+			{
+				"spawnflags" "48"
+				"MaxLiveChildren" "-1"
+				"MaxNPCCount" "200"
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath manhack01_spawn_counter:Subtract:1:0:-1,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath manhack01_spawn_button:UnLock::0:-1,0,-1"
+				"OnSpawnNPC" "manhack01_spawn_counter,Add,1,0,-1"
+				"origin" "536 626.145 11293"
+			}
+			"npc-maker-manhack02"
+			{
+				"spawnflags" "48"
+				"MaxLiveChildren" "-1"
+				"MaxNPCCount" "400"
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath manhack02_spawn_counter:Subtract:1:0:-1,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath manhack_spawngeraet02_knopf:UnLock::0:-1,0,-1"
+				"OnSpawnNPC" "manhack02_spawn_counter,Add,1,0,-1"
+				"origin" "-3791.2 -5912.15 10083"
+			}
+			"npc-maker-manhack03"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"npc-maker-manhack04"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+		//	"rebelteleporterE"
+		//	{
+		//		"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+		//	}
+		//	"combineteleporterWE"
+		//	{
+		//		"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+		//	}
+		}
+		Origin
+		{
+			"734.19 -13592 12574.8"
+			{
+				"teamnumber" "2"
+				"OnDeath" "npc-maker-rollermine01,Enable,,10,-1"
+			}
+			"734.19 -13564 12574.8"
+			{
+				"teamnumber" "2"
+				"OnDeath" "npc-maker-rollermine02,Enable,,10,-1"
+			}
+			"117.5 -3069 11272"
+			{
+				"OnTrigger" "npc-maker-rollermine01,Disable,,0,-1"
+				"OnTrigger" "npc-maker-rollermine02,Disable,,0,-1"
+			}
+			"542 651 11279"
+			{
+				"targetname" "manhack01_spawn_button"
+			}
+			"497.5 627 11293"
+			{
+				"OnStartTouch" "manhack_spawngeraet01,Open,,0,-1"
+				"OnEndTouch" "manhack_spawngeraet01,Close,,0,-1"
+			}
+			"-3752.7 -5913 10083"
+			{
+				"OnStartTouch" "manhack_spawngeraet02,Open,,0,-1"
+				"OnEndTouch" "manhack_spawngeraet02,Close,,0,-1"
+			}
+		//	"2672 -15082.5 9128"
+		//	{
+		//		"OnStartTouch" "weaponstrip,Strip,,0,-1"
+		//	}
+		//	"2656 -15218.5 9128"
+		//	{
+		//		"OnStartTouch" "weaponstrip,Strip,,0,-1"
+		//	}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+	//	"weapon_crowbar" "1"
+		"weapon_physcannon"	"1"
+	//	"weapon_357" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

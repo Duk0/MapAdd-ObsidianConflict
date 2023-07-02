@@ -1,0 +1,180 @@
+coop_wardogs_v5
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"game_score" {}
+			"logic_auto" {}
+			"player_weaponstrip" {}
+		}
+		TargetName
+		{
+			"makerebel" {}
+			"makerebelcases" {}
+		//	"client" {}
+			"music*" {}
+			"speakziel" {}
+			"domesting" {}
+		}
+		Origin
+		{
+			"0 0 -13184" {}
+			"0 0 -13168" {}
+			"0 0 -13136" {}
+			"0 0 -13152" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "elevatordoor,SetAnimation,open,0,1"
+			"OnMapSpawn" "silodoor,Close,,0,1"
+			"OnMapSpawn" "gantzteleporter0,Teleport,,0,1"
+			"OnMapSpawn" "modcharge,AddOutput,rendermode 1,0,1"
+			"OnMapSpawn" "elecase,PickRandomShuffle,,0.4,1"
+			"origin" "264 416 -13191"
+		}
+		"game_score"
+		{
+			"spawnflags" "0"
+			"targetname" "points007"
+			"points" "7"
+			"origin" "-32 -392 -13192"
+		}
+		"ambient_generic"
+		{
+			"message" "wardogs_wardogscrop"
+			"targetname" "music2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-72 432 -13168"
+		}
+		"ambient_generic"
+		{
+			"message" "wardogs_handinfection"
+			"targetname" "music1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-72 408 -13184"
+		}
+		"ambient_generic"
+		{
+			"message" "wardogs_houseelectrocrop"
+			"targetname" "speakziel"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-1112.82 102.278 -13200"
+		}
+		"ambient_generic"
+		{
+			"message" "song_hl1_stinger_7"
+			"targetname" "domesting"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-4031.31 -99.3871 -13655"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"hackerhit4"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"door"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"blah"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+		}
+		Origin
+		{
+			"256 472 -13192"
+			{
+				"Reciprocal" "1"
+			}
+			"32 332 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-96 332 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-224 332 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-316 256 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-316 128 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-316 0 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-316 -128 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-316 -256 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-192 -332 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-64 -332 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"64 -332 -13196"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-2572 -92 -13608"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-2572 -188 -13608"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-4036 -32 -13440"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+			"-3900 -32 -13440"
+			{
+				"OnBreak" "points007,ApplyScore,,0,1"
+			}
+		}
+	}
+	SpawnItems {"weapon_healer" "1"}
+}

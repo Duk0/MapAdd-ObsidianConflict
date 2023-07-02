@@ -1,0 +1,129 @@
+coop_blame!_log1_v2
+{
+	Remove
+	{
+		ClassName
+		{
+			"game_score" {}
+			"game_end" {}
+			"logic_auto" {}
+			"player_weaponstrip" {}
+		}
+		TargetName
+		{
+			"makerebel" {}
+			"client" {}
+			"server" {}
+			"endcount" {}
+			"music*" {}
+		}
+		Origin
+		{
+			"-5563.65 5560 162.115" {}
+			"-5562.13 5560 195.667" {}
+		}
+	}
+	Add
+	{
+		"math_counter"
+		{
+			"max" "2"
+			"startvalue" "2"
+			"targetname" "endcount"
+			"OnHitMin" "mapchange,Command,changelevel coop_blame!_log2_v2,10,1"
+			"OnHitMin" "es,PickRandom,,5,1"
+			"origin" "-5577.3 5559 -22.1"
+		}
+		"point_servercommand"
+		{
+			"targetname" "mapchange"
+			"origin" "-5547.0 5559 -15.2"
+		}
+		"game_score"
+		{
+			"spawnflags" "0"
+			"targetname" "pt07"
+			"points" "7"
+			"origin" "-25.2 -13881.9 -216.7"
+		}
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "modcharge,AddOutput,rendermode 1,0,1"
+		//	"OnMapSpawn" "scanners0*,AddOutput,health 420,0,1"
+		//	"OnMapSpawn" "scanners1*,AddOutput,health 420,0,1"
+			"OnMapSpawn" "gantzteleporter0,Teleport,,0,1"
+			"OnMapSpawn" "gantz2,TurnOff,,0,1"
+			"origin" "7.5 -14046.1 -247"
+		}
+		"ambient_generic"
+		{
+			"fadeinsecs" "0.2"
+			"message" "blame!_umw"
+			"targetname" "music0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-31.8 783.5 -247"
+		}
+		"ambient_generic"
+		{
+			"fadeinsecs" "0.2"
+			"message" "blame!_hc-gs"
+			"targetname" "music1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-322.9 4680 -28.5"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"mapversion" "5"
+			}
+		}
+		TargetName
+		{
+		//	"fastcrabbyhit*"
+		//	{
+		//		"spawnflags" "1032"
+		//	}
+			"vorthit*"
+			{
+				"OnBreak" "pt07,ApplyScore,,0,1"
+			}
+			"lionhit*"
+			{
+				"OnBreak" "pt07,ApplyScore,,0,1"
+			}
+			"equipper1"
+			{
+				"weapon_healer" "1"
+			}
+			"equipper2"
+			{
+				"weapon_healer" "1"
+			}
+			"equipper3"
+			{
+				"weapon_healer" "1"
+			}
+		}
+		Origin
+		{
+			"7.58046 -13982.1 -248"
+			{
+				"Reciprocal" "1"
+			}
+		}
+	}
+	SpawnItems {}
+}

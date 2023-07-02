@@ -1,0 +1,78 @@
+syn_silent_house
+{
+	Remove
+	{
+		TargetName
+		{
+			"musik_2" {}
+			"musik_1" {}
+			"musik_4" {}
+			"musik_fin" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"targetname" "spawn_1"
+			"StartDisabled" "0"
+			"angles" "0 180 0"
+			"origin" "327 -3481.66 -89"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song7"
+			"health" "10"
+			"origin" "408 -3180.66 -129.776"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep_song12"
+			"health" "10"
+			"fadeoutsecs" "3"
+			"origin" "68.0001 -3464.5 -70.292"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_4"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep_song27"
+			"health" "10"
+			"fadeoutsecs" "5"
+			"origin" "77.5931 -3238.66 -48.5244"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_fin"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_Ravenholm"
+			"health" "10"
+			"origin" "195.911 -3156.44 -128.849"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_crowbar" "1"
+		"weapon_physcannon" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

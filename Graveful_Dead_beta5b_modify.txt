@@ -1,0 +1,368 @@
+Graveful_Dead_beta5b
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"zu_rebel_f1" {}
+			"logic_case_rebel" {}
+			"Nur_Rebel_erlaubt" {}
+			"Nur_Combine_erlaubt" {}
+			"weapon_*" {}
+		}
+		Origin
+		{
+			"1136 -504 144.321" {}
+		}
+	}
+	Add
+	{
+	//	"logic_auto"
+	//	{
+	//		"spawnflags" "1"
+	//		"OnMapSpawn" "zombie_trigger,Disable,,0.01,-1"
+	//		"origin" "1136 -504 144.321"
+	//	}
+
+		"weapon_ar2"
+		{
+			"angles" "0 0 0"
+			"origin" "-823.531 -404 8"
+		}
+		"weapon_357"
+		{
+			"angles" "0 180 90"
+			"origin" "-768 -408 4"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 -90"
+			"origin" "-884 -408 4"
+		}
+		"weapon_rpg"
+		{
+			"angles" "0 180 90"
+			"origin" "-861.862 -472 8"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-825.543 -473.483 5.77485"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-716.195 -569.483 5.77485"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "-779.18 -569.483 5.77485"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "-758.985 -560 5.77485"
+		}
+		"item_ammo_ar2_altfire"
+		{
+			"angles" "0 0 0"
+			"origin" "-888 -568.403 5.77485"
+		}
+		"weapon_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-828 -564.403 5.77485"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 300 -90"
+			"origin" "734.894 -1572.52 13.515"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 -90"
+			"origin" "682.231 -1533.63 15.9107"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 30 -90"
+			"origin" "740.246 -1468.89 15.32"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 -90"
+			"origin" "850.898 -1457.13 12.1104"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 30 -90"
+			"origin" "864.276 -1542.85 14.5907"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 0 0"
+			"origin" "-108.122 301.522 17.4265"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 45 0"
+			"origin" "-26.01 311.631 17.644"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 345 0"
+			"origin" "-75.9024 257.318 17.2475"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 0 0"
+			"origin" "32.609 265.17 17.8044"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 135 0"
+			"origin" "52.2455 316.788 17.8044"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "1435.19 -118.817 14.7187"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 285 0"
+			"origin" "1437.83 -173.698 14.5843"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 75 0"
+			"origin" "1380.25 -113.276 12.056"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 300 0"
+			"origin" "1319.76 -118.59 12.056"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 300 0"
+			"origin" "1401.82 -262.5 12.1882"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 -90"
+			"origin" "78.8306 -1429.09 12.0198"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 90 -90"
+			"origin" "59.878 -1380.25 11.2824"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 -90"
+			"origin" "8.50476 -1475.7 12.9512"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 75 -90"
+			"origin" "151.489 -1425.24 11.9773"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 -90"
+			"origin" "33.4559 -1568.24 12.9"
+		}
+		"weapon_rpg"
+		{
+			"angles" "0 180 90"
+			"origin" "139.699 -1523.71 19.6872"
+		}
+		"weapon_357"
+		{
+			"angles" "0 180 90"
+			"origin" "-26.6486 -1527.93 14.2867"
+		}
+		"weapon_357"
+		{
+			"angles" "0 180 90"
+			"origin" "157.643 302.644 10.2812"
+		}
+		"weapon_357"
+		{
+			"angles" "0 180 90"
+			"origin" "586.037 -1559.68 14.8833"
+		}
+		"item_ammo_ar2_altfire"
+		{
+			"angles" "0 0 0"
+			"origin" "539.19 -498.513 13.0107"
+		}
+		"item_ammo_ar2_altfire"
+		{
+			"angles" "0 0 0"
+			"origin" "498.203 -590.818 15.2836"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-27.1918 130.657 6.22275"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "147.239 249.746 12.056"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "547.27 -594.847 16.9616"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "660.843 -425.027 12.2617"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "594.102 -461.038 14.47"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "614.297 -451.555 14.47"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "536.952 -690.946 22.2592"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "557.148 -681.463 22.2592"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "152.122 -1603.82 18.0463"
+		}
+		"weapon_slam"
+		{
+			"angles" "0 0 0"
+			"origin" "172.317 -1594.34 18.0463"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "2.1001 83.354 4.93192"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "22.2954 92.8373 4.93192"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "1441.13 -324.529 16.7413"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "1461.32 -315.046 16.7413"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "-760 -472 5.77485"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "599.528 -506.663 14.7512"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "677.78 -380 8"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "499.128 -688 20"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "489.109 -528 28"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "497.408 -372.431 8.28072"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "204.279 293.799 8.28072"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "-127.218 186.254 5.48772"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "1276.79 20.8411 8.28071"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "1456.8 -393.619 14.8287"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "972.615 -1537.18 14.5841"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "831.401 -1598.38 12.088"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			
+		}
+		TargetName
+		{
+			"zombie_trigger"
+			{
+				"StartDisabled" "1"
+			}
+		}
+		Origin
+		{
+			
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_healer" "1"
+	}
+}

@@ -1,0 +1,171 @@
+syn_sevenhourwar_part1
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"musik_*" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"StartDisabled" "0"
+			"angles" "0 0 0"
+			"origin" "263.521 -461.194 410.839"
+		}
+		"info_player_deathmatch"
+		{
+			"spawnflags" "0"
+			"angles" "0 0 0"
+			"origin" "279.521 -460.816 395.839"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song4"
+			"health" "10"
+			"origin" "2487.62 2974.37 757.117"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_3"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song1"
+			"health" "10"
+			"origin" "3416 4894.19 636.282"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_4"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song3"
+			"health" "10"
+			"origin" "2387.45 8153 617.442"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_6"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song4"
+			"health" "10"
+			"origin" "2599.96 9851.96 392"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_5"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_stinger27"
+			"health" "10"
+			"origin" "2618.08 9854.81 391"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_fin"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_stinger_7"
+			"health" "10"
+			"origin" "2332.73 8796.79 360"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song12"
+			"health" "10"
+			"origin" "1726.59 1378.87 313.962"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "1195.6 291.6 690"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0" 
+			"origin" "1205.9 204.6 677"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "2256.5 2879.6 652"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "2256.5 2855.5 652"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "2256.5 2830.6 652"
+		}
+		"item_battery"
+		{
+			"angles" "0 0 0"
+			"origin" "2353.8 3124 634"
+		}
+		"item_battery"
+		{
+			"angles" "0 0 0"
+			"origin" "2353.8 3114 634"
+		}
+		"item_battery"
+		{
+			"angles" "0 0 0"
+			"origin" "2353.8 3104 634"
+		}
+		"item_battery"
+		{
+			"angles" "0 0 0"
+			"origin" "2343.8 3124 634"
+		}
+		"item_battery"
+		{
+			"angles" "0 0 0"
+			"origin" "2343.8 3114 634"
+		}
+		"item_battery"
+		{
+			"angles" "0 0 0"
+			"origin" "2343.8 3104 634"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_physcannon" "1"
+		"weapon_pistol" "1"
+		"weapon_smg1" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

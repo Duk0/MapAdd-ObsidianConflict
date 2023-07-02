@@ -1,0 +1,299 @@
+coop_epicycle_v4
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_rebel" {}
+			"info_player_combine" {}
+			"game_score" {}
+			"player_weaponstrip" {}
+		}
+		TargetName
+		{
+			"makerebelcases" {}
+		//	"equipperitems" {}
+			"speakziel" {}
+			"music*" {}
+		}
+		Origin
+		{
+			"160 -10192 -12023" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "modcharge,AddOutput,rendermode 1,0,1"
+			"OnMapSpawn" "dome,AddOutput,renderamt 16,0,1"
+			"OnMapSpawn" "dome,AddOutput,rendermode 1,0,1"
+			"OnMapSpawn" "modvortex,AddOutput,rendermode 1,0,1"
+			"OnMapSpawn" "modvortex,AddOutput,renderamt 64,0,1"
+			"OnMapSpawn" "waveprop00,AddOutput,rendermode 1,0,1"
+			"OnMapSpawn" "waveprop00,AddOutput,renderamt 255,0,1"
+			"OnMapSpawn" "waveprop00,Color,0 0 0,0,1"
+			"OnMapSpawn" "waveball00,Color,0 0 0,0,1"
+			"OnMapSpawn" "waveball00,AddOutput,rendermode 1,0,1"
+		//	"OnMapSpawn" "scanners0*,AddOutput,health 420,0,1"
+		//	"OnMapSpawn" "scanners1*,AddOutput,health 420,0,1"
+			"OnMapSpawn" "chargetrail,HideSprite,,0,1"
+			"origin" "160 -10192 -12023"
+		}
+		"ambient_generic"
+		{
+			"message" "wardogs_houseelectrocrop"
+			"targetname" "speakziel"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "178.736 -9623.67 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "music_epicycle"
+			"targetname" "music00"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-8 -10472 -12023"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song15"
+			"targetname" "music04"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-24 -10472 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song20_submix0"
+			"targetname" "music06"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-24 -10504 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song16"
+			"targetname" "music05"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-24 -10488 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song2"
+			"targetname" "music07"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-24 -10520 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song_hl1_10"
+			"targetname" "music01"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-8 -10488 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song12_long"
+			"targetname" "music02"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-8 -10504 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song14"
+			"targetname" "music03"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-8 -10520 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song16"
+			"targetname" "music08"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-40 -10472 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song_eli_01_dam"
+			"targetname" "music12"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-56 -10472 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song_hl1_21"
+			"targetname" "music13"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-56 -10488 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song33"
+			"targetname" "music09"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-40 -10488 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "music_hl1_24"
+			"targetname" "music14"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-56 -10504 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "music_song30"
+			"targetname" "music10"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-40 -10504 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song_hl1_15"
+			"targetname" "music11"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-40 -10520 -12024"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "3"
+			"fadeinsecs" "1"
+			"message" "song_hl1_3"
+			"targetname" "music15"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-56 -10520 -12024"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"func_recharge"
+			{
+				"OnPlayerUse" "equipperitems,EquipActivator,,1,-1"
+			}
+			"npc_cscanner"
+			{
+				"OnLostPlayer" "!self,AddOutput,renderamt 255,0.2,-1"
+				"OnLostPlayer" "!self,AddOutput,renderfx 5,0.1,-1"
+				"OnLostPlayer" "!self,AddOutput,rendermode 1,0.1,-1"
+				"OnPhotographPlayer" "!self,AddOutput,renderfx 1,6.1,-1"
+				"OnPhotographPlayer" "!self,AddOutput,renderamt 60,6.1,-1"
+				"OnUser1" "!self,AddOutput,renderamt 180,0.1,1"
+			}
+			"worldspawn"
+			{
+				"skyname" "sky_day01_09"
+			}
+		}
+	//	TargetName
+		Origin
+		{
+			"160 -10128 -12024"
+			{
+				"Reciprocal" "1"
+			}
+		}
+	}
+	SpawnItems {"weapon_healer" "1"}
+}

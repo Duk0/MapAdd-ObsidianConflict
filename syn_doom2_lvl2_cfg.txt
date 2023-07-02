@@ -1,0 +1,94 @@
+syn_doom2_lvl2
+{
+	"mp_weaponstay" "0"
+	"mp_flashlight" "1"
+	"mp_friendlyfire" "0" 
+	"mp_falldamage" "0"
+
+	"sk_combine_s_health"		"200"
+	"sk_combine_s_kick"		"25"
+	"sk_houndeye_health"		"450"
+	"sk_houndeye_dmg_blast"		"100"
+	"sk_metropolice_health"		"160"
+	"sk_zombie_health"		"200"
+	"sk_zombie_dmg_one_slash"	"50"
+	"sk_zombie_dmg_both_slash"	"75"
+	"sk_zombie_poison_health"	"500"
+	"sk_zombie_poison_dmg_spit"	"80"
+	"sk_antlion_health"		"300"
+	"sk_antlion_swipe_damage"	"45"
+	"sk_antlion_jump_damage"	"80"
+
+	"sk_plr_dmg_ar2"		"8"
+	"sk_npc_dmg_ar2"		"8"
+	"sk_max_ar2"			"120"
+	"sk_max_ar2_altfire"		"2"
+
+	"sk_plr_dmg_alyxgun"		"5"
+	"sk_npc_dmg_alyxgun"		"5"
+	"sk_max_alyxgun"		"400"
+
+	"sk_plr_dmg_pistol"		"12"
+	"sk_npc_dmg_pistol"		"10"
+	"sk_max_pistol"			"210"
+
+	"sk_plr_dmg_smg1"		"6"
+	"sk_npc_dmg_smg1"		"5"
+	"sk_max_smg1"			"500"
+
+	"sk_plr_dmg_buckshot"		"8"	
+	"sk_npc_dmg_buckshot"		"7"
+	"sk_max_buckshot"		"60"
+
+	"sk_plr_dmg_rpg_round"		"400"
+	"sk_npc_dmg_rpg_round"		"400"
+	"sk_max_rpg_round"		"3"
+
+	"sk_plr_dmg_smg1_grenade"	"150"
+	"sk_npc_dmg_smg1_grenade"	"150"
+	"sk_max_smg1_grenade"		"5"
+	"sk_smg1_grenade_radius"	"200"
+
+	"sk_plr_dmg_sniper_round"	"150"
+	"sk_npc_dmg_sniper_round"	"150"
+	"sk_max_sniper_round"		"40"
+
+	"sk_plr_dmg_357"		"60"
+	"sk_npc_dmg_357"		"40"
+	"sk_max_357"			"24"
+
+	"sk_plr_dmg_crossbow"		"200"
+	"sk_npc_dmg_crossbow"		"100"
+	"sk_max_crossbow"		"20"
+
+	"sk_plr_dmg_grenade"		"150"	
+	"sk_npc_dmg_grenade"		"120"
+	"sk_max_grenade"		"10"
+
+	"sk_plr_dmg_crowbar"		"25"
+	"sk_npc_dmg_crowbar"		"25"
+
+	"sk_plr_dmg_stunstick"		"40"
+	"sk_npc_dmg_stunstick"		"40"
+
+	"sk_plr_dmg_satchel"		"750"
+	"sk_npc_dmg_satchel"		"750"
+	"sk_satchel_radius"		"1000"
+	"sk_plr_dmg_fraggrenade"	"150"
+	"sk_npc_dmg_fraggrenade"	"120"
+	"sk_fraggrenade_radius"		"300"
+
+	"sk_npc_head"			"3"
+	"sk_npc_chest"			"1"
+	"sk_npc_stomach"		"1"
+	"sk_npc_arm"			"1"
+	"sk_npc_leg"			"1"
+
+	"sk_player_head"		"3"
+	"sk_player_chest"		"2"
+	"sk_player_stomach"		"3"
+	"sk_player_arm"			"1"
+	"sk_player_leg"			"2"
+
+	"sk_healthvial" 		"5"
+}

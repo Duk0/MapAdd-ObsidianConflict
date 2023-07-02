@@ -1,0 +1,31 @@
+syn_horror
+{
+	"mp_friendlyfire" "0"
+	"mp_weaponstay" "0"
+	"mp_falldamage" "1"
+
+
+	// Zombies Are More Like Zombies
+	"sk_npc_head"		"1.0"
+	"sk_npc_chest"		"0.3"
+	"sk_npc_stomach"		"0.2"
+	"sk_npc_arm"		"0.1"
+	"sk_npc_leg"		"0.1"
+	"sk_zombie_health"	"60"
+	"sk_zombie_poison_health"	"120"
+	"sk_headcrab_health" "20"
+	"sk_headcrab_poison_health" "40"
+
+	// Nerf Combine
+	"sk_metropolice_health"	"15"
+	"sk_combine_s_health"	"25"
+
+	// Make map hard
+	"skill"	"3"
+
+	"sk_citizen_health"	"100"
+	"sk_npc_dmg_crowbar" "25"
+	"sk_plr_dmg_crowbar" "200"
+	"sk_npc_dmg_buckshot" "5"
+	"sk_plr_dmg_buckshot" "120"
+}

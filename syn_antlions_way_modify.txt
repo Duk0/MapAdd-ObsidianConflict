@@ -1,0 +1,80 @@
+syn_antlions_way
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"musik_*" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"StartDisabled" "0"
+			"angles" "0 0 0"
+			"origin" "-1 -14 775"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_1"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep_song12"
+			"health" "10"
+			"origin" "-119 387.672 796.249"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song3"
+			"health" "10"
+			"fadeoutsecs" "2"
+			"origin" "326.669 -504 327.066"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_3"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song0"
+			"health" "10"
+			"fadeoutsecs" "2"
+			"origin" "333.2 -504 497.162"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_fin"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+		//	"message" "music/stingers/industrial_suspense1.wav"
+			"message" "d3_citadel.stinger"
+			"health" "10"
+			"origin" "203.521 -504 555.317"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_physcannon" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol" "2"
+		"item_ammo_smg1" "1"
+		"weapon_healer" "1"
+	}
+}

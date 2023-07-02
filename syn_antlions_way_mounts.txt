@@ -1,0 +1,4 @@
+syn_antlions_way
+{
+	"MountEpisodeTwo" "1"
+}

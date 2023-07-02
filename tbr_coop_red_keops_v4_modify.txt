@@ -1,0 +1,170 @@
+"tbr_coop_red_keops_v4"
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+			"info_player_combine" {}
+			"info_player_rebel" {}
+			"game_score" {}
+			"logic_auto" {}
+		//	"env_tonemap_controller" {}
+		//	"trigger_weapon_strip" {}
+		}
+		TargetName
+		{
+			"server_commands" {}
+			"makerebelcases" {}
+			"red_keops1" {}
+			"red_keops2" {}
+		}
+		Origin
+		{
+			//	model *42
+			"-2722.5 -2048 880" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2862 -1968 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2862 -2008 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2862 -2048 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2862 -2088 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2862 -2128 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2720 -2128 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2720 -2088 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2720 -2048 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2720 -2008 848"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-2720 -1968 848"
+		}
+
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "heli_gun1,SetTargetEntityName,smith,0,-1"
+			"OnMapSpawn" "heli_gun2,SetTargetEntityName,smith,0,-1"
+			"OnMapSpawn" "mgnun*,SetTargetEntityName,smith,0,-1"
+			"OnMapSpawn" "NPC_gunship1,DisableRotorSound,,0,-1"
+			"OnMapSpawn" "NPC_heli,DisableRotorSound,,0,-1"
+		//	"OnMapSpawn" "NPC_cscanner1,SetHealth,600,0,-1"
+		//	"OnMapSpawn" "NPC_cscanner2,SetHealth,600,0,-1"
+		//	"OnMapSpawn" "NPC_cscanner3,SetHealth,600,0,-1"
+		//	"OnMapSpawn" "NPC_cscanner4,SetHealth,600,0,-1"
+		//	"OnMapSpawn" "NPC_cscanner5,SetHealth,600,0,-1"
+		//	"OnMapSpawn" "NPC_cscanner6,SetHealth,600,0,-1"
+			"OnMapSpawn" "part2_plate,Open,,0,-1"
+			"OnMapSpawn" "elevator_gate1_1,SetAnimation,close,2,-1"
+			"OnMapSpawn" "elevator_gate1_2,SetAnimation,close,2,-1"
+			"OnMapSpawn" "elevator_gate1_3,SetAnimation,close,2,-1"
+			"OnMapSpawn" "elevator_gate1_4,SetAnimation,close,2,-1"
+			"OnMapSpawn" "elevator_gate1_5,SetAnimation,close,2,-1"
+			"OnMapSpawn" "elevator_gate1_6,SetAnimation,close,2,-1"
+			"OnMapSpawn" "printer1,SetAnimation,print,0,-1"
+			"OnMapSpawn" "gunship_idle,SetAnimation,idle,0,-1"
+			"OnMapSpawn" "magent_door,Open,,0,-1"
+			"OnMapSpawn" "HDR_tonemap,UseDefaultAutoExposure,,0,-1"
+			"OnMapSpawn" "HDR_tonemap,SetBloomScale,1,0,-1"
+			"OnMapSpawn" "hate,ApplyRelationship,,0,-1"
+			"origin" "-2536 -2008 696"
+		}
+
+		"ai_relationship"
+		{
+			"spawnflags" "0"
+			"Reciprocal" "1"
+			"StartActive" "1"
+			"rank" "90"
+			"radius" "40000"
+			"target" "player"
+			"subject" "npc_vortigaunt"
+			"disposition" "1"
+			"origin" "20 20 20"
+		}
+
+		"ambient_generic"
+		{
+			"fadeoutsecs" "10"
+			"fadeinsecs" "5"
+			"targetname" "red_keops1"
+			"message" "red_keops_loop"
+			"spawnflags" "17"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-2720 -1736 89"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "10"
+			"fadeinsecs" "0"
+			"volstart" "0"
+			"message" "red_keops_full"
+			"targetname" "red_keops2"
+			"spawnflags" "17"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "1560 0 9225"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"chandelier_rollermine" { "MaxNPCCount" "35" }
+		}
+	}
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_crossbow" "1"
+		"weapon_rpg" "1"
+		"item_ammo_crossbow" "1"
+		"item_rpg_round" "1"
+	}
+}

@@ -1,0 +1,14 @@
+coop_missile_silo_
+{
+	"sk_antlion_health" "50"
+	"sk_antlion_jump_damage" "20"
+	"sk_antlion_swipe_damage" "15"
+	"sk_antlionguard_dmg_charge" "75"
+	"sk_antlionguard_dmg_shove" "50"
+	"sk_antlionguard_health" "1000"
+	"sk_headcrab_poison_health" "10"
+	"sk_headcrab_health" "10"
+	"sk_headcrab_melee_dmg" "17"
+	"sk_headcrab_fast_health" "10"
+	"sv_gravity" "600"
+}

@@ -1,0 +1,82 @@
+syn_takeover
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+			"weapon_crowbar" {}
+		}
+		TargetName
+		{
+			"spawn" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"origin" "-416 1108 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"origin" "-416 1056 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"origin" "-416 1004 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 225 0"
+			"origin" "-464 1208 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"origin" "-416 952 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"origin" "-416 1160 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"origin" "-568 1264 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"origin" "-624 1264 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"origin" "-680 1264 65"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"origin" "-736 1264 65"
+		}
+		"weapon_crowbar"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 45 0"
+			"origin" "-407.117 1245.95 180.154"
+		}
+	}
+	SpawnItems
+	{
+		"item_ammo_pistol" "3"
+		"item_ammo_smg1" "2"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

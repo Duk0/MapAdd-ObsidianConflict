@@ -1,0 +1,4 @@
+syn_sevenhourwar_part1
+{
+	"MountEpisodeTwo" "1"
+}

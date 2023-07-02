@@ -1,0 +1,4 @@
+syn_trials4c
+{
+	"MountEpisodeTwo" "1"
+}

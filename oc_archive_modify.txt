@@ -1,0 +1,1718 @@
+//This mapadd has two main parts you can configure.The first part is to configure the security door that allows or denies access to a further 60 mapselect doors (door numbers 121-180) to configure you can change the four digit keycode to your liking, in the block of text under "targetname" "keypad_%i_case", I've added // (notes) at the end of the lines that are configureable. To configure the security door openable or locked requiring the four digit keycode; in the block of text under TargetName "keypad_%i_door" you need to change the value of the "spawnflags" a value of "5136" will allow the door to be openable and no value at all will allow the door to be locked requiring the four digit keycode, Again I've added // (notes) to the line which needs to be configured. The second part is to configure what map doors are breakable and then what map door corresponds to the whatever given mapname. You will see that I have already included Obsidianv.123 official maps for you to follow the pattern up to 180 just make sure you maintain the structure of the text as you add. 
+
+oc_archive
+{
+	Remove
+	{
+		TargetName
+		{
+			"keypad_%i_case" {}
+			"snd_mapchange" {}
+			"music1water" {}
+			"text_map*" {}
+			"countdown_debugger" {}
+		}
+	}
+	Add
+	{
+		"logic_case"
+		{
+			"targetname" "keypad_%i_case"
+			"Case01" "0"
+			"Case02" "1"
+			"Case03" "2"
+			"Case04" "3"
+			"Case05" "4"
+
+			// Value,2 is the first number of the keycode change to any value from 0-9
+			// Value,4 is the second number of the keycode change to any value from 0-9
+			// Value,1 is the third number of the keycode change to any value from 0-9
+			// Value,2 is the fourth number of the keycode change to any value from 0-9
+			"OnCase01" "keypad_%i_compare,SetCompareValue,2,0,-1"
+			"OnCase02" "keypad_%i_compare,SetCompareValue,4,0,-1"
+			"OnCase03" "keypad_%i_compare,SetCompareValue,1,0,-1"
+			"OnCase04" "keypad_%i_compare,SetCompareValue,2,0,-1"
+
+			"OnCase05" "keypad_%i_accept,PlaySound,,0,-1"
+			"OnCase05" "keypad_%i_door,Open,,0,-1"
+			"OnCase05" "keypad_%i_case,InValue,0,0,-1"
+			"OnCase05" "keypad_%i_correctcounter,SetValueNoFire,0,0,-1"
+			"origin" "174 495 -256"
+		}
+
+		"game_text_quick"
+		{
+			"y" ".60"
+			"x" "-1"
+			"targetname" "map_text"
+			"spawnflags" "0"
+			"message" "dummy"
+			"holdtime" "2"
+			"fxtime" "0.25"
+			"fadeout" "0.5"
+			"fadein" "1"
+			"effect" "0"
+			"color2" "0 0 0"
+			"color" "0 255 0"
+			"channel" "1"
+			"origin" "0 0 10"
+		}
+		"game_text_quick"
+		{
+			"y" ".65"
+			"x" "-1"
+			"targetname" "map_text2"
+			"spawnflags" "0"
+			"message" "dummy"
+			"holdtime" "2"
+			"fxtime" "0.25"
+			"fadeout" "0.5"
+			"fadein" "1"
+			"effect" "0"
+			"color2" "0 0 0"
+			"color" "0 255 0"
+			"channel" "2"
+			"origin" "0 0 20"
+		}
+		"game_text_quick"
+		{
+			"y" ".70"
+			"x" "-1"
+			"targetname" "map_text3"
+			"spawnflags" "0"
+			"message" "dummy"
+			"holdtime" "2"
+			"fxtime" "0.25"
+			"fadeout" "0.5"
+			"fadein" "1"
+			"effect" "0"
+			"color2" "0 0 0"
+			"color" "0 255 0"
+			"channel" "3"
+			"origin" "0 0 30"
+		}
+		"game_text_quick"
+		{
+			"y" ".75"
+			"x" "-1"
+			"targetname" "map_text4"
+			"spawnflags" "0"
+			"message" "dummy"
+			"holdtime" "2"
+			"fxtime" "0.25"
+			"fadeout" "0.5"
+			"fadein" "1"
+			"effect" "0"
+			"color2" "0 0 0"
+			"color" "0 255 0"
+			"channel" "4"
+			"origin" "0 0 40"
+		}
+
+		"ambient_generic"
+		{
+			"pitch" "100"
+			"volstart" "10"
+			"message" "song_hl1_11"
+			"targetname" "snd_mapchange"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"health" "10"
+			"origin" "8 -1121 -632"
+		}
+		"ambient_generic"
+		{
+			"targetname" "music1water"
+			"message" "hl2_song10cued"
+			"spawnflags" "1"
+			"radius" "2220"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "18 -1070 -775"
+		}
+
+		"infodecal"
+		{
+			// decal 01
+		//	"targetname" "decal_map01"
+		//	"SprayImmediate" "1"
+			"texture" "duko/oc_archive/coop_123module"
+			"origin" "1003 -233 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 02
+			"texture" "duko/oc_archive/coop_blame!_log1"
+			"origin" "1003 -425 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 03
+			"texture" "duko/oc_archive/coop_blame!_log2"
+			"origin" "1003 -617 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 04
+			"texture" "duko/oc_archive/coop_epicycle"
+			"origin" "1003 -809 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 05
+			"texture" "duko/oc_archive/coop_swampthing"
+			"origin" "1003 -1001 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 06
+			"texture" "duko/oc_archive/coop_wardogs"
+			"origin" "1003 -1193 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 07
+			"texture" "duko/oc_archive/coop_missile_silo"
+			"origin" "1003 -1385 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 08
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "1003 -1577 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 09
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "1003 -1769 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 10
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "1003 -1961 -736"
+		}
+		"infodecal"
+		{
+			// decal 11
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "863.99 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 12
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "671.99 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 13
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "479.89 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 14
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "287.89 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 15
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "95.89 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 16
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-96.01 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 17
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-288.01 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 18
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-480.11 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 19
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-672.11 -2095 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 20
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-864.11 -2095 -736"
+		}
+		"infodecal"
+		{
+			// decal 21
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-1003 -1961 -735.38"
+		}
+		"infodecal"
+		{
+			// decal 22
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-1003 -1769 -735.38"
+		}
+//		"infodecal"
+//		{
+//			// decal 23
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1577 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 24
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1385 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 25
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1193 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 26
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1001 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 27
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -809 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 28
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -617 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 29
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -425 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 30
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -233 -735.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 31
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -233.01 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 32
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -425.01 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 33
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -617.11 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 34
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -809.11 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 35
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1001.11 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 36
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1193.01 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 37
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1385.01 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 38
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1577.11 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 39
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1769.11 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 40
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1961.11 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 41
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "864 -2095 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 42
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "672 -2095 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 43
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "480 -2095 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 44
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "288 -2095 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 45
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "96 -2095 -575.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 46
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-96 -2095 -572"
+//		}
+//		"infodecal"
+//		{
+//			// decal 47
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-288 -2095 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 48
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-480 -2095 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 49
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-672 -2095 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 50
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-864 -2095 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 51
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1961 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 52
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1769 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 53
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1577 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 54
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1385 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 55
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1193 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 56
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1000 -574"
+//		}
+//		"infodecal"
+//		{
+//			// decal 57
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -809 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 58
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -619 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 59
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -425 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 60
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -233 -576"
+//		}
+//		"infodecal"
+//		{
+//			// decal 61
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -233 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 62
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -425 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 63
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -617 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 64
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -809 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 65
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1001 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 66
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1193 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 67
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1385 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 68
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1577 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 69
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1769 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 70
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "1003 -1961 -416"
+//		}
+//		"infodecal"
+//		{
+//			// decal 71
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "863.99 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 72
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "671.99 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 73
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "479.89 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 74
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "287.89 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 75
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "95.89 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 76
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-96.01 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 77
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-288.01 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 78
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-480.11 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 79
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-672.11 -2095 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 80
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-864.11 -2095 -416"
+//		}
+//		"infodecal"
+//		{
+//			// decal 81
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1961 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 82
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1769 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 83
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1577 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 84
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1385 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 85
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1193 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 86
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -1001 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 87
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -809 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 88
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -617 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 89
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-1003 -425 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 90
+//			"texture" "duko/oc_archive/syn_antlions_way"
+//			"origin" "-1003 -233 -415.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 91
+//			"texture" "duko/oc_archive/syn_antlions_way"
+//			"origin" "1003 -233.01 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 92
+//			"texture" "duko/oc_archive/syn_bunker"
+//			"origin" "1003 -425.01 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 93
+//			"texture" "duko/oc_archive/syn_canal_escape_part1"
+//			"origin" "1003 -617.11 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 94
+//			"texture" "duko/oc_archive/syn_desolate"
+//			"origin" "1003 -809.11 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 95
+//			"texture" "duko/oc_archive/syn_farm"
+//			"origin" "1003 -1001.11 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 96
+//			"texture" "duko/oc_archive/syn_heat_wave"
+//			"origin" "1003 -1193.01 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 97
+//			"texture" "duko/oc_archive/syn_oldcanals"
+//			"origin" "1003 -1385.01 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 98
+//			"texture" "duko/oc_archive/syn_sevenhourwar_part1"
+//			"origin" "1003 -1577.11 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 99
+//			"texture" "duko/oc_archive/syn_silent_house"
+//			"origin" "1003 -1769.11 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 100
+//			"texture" "duko/oc_archive/syn_takeover"
+//			"origin" "1003 -1961.11 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 101
+//			"texture" "duko/oc_archive/syn_trials4"
+//			"origin" "864 -2095 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 102
+//			"texture" "duko/oc_archive/syn_trials4b"
+//			"origin" "672 -2095 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 103
+//			"texture" "duko/oc_archive/syn_trials4c"
+//			"origin" "480 -2095 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 104
+//			"texture" "duko/oc_archive/syn_trials4d"
+//			"origin" "288 -2095 -255.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 105
+//			"texture" "duko/oc_archive/syn_urbanchaos"
+//			"origin" "96 -2095 -255.38"
+//		}
+		"infodecal"
+		{
+			// decal 106
+			"texture" "duko/oc_archive/syn_antlions_way"
+			"origin" "-96 -2095 -252"
+		}
+		"infodecal"
+		{
+			// decal 107
+			"texture" "duko/oc_archive/syn_bunker"
+			"origin" "-288 -2095 -256"
+		}
+		"infodecal"
+		{
+			// decal 108
+			"texture" "duko/oc_archive/syn_canal_escape_part1"
+			"origin" "-480 -2095 -256"
+		}
+		"infodecal"
+		{
+			// decal 109
+			"texture" "duko/oc_archive/syn_desolate"
+			"origin" "-672 -2095 -256"
+		}
+		"infodecal"
+		{
+			// decal 110
+			"texture" "duko/oc_archive/syn_farm"
+			"origin" "-864 -2095 -256"
+		}
+		"infodecal"
+		{
+			// decal 111
+			"texture" "duko/oc_archive/syn_heat_wave"
+			"origin" "-1003 -1961 -256"
+		}
+		"infodecal"
+		{
+			// decal 112
+			"texture" "duko/oc_archive/syn_oldcanals"
+			"origin" "-1003 -1769 -256"
+		}
+		"infodecal"
+		{
+			// decal 113
+			"texture" "duko/oc_archive/syn_sevenhourwar_part1"
+			"origin" "-1003 -1577 -256"
+		}
+		"infodecal"
+		{
+			// decal 114
+			"texture" "duko/oc_archive/syn_silent_house"
+			"origin" "-1003 -1385 -256"
+		}
+		"infodecal"
+		{
+			// decal 115
+			"texture" "duko/oc_archive/syn_takeover"
+			"origin" "-1003 -1193 -256"
+		}
+		"infodecal"
+		{
+			// decal 116
+			"texture" "duko/oc_archive/syn_trials4"
+			"origin" "-1003 -1000 -254"
+		}
+		"infodecal"
+		{
+			// decal 117
+			"texture" "duko/oc_archive/syn_trials4b"
+			"origin" "-1003 -809 -256"
+		}
+		"infodecal"
+		{
+			// decal 118
+			"texture" "duko/oc_archive/syn_trials4c"
+			"origin" "-1003 -619 -256"
+		}
+		"infodecal"
+		{
+			// decal 119
+			"texture" "duko/oc_archive/syn_trials4d"
+			"origin" "-1003 -425 -256"
+		}
+		"infodecal"
+		{
+			// decal 120
+			"texture" "duko/oc_archive/syn_urbanchaos"
+			"origin" "-1003 -233 -256"
+		}
+
+		// 2nd section
+		"infodecal"
+		{
+			// decal 121
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-520 1215.01 -63.38"
+		}
+//		"infodecal"
+//		{
+//			// decal 122
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-520 1407.01 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 123
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-520 1599.11 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 124
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-520 1791.11 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 125
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-520 1983.11 -63.38"
+//		}
+		"infodecal"
+		{
+			// decal 126
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "-383.99 2118 -63.38"
+		}
+//		"infodecal"
+//		{
+//			// decal 127
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-191.99 2137.11 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 128
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "0.11 2137.01 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 129
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "192.11 2119.01 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 130
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "384.11 2138.01 -64"
+//		}
+		"infodecal"
+		{
+			// decal 131
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "523 1983 -63.38"
+		}
+//		"infodecal"
+//		{
+//			// decal 132
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "524 1791 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 133
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "524 1599 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 134
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "524 1407 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 135
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "524 1215 -63.38"
+//		}
+		"infodecal"
+		{
+			// decal 136
+			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+			"origin" "384 1080 -63.38"
+		}
+//		"infodecal"
+//		{
+//			// decal 137
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "192 1071 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 138
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "0 1071 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 139
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-192 1079 -63.38"
+//		}
+//		"infodecal"
+//		{
+//			// decal 140
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-384 1070 -64"
+//		}
+//		"infodecal"
+//		{
+//			// decal 141
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-651.99 1215.01 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 142
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-651.99 1407.01 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 143
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-651.99 1599.11 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 144
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-651.99 1791.11 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 145
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-651.99 1983.11 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 146
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-383.99 2251.11 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 147
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-191.99 2251.11 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 148
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "0.11 2251.01 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 149
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "192.11 2251.01 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 150
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "384.11 2251.01 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 151
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "652 1983 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 152
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "652 1791 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 153
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "652 1599 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 154
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "652 1407 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 155
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "652 1215 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 156
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "384 947 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 157
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "192 947 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 158
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "0 947 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 159
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-192 947 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 160
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-384 947 96.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 161
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-779.99 1215 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 162
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-779.99 1407 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 163
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-779.99 1599 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 164
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-779.99 1791 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 165
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-779.99 1983 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 166
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-383 2379.11 258"
+//		}
+//		"infodecal"
+//		{
+//			// decal 167
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-192 2379.11 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 168
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-2 2379.01 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 169
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "192 2379.01 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 170
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "384 2379.01 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 171
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "780 1983 256.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 172
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "780 1791 256.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 173
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "780 1599 256.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 174
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "780 1407 256.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 175
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "780 1215 256.62"
+//		}
+//		"infodecal"
+//		{
+//			// decal 176
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "384 819 260"
+//		}
+//		"infodecal"
+//		{
+//			// decal 177
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "192 819 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 178
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "0 819 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 179
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-192 819 256"
+//		}
+//		"infodecal"
+//		{
+//			// decal 180
+//			"texture" "darkdevice/map_select/ep1_oc_broken_escape_01"
+//			"origin" "-384 819 256"
+//		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"mapversion" "519"
+			}
+
+			"logic_auto"
+			{
+				"OnMapSpawn" "wall_map01,Disable,,0,-1"
+				"OnMapSpawn" "door_map01,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map02,Disable,,0,-1"
+				"OnMapSpawn" "door_map02,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map03,Disable,,0,-1"
+				"OnMapSpawn" "door_map03,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map04,Disable,,0,-1"
+				"OnMapSpawn" "door_map04,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map05,Disable,,0,-1"
+				"OnMapSpawn" "door_map05,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map06,Disable,,0,-1"
+				"OnMapSpawn" "door_map06,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map07,Disable,,0,-1"
+				"OnMapSpawn" "door_map07,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map08,Disable,,0,-1"
+				"OnMapSpawn" "door_map08,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map09,Disable,,0,-1"
+				"OnMapSpawn" "door_map09,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map10,Disable,,0,-1"
+				"OnMapSpawn" "door_map10,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map11,Disable,,0,-1"
+				"OnMapSpawn" "door_map11,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map12,Disable,,0,-1"
+				"OnMapSpawn" "door_map12,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map13,Disable,,0,-1"
+				"OnMapSpawn" "door_map13,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map14,Disable,,0,-1"
+				"OnMapSpawn" "door_map14,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map15,Disable,,0,-1"
+				"OnMapSpawn" "door_map15,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map16,Disable,,0,-1"
+				"OnMapSpawn" "door_map16,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map17,Disable,,0,-1"
+				"OnMapSpawn" "door_map17,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map18,Disable,,0,-1"
+				"OnMapSpawn" "door_map18,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map19,Disable,,0,-1"
+				"OnMapSpawn" "door_map19,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map20,Disable,,0,-1"
+				"OnMapSpawn" "door_map20,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map21,Disable,,0,-1"
+				"OnMapSpawn" "door_map21,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map22,Disable,,0,-1"
+				"OnMapSpawn" "door_map22,SetHealth,1000,0,-1"
+
+				"OnMapSpawn" "wall_map106,Disable,,0,-1"
+				"OnMapSpawn" "door_map106,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map107,Disable,,0,-1"
+				"OnMapSpawn" "door_map107,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map108,Disable,,0,-1"
+				"OnMapSpawn" "door_map108,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map109,Disable,,0,-1"
+				"OnMapSpawn" "door_map109,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map110,Disable,,0,-1"
+				"OnMapSpawn" "door_map110,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map111,Disable,,0,-1"
+				"OnMapSpawn" "door_map111,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map112,Disable,,0,-1"
+				"OnMapSpawn" "door_map112,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map113,Disable,,0,-1"
+				"OnMapSpawn" "door_map113,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map114,Disable,,0,-1"
+				"OnMapSpawn" "door_map114,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map115,Disable,,0,-1"
+				"OnMapSpawn" "door_map115,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map116,Disable,,0,-1"
+				"OnMapSpawn" "door_map116,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map117,Disable,,0,-1"
+				"OnMapSpawn" "door_map117,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map118,Disable,,0,-1"
+				"OnMapSpawn" "door_map118,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map119,Disable,,0,-1"
+				"OnMapSpawn" "door_map119,SetHealth,1000,0,-1"
+				"OnMapSpawn" "wall_map120,Disable,,0,-1"
+				"OnMapSpawn" "door_map120,SetHealth,1000,0,-1"
+
+				"OnMapSpawn" "wall_map121,Disable,,0,-1"
+				"OnMapSpawn" "door_map121,SetHealth,1000,0,-1"
+
+				"OnMapSpawn" "wall_map126,Disable,,0,-1"
+				"OnMapSpawn" "door_map126,SetHealth,1000,0,-1"
+
+				"OnMapSpawn" "wall_map131,Disable,,0,-1"
+				"OnMapSpawn" "door_map131,SetHealth,1000,0,-1"
+
+				"OnMapSpawn" "wall_map136,Disable,,0,-1"
+				"OnMapSpawn" "door_map136,SetHealth,1000,0,-1"
+			}
+		}
+		Targetname
+		{
+			//To toggle the door openable by players add the value 5136, to lock the door simply remove the value 5136
+			"keypad_%i_door" {"spawnflags" "5136"}
+
+			"mapchange_relay" {"OnTrigger" "music1water,StopSound,,0,-1"}
+
+			"maker*" 
+			{
+				"spawnflags" "112"
+				"SpawnFrequency" "45"
+			//	"MaxNPCCount" "2"
+			}
+
+		//	"text_map*" {"y" "0.4"}
+
+		//	"text_map01" {"message" "coop_123module_v2"}
+			"trigger_map01" {"OnTrigger" "server,Command,changelevel coop_123module_v2,5,1"}
+			"door_map01"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_123module_v2,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,Author:Singe,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map02" {"message" "coop_blame!_log1_v2"}
+			"trigger_map02" {"OnTrigger" "server,Command,changelevel coop_blame!_log1_v2,5,1"}
+			"door_map02"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_blame!_log1_v2,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,Author:Singe,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map03" {"message" "coop_blame!_log2_v2"}
+			"trigger_map03" {"OnTrigger" "server,Command,changelevel coop_blame!_log2_v2,5,1"}
+			"door_map03"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_blame!_log2_v2,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,Author:Singe,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map04" {"message" "coop_epicycle_v4"}
+			"trigger_map04" {"OnTrigger" "server,Command,changelevel coop_epicycle_v4,5,1"}
+			"door_map04"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_epicycle_v4,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,Author:Singe,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map05" {"message" "coop_swampthing_v6"}
+			"trigger_map05" {"OnTrigger" "server,Command,changelevel coop_swampthing_v6,5,1"}
+			"door_map05"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_swampthing_v6,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,Author:Singe,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map06" {"message" "coop_wardogs_v5"}
+			"trigger_map06" {"OnTrigger" "server,Command,changelevel coop_wardogs_v5,5,1"}
+			"door_map06"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_wardogs_v5,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,Author:Singe,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map07" {"message" "coop_missile_silo214"}
+			"trigger_map07" {"OnTrigger" "server,Command,coop_missile_silo214,5,1"}
+			"door_map07"
+			{
+				"OnHealthChanged" "map_text,DisplayText,coop_missile_silo214,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:None,0,-1"
+			}
+
+		//	"text_map08" {"message" "oc_evildead"}
+			"trigger_map08" {"OnTrigger" "server,Command,changelevel oc_evildead,5,1"}
+			"door_map08"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map09" {"message" "oc_freezingpoint"}
+			"trigger_map09" {"OnTrigger" "server,Command,changelevel oc_freezingpoint,5,1"}
+			"door_map09"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map10" {"message" "oc_kake_e"}
+			"trigger_map10" { "OnTrigger" "server,Command,changelevel oc_kake_e,5,1"}
+			"door_map10"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map11" {"message" "oc_manor"}
+			"trigger_map11" {"OnTrigger" "server,Command,changelevel oc_manor,5,1"}
+			"door_map11"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map12" {"message" "oc_seamus"}
+			"trigger_map12" {"OnTrigger" "server,Command,changelevel oc_seamus,5,1"}
+			"door_map12"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map13" {"message" "oc_sewers"}
+			"trigger_map13" {"OnTrigger" "server,Command,changelevel oc_sewers,5,1"}
+			"door_map13"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map14" {"message" "oc_stadium"}
+			"trigger_map14" {"OnTrigger" "server,Command,changelevel oc_stadium,5,1"}
+			"door_map14"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map15" {"message" "oc_starlight"}
+			"trigger_map15" {"OnTrigger" "server,Command,changelevel oc_starlight,5,1"}
+			"door_map15"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map16" {"message" "oc_stitches_1"}
+			"trigger_map16" {"OnTrigger" "server,Command,changelevel oc_stitches_1,5,1"}
+			"door_map16"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map17" {"message" "oc_stitches_2"}
+			"trigger_map17" {"OnTrigger" "server,Command,changelevel oc_stitches_2,5,1"}
+			"door_map17"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map18" {"message" "oc_umizuri_i"}
+			"trigger_map18" {"OnTrigger" "server,Command,changelevel oc_umizuri_i,5,1"}
+			"door_map18"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map19" {"message" "oc_waking_dead"}
+			"trigger_map19" {"OnTrigger" "server,Command,changelevel oc_waking_dead,5,1"}
+			"door_map19"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map20" {"message" "oc_wgh"}
+			"trigger_map20" {"OnTrigger" "server,Command,changelevel oc_wgh,5,1"}
+			"door_map20"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map21" {"message" "ocf_deadland"}
+			"trigger_map21" {"OnTrigger" "server,Command,changelevel ocf_deadland,5,1"}
+			"door_map21"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map22" {"message" "z_harrier2_c"}
+			"trigger_map22" {"OnTrigger" "server,Command,changelevel z_harrier2_c,5,1"}
+			"door_map22"
+			{
+				"OnHealthChanged" "map_text,DisplayText,ep1_oc_broken_escape_01,0,-1"
+			//	"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+			//	"OnHealthChanged" "map_text4,DisplayText,Mounts:,0,-1"
+			}
+
+		//	"text_map106" {"message" "syn_antlions_way"}
+			"trigger_map106" {"OnTrigger" "server,Command,changelevel syn_antlions_way,5,1"}
+			"door_map106"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_antlions_way,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map107" {"message" "syn_bunker"}
+			"trigger_map107" {"OnTrigger" "server,Command,changelevel syn_bunker,5,1"}
+			"door_map107"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_bunker,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map108" {"message" "syn_canal_escape_part1"}
+			"trigger_map108" {"OnTrigger" "server,Command,changelevel syn_canal_escape_part1,5,1"}
+			"door_map108"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_canal_escape_part1,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN,0,-1"
+			}
+
+		//	"text_map109" {"message" "syn_desolate"}
+			"trigger_map109" {"OnTrigger" "server,Command,changelevel syn_desolate,5,1"}
+			"door_map109"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_desolate,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN,0,-1"
+			}
+
+		//	"text_map110" {"message" "syn_farm"}
+			"trigger_map110" {"OnTrigger" "server,Command,changelevel syn_farm,5,1"}
+			"door_map110"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_farm,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN,0,-1"
+			}
+
+		//	"text_map111" {"message" "syn_heat_wave"}
+			"trigger_map111" {"OnTrigger" "server,Command,changelevel syn_heat_wave,5,1"}
+			"door_map111"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_heat_wave,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map112" {"message" "syn_oldcanals"}
+			"trigger_map112" {"OnTrigger" "server,Command,changelevel syn_oldcanals,5,1"}
+			"door_map112"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_oldcanals,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN,0,-1"
+			}
+
+		//	"text_map113" {"message" "syn_sevenhourwar_part1"}
+			"trigger_map113" {"OnTrigger" "server,Command,changelevel syn_sevenhourwar_part1,5,1"}
+			"door_map113"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_sevenhourwar_part1,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map114" {"message" "syn_silent_house"}
+			"trigger_map114" {"OnTrigger" "server,Command,changelevel syn_silent_house,5,1"}
+			"door_map114"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_silent_house,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map115" {"message" "syn_takeover"}
+			"trigger_map115" {"OnTrigger" "server,Command,changelevel syn_takeover,5,1"}
+			"door_map115"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_takeover,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN,0,-1"
+			}
+
+		//	"text_map116" {"message" "syn_trials4"}
+			"trigger_map116" {"OnTrigger" "server,Command,changelevel syn_trials4,5,1"}
+			"door_map116"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_trials4,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map117" {"message" "syn_trials4b"}
+			"trigger_map117" {"OnTrigger" "server,Command,changelevel syn_trials4b,5,1"}
+			"door_map117"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_trials4b,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map118" {"message" "syn_trials4c"}
+			"trigger_map118" {"OnTrigger" "server,Command,changelevel syn_trials4c,5,1"}
+			"door_map118"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_trials4c,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map119" {"message" "syn_trials4d"}
+			"trigger_map119" {"OnTrigger" "server,Command,changelevel syn_trials4d,5,1"}
+			"door_map119"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_trials4d,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP2,0,-1"
+			}
+
+		//	"text_map120" {"message" "syn_urbanchaos"}
+			"trigger_map120" {"OnTrigger" "server,Command,changelevel syn_urbanchaos,5,1"}
+			"door_map120"
+			{
+				"OnHealthChanged" "map_text,DisplayText,syn_urbanchaos,0,-1"
+				"OnHealthChanged" "map_text2,DisplayText,MapAddAuthor:Duko,0,-1"
+			//	"OnHealthChanged" "map_text3,DisplayText,Genre:Linear/Combat,0,-1"
+				"OnHealthChanged" "map_text4,DisplayText,Mounts:SYN/EP1,0,-1"
+			}
+        }
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_grapple" "1"
+		"item_battery" "1"
+		"item_cloak" "1"
+		"item_ammo_pistol_large" "3"
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+	}
+}

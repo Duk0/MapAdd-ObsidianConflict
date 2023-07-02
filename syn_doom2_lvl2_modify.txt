@@ -1,0 +1,64 @@
+syn_doom2_lvl2
+{
+	Remove
+	{
+		ClassName
+		{
+			"trigger_weapon_strip" {}
+			"game_end" {}
+		//	"weapon_melee" {}
+		}
+	//	TargetName
+	//	{
+	//	}
+	}
+	Add
+	{
+		"point_servercommand"
+		{
+			"targetname" "end_next_map"
+			"origin" "-1272 3498 1682"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+		//	"trigger_noblock"
+		//	{
+		//		"classname" "trigger_nocollide"
+		//	}
+			"trigger_teleport"
+			{
+				"spawnflags" "1"
+			}
+//			"weapon_medkit"
+//			{
+//				"classname" "item_healthvial"
+//			}
+		}
+		TargetName
+		{
+			"rel_1"
+			{
+				"OnTrigger" "end_next_map,Command,changelevel syn_doom2_lvl3,7,-1"
+			}
+//			"c_14"
+//			{
+//				"additionalequipment" "weapon_smg1"
+//			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+	//	"weapon_357" "1"
+	//	"weapon_smg1" "1"
+		"item_ammo_pistol" "8"
+		"item_ammo_smg1" "5"
+		"item_ammo_357" "6"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

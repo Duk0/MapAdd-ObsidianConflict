@@ -1,0 +1,1099 @@
+syn_horror
+{
+	Remove
+	{
+		ClassName
+		{
+			"synergy_gameinfo" {}
+			"weapon_medkit" {}
+			"weapon_flaregun" {}
+			"info_checkpoint" {}
+			"item_box_flare_rounds" {}
+			"trigger_noblock" {}
+			"phys_ragdollconstraint" {}
+		}
+		TargetName
+		{
+			"a6_gman_s" {}
+			"a4_metro_s" {}
+			"a5_spawner" {}
+			"intro_relay" {}
+			"start_relay" {}
+			"a6_ender" {}
+			"intro_music" {}
+			"start_music" {}
+			"a2_music" {}
+			"a3_music" {}
+			"a4_music" {}
+			"end_music" {}
+			"game_dynm_music" {}
+		}
+		Origin
+		{
+			"2040 928 -871" {}
+			"1984 1040 -871" {}
+			"2080 832 -871" {}
+			"2128 1008 -871" {}
+
+			"1904.11 270.979 -863" {}
+			"2308 954.95 -870.362" {}
+
+			"712.569 478.967 -722.846" {}
+			"-1372 624 -696" {}
+		}
+	}
+	Add
+	{
+		"npc_barney"
+		{
+			"targetname" "a2_fix_barn"
+			"angles" "0 180 0"
+			"spawnflags" "8198"
+			"GameEndAlly" "No"
+			"additionalequipment" "weapon_shotgun"
+			"origin" "2065 1036 -835"
+		}
+		"npc_kleiner"
+		{
+			"targetname" "a2_fix_kle"
+			"angles" "0 180 0"
+			"spawnflags" "8196"
+			"GameEndAlly" "No"
+			"OnDeath" "a2_music,PlaySound,,0,-1"
+			"OnDeath" "a2_wheel,Unlock,,0,-1"
+			"OnDeath" "game_npc_deathmanager,Enable,,0,-1"
+			"origin" "2085 858 -835"
+		}
+		"npc_maker"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "1"
+			"MaxNPCCount" "1"
+			"SpawnFrequency" "-1"
+			"MaxLiveChildren" "1"
+			"additionalequipment" "0"
+			"targetname" "a6_gman_s"
+			"NPCType" "npc_breen"
+			"NPCTargetname" "a6_breen"
+		//	"npcname" "Boss"
+			"npchealth" "350"
+			"spawnflags" "0"
+			"OnAllSpawnedDead" "a6_ender,Trigger,,0,-1"
+			"origin" "-5640 -1328 -839"
+		}
+		"npc_maker"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"MaxNPCCount" "4"
+			"SpawnFrequency" "1"
+			"MaxLiveChildren" "4"
+			"additionalequipment" "weapon_smg1"
+			"targetname" "a4_metro_s"
+			"NPCType" "npc_metropolice"
+			"NPCTargetname" "a4_metro"
+			"NPCSquadname" "a4_c"
+		//	"Radius" "128"
+			"spawnflags" "0"
+			"OnAllSpawnedDead" "a5_spawner,Enable,,0,-1"
+			"origin" "-3837.24 44.3314 -839"
+		}
+		"npc_maker"
+		{
+			"angles" "0 80 0"
+			"StartDisabled" "1"
+			"MaxNPCCount" "1"
+			"SpawnFrequency" "-1"
+			"MaxLiveChildren" "1"
+			"additionalequipment" "weapon_smg1"
+			"targetname" "a5_spawner"
+			"NPCType" "npc_metropolice"
+			"NPCTargetname" "a5_metro_t"
+			"NPCSquadname" "a4_c"
+			"spawnflags" "48"
+			"origin" "-5576 360 -839"
+		}
+		"npc_maker"
+		{
+			"angles" "0 80 0"
+			"StartDisabled" "1"
+			"MaxNPCCount" "1"
+			"SpawnFrequency" "-1"
+			"MaxLiveChildren" "1"
+			"additionalequipment" "weapon_smg1"
+			"targetname" "a5_spawner"
+			"NPCType" "npc_metropolice"
+			"NPCTargetname" "a5_metro_t"
+			"NPCSquadname" "a4_c"
+			"spawnflags" "48"
+			"origin" "-5480 456 -839"
+		}
+	//	"npc_gman"
+	//	{
+	//		"targetname" "a6_gman_fix"
+	//		"spawnflags" "2052"
+	//		"origin" "0 0 0"
+	//	}
+		"logic_relay"
+		{
+			"spawnflags" "1"
+			"targetname" "intro_relay"
+			"OnTrigger" "intro_text1,Display,,15,-1"
+			"OnTrigger" "intro_text1b,Display,,19,-1"
+			"OnTrigger" "intro_music,PlaySound,,1,-1"
+			"OnTrigger" "intro_text2b,Display,,29,-1"
+			"OnTrigger" "intro_text2,Display,,25,-1"
+			"OnTrigger" "start_relay,Trigger,,70,-1"
+			"OnTrigger" "intro,SetCameraViewEntity,intro_cam,39,-1"
+			"OnTrigger" "intro,SetBlendMode,1,39.01,-1"
+			"OnTrigger" "intro,SetNextBlendMode,4,40,-1"
+			"OnTrigger" "intro,SetNextBlendTime,30,40.01,-1"
+			"OnTrigger" "intro,FadeTo,0 45,40.02,-1"
+			"OnTrigger" "intro,Deactivate,,86,-1"
+			"OnTrigger" "intro_splutter_t,Enable,,1,-1"
+			"OnTrigger" "intro_splutter_t,Disable,,90,-1"
+			"origin" "-240 -240 -352"
+		}
+		"logic_relay"
+		{
+			"targetname" "start_relay"
+			"spawnflags" "1"
+			"OnTrigger" "start_music,PlaySound,,0,-1"
+			"OnTrigger" "start_zscare,Enable,,0,-1"
+			"OnTrigger" "start_zscare,Kill,,60,-1"
+			"OnTrigger" "start_zdoorscare,Enable,,65,-1"
+			"OnTrigger" "start_wood1,Break,,137,-1"
+			"OnTrigger" "start_wood2,Break,,180,-1"
+			"OnTrigger" "start_wood3,Break,,210,-1"
+			"OnTrigger" "start_zdoor,Kill,,232,-1"
+			"OnTrigger" "start_zdoorbreak,Break,,232,-1"
+			"OnTrigger" "start_zdoorscare,Kill,,232,-1"
+			"OnTrigger" "start_trigger,Enable,,240,-1"
+			"OnTrigger" "Credit1,Display,,0,-1"
+			"OnTrigger" "Credit2,Display,,7,-1"
+			"OnTrigger" "Credit3,Display,,14,-1"
+			"OnTrigger" "Credit4,Display,,21,-1"
+			"OnTrigger" "start_dude,Kill,,230,-1"
+			"OnTrigger" "start_breaker,Kill,,170.1,-1"
+			"OnTrigger" "wood_crate,AddOutput,OnPlayerPickup start_breaker2:Display::0:-1,170.2,-1"
+			"OnTrigger" "countdown_timer,SetTimerLabel,Time to escape:,0,-1"
+			"OnTrigger" "countdown_timer,StartTimer,240,0,-1"
+			"origin" "-208 -240 -352"
+		}
+		"logic_relay"
+		{
+			"spawnflags" "1"
+			"targetname" "a6_ender"
+			"OnTrigger" "a6_health,Enable,,0,-1"
+			"OnTrigger" "a6_explode,PlaySound,,0,-1"
+			"OnTrigger" "intro,FadeTo,255 0.1,0,-1"
+			"OnTrigger" "intro,Activate,,0.01,-1"
+			"OnTrigger" "intro,SetCameraViewEntity,intro_cam,10,-1"
+			"OnTrigger" "intro,SetBlendMode,1,10.01,-1"
+			"OnTrigger" "intro,SetNextBlendMode,4,20,-1"
+			"OnTrigger" "intro,SetNextBlendTime,25,20.01,-1"
+			"OnTrigger" "intro,FadeTo,0 30,20.02,-1"
+			"OnTrigger" "intro,Deactivate,,35,-1"
+		//	"OnTrigger" "a4_checkpoint,ClearCheckpoint,,10,-1"
+		//	"OnTrigger" "mission_end,SetCheckpoint,,10,-1"
+		//	"OnTrigger" "mission_end,MovePlayers,0,10,-1"
+			"OnTrigger" "a6_inc_lock,Trigger,,0.5,-1"
+			"OnTrigger" "a2_inc_hatch,Close,,0,-1"
+			"OnTrigger" "a2_inc_doors,Close,,0,-1"
+			"OnTrigger" "a6_inc_activate,Trigger,,20,-1"
+			"OnTrigger" "a6_groan,PlaySound,,10,-1"
+		//	"OnTrigger" "mission_end,ClearCheckpoint,,20,-1"
+		//	"OnTrigger" "a6_checkpoint,SetCheckpoint,,20,-1"
+		//	"OnTrigger" "a6_checkpoint,MovePlayers,0,20,-1"
+			"OnTrigger" "a6_inc_fire,Trigger,,30,-1"
+			"OnTrigger" "a6_gman_sound,PlaySound,,33,-1"
+			"OnTrigger" "a6_schedule,StartSchedule,,35,-1"
+			"OnTrigger" "game_dynm_music,FadeOut,1,1,-1"
+			"OnTrigger" "game_npc_deathmanager,Disable,,0,-1"
+			"OnTrigger" "a6_skill*,Kill,,10,-1"
+			"OnTrigger" "a6_solly_t,Kill,,10,-1"
+			"OnTrigger" "a6_metro_t,Kill,,10,-1"
+			"OnTrigger" "a6_gman_s2,Enable,,10,-1"
+			"OnTrigger" "intro_splutter_t,Enable,,13,-1"
+			"OnTrigger" "intro_splutter_t,Disable,,25,-1"
+			"OnTrigger" "pt_a4_checkpoint,Disable,,10,-1"
+			"OnTrigger" "pt_mission_end,Enable,,10,-1"
+			"OnTrigger" "pt_mission_end,Disable,,20,-1"
+			"OnTrigger" "pt_a6_checkpoint,Enable,,20,-1"
+			"origin" "-5639.68 -1093.3 -839"
+		}
+		"game_text"
+		{
+			"targetname" "start_breaker2"
+			"channel" "1"
+			"color" "255 0 0"
+			"color2" "255 0 0"
+			"effect" "0"
+			"fadein" "1"
+			"fadeout" "1"
+			"fxtime" "0.25"
+			"holdtime" "3"
+			"message" "Try Break This With Saw Blade."
+			"spawnflags" "0"
+			"x" "-1"
+			"y" "-1"
+			"origin" "-248 59 -440"
+		}
+		"weapon_crowbar"
+		{
+			"angles" "0 0 30"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"origin" "1845 217.817 -865"
+		}
+		"weapon_crowbar"
+		{
+			"angles" "0 0 30"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"origin" "-3202 105 -842.846"
+		}
+		"weapon_crowbar"
+		{
+			"angles" "0 0 30"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"origin" "546 481 -716"
+		}
+		"weapon_slam"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "649.4 475.3 -716"
+		}
+		"weapon_shotgun"
+		{
+			"angles" "0 0 270"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"origin" "-3084 102 -837.627"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 90 0"
+			"fademaxdist" "0"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"origin" "707 468 -712"
+		}
+	//	"item_item_crate"
+	//	{
+	//		"angles" "0 139 0"
+	//		"damagetoenablemotion" "0"
+	//		"Damagetype" "0"
+	//		"disableshadows" "0"
+	//		"fademindist" "-1"
+	//		"fadescale" "1"
+	//		"inertiaScale" "1.0"
+	//		"ItemClass" "item_box_buckshot"
+	//		"ItemCount" "4"
+	//		"minhealthdmg" "0"
+	//		"nodamageforces" "0"
+	//		"physdamagescale" "0.1"
+	//		"pressuredelay" "0"
+	//		"spawnflags" "0"
+	//		"origin" "692.176 643.045 -742.918"
+	//	}
+	//	"weapon_frag"
+	//	{
+	//		"fadescale" "1"
+	//		"fademindist" "-1"
+	//		"angles" "0 0 0"
+	//		"origin" "-3225.8 -10.5 -845"
+	//	}
+		"weapon_healer"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "1483 287 -630"
+		}
+		"weapon_healer"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "716 668 -750"
+		}
+		"weapon_healer"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "-3225.8 -10.5 -845"
+		}
+		"weapon_smg1"
+		{
+			 "angles" "0 90 90"
+			 "origin" "-3632 -92 -821"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1655 376 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1466 368 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 50 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1623 231 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1556 232 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1478 233 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1533 371 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 30 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1709 324 -631"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a2_checkpoint"
+			"origin" "1590 369 -631" // 1620.96 288.887 -631
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3081 77 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3205 75 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3080 -7 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3080 -66 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3137 -8 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3193 -3 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3130 -65 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a4_checkpoint"
+			"origin" "-3147.66 76.6952 -847"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "725 535 -745"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "667 535 -744"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "598 536 -729"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "632 623 -736"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "672 588 -744"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "677 658 -744"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "730 700 -745"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a3_checkpoint"
+			"origin" "722 637 -745"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2799 952 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2685 952 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2656 1004 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2716 1005 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2773 1005 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2829 1003 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2712 903 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2778 907 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_a6_checkpoint"
+			"origin" "2743.75 951.294 -871"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4191 2267 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4196 2153 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4150 2123 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4149 2184 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4152 2241 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4149 2294 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4236 2238 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4242 2184 -1063"
+		}
+		"info_teleport_destination"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"targetname" "teleport_mission_end"
+			"origin" "4192 2208 -1063"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "192"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_a2_checkpoint"
+			"TeleportDestination" "teleport_a2_checkpoint"
+			"origin" "-86 -39 -381"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "280"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_a3_checkpoint"
+			"TeleportDestination" "teleport_a3_checkpoint"
+			"origin" "-86 -39 -383"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "280"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_a4_checkpoint"
+			"TeleportDestination" "teleport_a4_checkpoint"
+			"origin" "-86 -39 -385"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "280"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_a6_checkpoint"
+			"TeleportDestination" "teleport_a6_checkpoint"
+			"origin" "-86 -39 -387"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "690"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_a6_checkpoint"
+			"TeleportDestination" "teleport_a6_checkpoint"
+			"origin" "4192 2214 -832"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "2200"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_mission_end"
+			"TeleportDestination" "teleport_mission_end"
+			"origin" "-4470 -10.9316 -759"
+		}
+		"point_teleport"
+		{
+			"angles" "0 0 0"
+			"radius" "280"
+			"spawnflags" "2048"
+			"StartEnabled" "0"
+			"targetname" "pt_mission_end"
+			"TeleportDestination" "teleport_mission_end"
+			"origin" "-89 -39 -384"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-3852.07 -99.4898 -844.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-3801.91 -78.7379 -844.285"
+		}
+		"item_healthvial"
+		{
+			"spawnflags" "0"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-3900.54 -104.977 -844.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-3886.77 -150.522 -844.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-3828.19 -143.89 -844.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-3849.47 -194.461 -844.285"
+		}
+		"item_healthvial"
+		{
+			"spawnflags" "0"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-5339.58 433.272 -845.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-5325.81 387.727 -845.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-5291.11 438.759 -845.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-5240.95 459.511 -845.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-5267.23 394.359 -845.285"
+		}
+		"item_healthvial"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 90"
+			"origin" "-5288.51 343.788 -845.285"
+		}
+		"weapon_slam"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "656 299 -600"
+		}
+		"weapon_slam"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "659 391 -600"
+		}
+		"weapon_slam"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "640 359 -600"
+		}
+	//	"weapon_slam"
+	//	{
+	//		"fadescale" "1"
+	//		"fademindist" "-1"
+	//		"angles" "0 0 0"
+	//		"origin" "708.229 660.488 -748.057"
+	//	}
+		"trigger_nocollide"
+		{
+			"model" "*30"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"origin" "8 188 -384"
+		}
+		"trigger_nocollide"
+		{
+			"model" "*58"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"origin" "80 112 -384"
+		}
+		"trigger_nocollide"
+		{
+			"model" "*71"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"origin" "2680 1300 -600"
+		}
+		"trigger_nocollide"
+		{
+			"model" "*80"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"origin" "32 -176 -384"
+		}
+		"trigger_nocollide"
+		{
+			"model" "*83"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"origin" "508 666 -712"
+		}
+		"ambient_generic"
+		{
+			"message" "syn_horror_intro"
+			"targetname" "intro_music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-272 -240 -439"
+		}
+		"ambient_generic"
+		{
+			"fadeoutsecs" "20"
+			"message" "syn_horror_start"
+			"targetname" "start_music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-240 -240 -439"
+		}
+		"ambient_generic"
+		{
+			"message" "syn_horror_a2"
+			"targetname" "a2_music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "2130.42 902.063 -863"
+		}
+		"ambient_generic"
+		{
+			"message" "syn_horror_a3"
+			"targetname" "a3_music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "3469.55 1246.68 -797"
+		}
+		"ambient_generic"
+		{
+			"message" "syn_horror_a4"
+			"targetname" "a4_music"
+			"spawnflags" "49"
+			"radius" "3768"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-3600 -872 -839"
+		}
+		"ambient_generic"
+		{
+			"message" "syn_horror_end"
+			"targetname" "end_music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "4128 2240 -1032"
+		}
+		"ambient_generic"
+		{
+			"message" "syn_horror_dyn_battle"
+			"targetname" "game_dynm_music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"health" "10"
+			"origin" "-224 -72 -439"
+		}
+		"prop_physics"
+		{
+			"spawnflags" "256"
+			"skin" "0"
+			"rendercolor" "255 255 255"
+			"renderamt" "255"
+			"physdamagescale" "0.1"
+			"model" "models/props_c17/oildrum001.mdl"
+			"inertiaScale" "1.0"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "-273.1 -239.6 -447.5"
+		}
+		"prop_ragdoll"
+		{
+			"skin" "0"
+			"model" "models/humans/group03/female_04_bloody.mdl"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"spawnflags" "4"
+			"angles" "0 0 0"
+			"origin" "1904.11 270.979 -863"
+		}
+		"prop_ragdoll"
+		{
+			"skin" "0"
+			"model" "models/humans/group03/female_01_bloody.mdl"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"spawnflags" "4"
+			"angles" "0 0 0"
+			"origin" "2308 954.95 -870.362"
+		}
+		"phys_ballsocket"
+		{
+			"attach1" "a3_deady"
+			"origin" "3376 1112 -760"
+		}
+		"trigger_once"
+		{
+			"model" "*74"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"classname" "trigger_once"
+			"OnTrigger" "a3_gman,Wake,,0,-1"
+			"OnTrigger" "a3_gexplode,PlaySound,,0,-1"
+			"OnTrigger" "a3_glight,TurnOn,,0,-1"
+			"OnTrigger" "a3_glight_s,LightOn,,0,-1"
+			"OnTrigger" "a3_gfire,StartFire,,0,-1"
+			"OnTrigger" "intro,SetCameraViewEntity,a3_cam,0,-1"
+			"OnTrigger" "intro,SetBlendMode,6,0.01,-1"
+			"OnTrigger" "intro,Activate,,0.02,-1"
+			"OnTrigger" "intro,SetNextBlendMode,8,0.03,-1"
+			"OnTrigger" "intro,SetNextBlendTime,4,0.04,-1"
+			"OnTrigger" "a3_zoom,Open,,0.03,-1"
+			"OnTrigger" "pt_a3_checkpoint,Enable,,0,-1"
+			"OnTrigger" "pt_a2_checkpoint,Disable,,0,-1"
+			"origin" "-1372 624 -696"
+		}
+		"game_countdown_timer"
+		{
+			"targetname" "countdown_timer"
+			"origin" "30 20 10"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"mapversion" "130"
+				"showmotd" "0"
+			}
+		}
+		TargetName
+		{
+			"intro_text2"
+			{
+				"message" "syn_horror (v1.5)"
+			}
+			"intro_text2b"
+			{
+				"message" "syn_horror (v1.5)"
+			}
+			"start_dude"
+			{
+				"sleepstate" "3"
+			}
+			"a2_ladder_m"
+			{
+				"blockdamage" "10"
+			}
+			"a3_door"
+			{
+				"material" "2"
+			}
+			"a2_inc_doors"
+			{
+				"dmg" "10"
+				"loopmovesound" "0"
+				"spawnflags" "4130"
+			}
+			"a4_scene"
+			{
+				"OnTrigger" "pt_a3_checkpoint,Disable,,0,-1"
+				"OnTrigger" "pt_a4_checkpoint,Enable,,0,-1"
+			}
+		//	"a6_ender"
+		//	{
+		//		"OnTrigger" "pt_a4_checkpoint,Disable,,10,-1"
+		//		"OnTrigger" "pt_mission_end,Enable,,10,-1"
+		//		"OnTrigger" "pt_mission_end,Disable,,20,-1"
+		//		"OnTrigger" "pt_a6_checkpoint,Enable,,20,-1"
+		//	}
+			"end_master"
+			{
+				"OnTrigger" "pt_a6_checkpoint,Disable,,0,-1"
+				"OnTrigger" "pt_mission_end,Enable,,0,-1"
+			}
+			"mpc_init"
+			{
+				"OnTrigger" "a2_inc_doorcontrol,Unlock,,0,-1"
+			}
+
+			"mpc_count" {"max" "1"}
+		}
+		Origin
+		{
+			"2056 960 -816"
+			{
+				"excludednpc" "npc_zombie"
+				"invert_exclusion" "0"
+			}
+			"732 312 -631.719"
+			{
+				"minhealthdmg" "40"
+			}
+		//	"2754.62 684.662 -864"
+		//	{
+		//		"TemplateName" "a6_gman_fix"
+		//	}
+		//	"2807.28 633.815 -863"
+		//	{
+		//		"m_iszEntity" "a6_gman_fix"
+		//	}
+		//	"3288 516 -842.15"
+		//	{
+		//		"spawnflags" "1057"
+		//	}
+			"-254.772 119.041 -427.719"
+			{
+				"targetname" "wood_crate"
+			}
+			"1296 304 -592"
+			{
+				"OnTrigger" "pt_a2_checkpoint,Enable,,0,-1"
+			}
+		//	"-1372 624 -696"
+		//	{
+		//		"OnTrigger" "pt_a3_checkpoint,Enable,,0,-1"
+		//		"OnTrigger" "pt_a2_checkpoint,Disable,,0,-1"
+		//	}
+			"12 172 -348"
+			{
+				"OnTrigger" "countdown_timer,StopTimer,,0,-1"
+			}
+		}
+	}
+	SpawnItems {}
+}

@@ -1,0 +1,112 @@
+coop_the_escape_part3_beta5
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"logic_case_rebel" {}
+			"zu_combine_p" {}
+			"zu_combine_css" {}
+			"Punkte1" {}
+			"Punkte10" {}
+		}
+		Origin
+		{
+			"2588.01 -8487.87 -2095" {}
+			"5499.2 -5683 -1276" {}
+		}
+	}
+	Add
+	{
+		"trigger_once"
+		{
+			"model" "*320"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnTrigger" "info_nextlevel,Display,,0,-1"
+			"OnTrigger" "sv_cmd,Command,changelevel coop_the_escape_part4_beta4,20,1"
+			"OnTrigger" "EndGame,EndGame,,30,1"
+			"origin" "2588.01 -8487.87 -2095"
+		}
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "kameraachse1,Toggle,,2,-1"
+			"OnMapSpawn" "zaehlerschieber,Toggle,,0,-1"
+			"OnMapSpawn" "kameraachse3,Toggle,,2,-1"
+		//	"OnMapSpawn" "debuginfo1,Display,,20,-1"
+			"OnMapSpawn" "kameraachse2,Toggle,,2,-1"
+			"OnMapSpawn" "2knopftuerB,SetAnimation,Close,1,-1"
+			"origin" "5499.2 -5683 -1276"
+		}
+		"point_servercommand"
+		{
+			"targetname" "sv_cmd"
+			"origin" "5470 -5710 -1280"
+		}
+		"player_weaponstrip"
+		{
+			"targetname" "weaponstrip"
+			"origin" "50 0 50"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"teamplay" "1"
+			}
+		}
+		TargetName
+		{
+			"zu_combine_cs"
+			{
+				"OnTrigger" "!activator,SetTeam,2,0,-1"
+			}
+			"zu_rebel_f1"
+			{
+				"OnTrigger" "!activator,SetTeam,3,0,-1"
+			}
+			"rebelteleporterE"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+			"combineteleporterWE"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+		}
+		Origin
+		{
+			"5088 -5997 -1220"
+			{
+				"OnStartTouch" "weaponstrip,Strip,,0,-1"
+			}
+			"5072 -6133 -1220"
+			{
+				"OnStartTouch" "weaponstrip,Strip,,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_357" "1"
+		"weapon_physcannon"	"1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

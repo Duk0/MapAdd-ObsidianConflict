@@ -1,0 +1,786 @@
+syn_trials4d
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"prelude_liftdoor" {}
+			"mission_stage6_music" {}
+			"intro_music_crows" {}
+			"end_endsound" {}
+			"mission_stage2_music" {}
+			"mission_stage5_music" {}
+			"trial_e_fail" {}
+			"trial_e_stage2music" {}
+			"trial_e_stage5music" {}
+			"end_creditsound" {}
+		}
+		Origin
+		{
+			"2424 402 -400" {}
+			"2694 402 -400" {}
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"intro_relay_end"
+			{
+				"OnTrigger" "game_cp0,Disable,,5,-1"
+				"OnTrigger" "game_cp1,Enable,,5,-1"
+				"OnTrigger" "game_cp1pt,Teleport,,5,-1"
+			}
+			"prelude_combine_relay"
+			{
+			//	"OnTrigger" "info_player_deathmatch,AddOutput,OnPlayerSpawn trial_a_equip:EquipActivator::0.11:-1,0,-1"
+				"OnTrigger" "spawn_items_equip,AddOutput,weapon_crowbar 1,0,-1"
+				"OnTrigger" "spawn_items_equip,AddOutput,weapon_healer 1,0.01,-1"
+				"OnTrigger" "spawn_items_equip,EquipAll,,0.1,-1"
+			//	"OnTrigger" "trial_a_equip,EquipAll,,1,-1"
+			}
+			"trial_e_relay_start"
+			{
+			//	"OnTrigger" "info_player_deathmatch,AddOutput,OnPlayerSpawn trial_e_equip:EquipActivator::0.12:-1,0,-1"
+			//	"OnTrigger" "trial_e_equip,AddOutput,targetname spawn_items_equip,0,-1"
+				"OnTrigger" "spawn_items_equip,AddOutput,weapon_smg1 1,0,-1"
+				"OnTrigger" "spawn_items_equip,AddOutput,weapon_pistol 1,0.01,-1"
+				"OnTrigger" "spawn_items_equip,AddOutput,item_battery 1,0.02,-1"
+			}
+			"trial_e_logic_stage"
+			{
+				"OutValue" "trial_e_timer,StopTimer,,0,-1"
+			//	"OutValue" "trial_e_relay_fail,CancelPending,,0,-1"
+			//	"OutValue" "trial_e_relay_stage*,CancelPending,,0,-1"
+				"OutValue" "trial_e_relay_stage2,CancelPending,,0,-1"
+				"OutValue" "trial_e_relay_stage3,CancelPending,,0,-1"
+				"OutValue" "trial_e_relay_stage4,CancelPending,,0,-1"
+				"OutValue" "trial_e_relay_stage5,CancelPending,,0,-1"
+				"OutValue" "trial_e_relay_stage6,CancelPending,,0,-1"
+				"OutValue" "trial_e_tutorial_stopnotify_oc_fix,CancelPending,,0,-1"
+			}
+			"trial_e_relay_stage2"
+			{
+				"spawnflags" "0"
+				"OnTrigger" "trial_e_timer,SetTimerLabel,TIME LIMIT,0,-1"
+				"OnTrigger" "trial_e_timer,StartTimer,400,0,-1"
+				"OnTrigger" "trial_e_relay_fail,Trigger,,400,-1"
+			}
+			"trial_e_relay_stage3"
+			{
+				"spawnflags" "0"
+				"OnTrigger" "trial_e_timer,SetTimerLabel,TIME LIMIT,0,-1"
+				"OnTrigger" "trial_e_timer,StartTimer,300,0,-1"
+				"OnTrigger" "trial_e_relay_fail,Trigger,,300,-1"
+			}
+			"trial_e_relay_stage4"
+			{
+				"spawnflags" "0"
+				"OnTrigger" "trial_e_timer,SetTimerLabel,TIME LIMIT,0,-1"
+				"OnTrigger" "trial_e_timer,StartTimer,430,0,-1"
+				"OnTrigger" "trial_e_relay_fail,Trigger,,430,-1"
+			}
+			"trial_e_relay_stage5"
+			{
+				"spawnflags" "0"
+				"OnTrigger" "trial_e_timer,SetTimerLabel,TIME LIMIT,0,-1"
+				"OnTrigger" "trial_e_timer,StartTimer,500,0,-1"
+				"OnTrigger" "trial_e_relay_fail,Trigger,,500,-1"
+			}
+			"trial_e_relay_stage6"
+			{
+				"spawnflags" "0"
+				"OnTrigger" "trial_e_timer,SetTimerLabel,TIME LIMIT,0,-1"
+				"OnTrigger" "trial_e_timer,StartTimer,400,0,-1"
+				"OnTrigger" "trial_e_relay_fail,Trigger,,400,-1"
+			}
+			"trial_e_tutorial_stopnotify"
+			{
+				"OnTrigger" "trial_e_tutorial_stopnotify_oc_fix,Trigger,,0,-1"
+			}
+			"trial_e_tuttext*"
+			{
+				"y" "0.6"
+				"color" "0 200 255"
+			}
+			"trial_e_loaded*"
+			{
+				"y" "0.6"
+				"color" "0 200 255"
+			}
+			"trial_e_factory"
+			{
+				"y" "0.6"
+				"color" "0 200 255"
+			}
+			"trial_e_topfactory"
+			{
+				"y" "0.6"
+				"color" "0 200 255"
+			}
+			"trial_e_woods"
+			{
+				"y" "0.6"
+				"color" "0 200 255"
+			}
+		}
+		Origin
+		{
+			"3256 624 448"
+			{
+				"OnTrigger" "game_cp2,Disable,,0,-1"
+				"OnTrigger" "game_cp3,Enable,,0,-1"
+			}
+			"2108 424 -256"
+			{
+				"OnTrigger" "game_cp3,Disable,,0,-1"
+				"OnTrigger" "game_cp4,Enable,,0,-1"
+			}
+		//	"2424 402 -400" { "targetname" "brush_trial_e_truck1" }
+		//	"2694 402 -400" { "targetname" "brush_trial_e_truck2" }
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp0"
+			"angles" "0 0 0"
+			"OnPlayerSpawn" "player_branch,Test,,5,-1"
+			"origin" "2144 -3136 -255"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp0"
+			"angles" "0 0 0"
+			"OnPlayerSpawn" "player_branch,Test,,5,-1"
+			"origin" "2144 -3046 -255"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp0"
+			"angles" "0 0 0"
+			"OnPlayerSpawn" "player_branch,Test,,5,-1"
+			"origin" "2144 -2956 -255"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1484 -2240 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1574 -2240 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1664 -2240 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1754 -2240 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1844 -2240 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1484 -2150 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1574 -2150 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1664 -2150 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1754 -2150 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1844 -2150 360"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp2"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "1230 -180 393"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp2"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "1230 -290 393"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp2"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "1320 -180 393"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp2"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "1320 -290 393"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3462.4 494.34 385"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3462.4 404.34 385"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3462.4 314.34 385"
+		}
+	//	"info_player_deathmatch"
+	//	{
+	//		"targetname" "game_cp3"
+	//		"StartDisabled" "1"
+	//		"angles" "0 162 0"
+	//		"origin" "3552.4 494.34 385"
+	//	}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3552.4 404.34 385"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3552.4 314.34 385"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3372.4 494.34 385"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 162 0"
+			"origin" "3372.4 404.34 385"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2010.76 417.781 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2110 488 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2110 364 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2200 488 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2200 364 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2290 488 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "2290 364 -319"
+		}
+	//	"info_player_start"
+	//	{
+	//		"angles" "0 70 0"
+	//		"origin" "1614.52 -2169.26 361"
+	//	}
+		"game_player_equip"
+		{
+			"spawnflags" "1"
+			"targetname" "trial_a_equip"
+			"weapon_crowbar" "1"
+			"origin" "1188 -1072 625"
+		}
+		"game_player_equip"
+		{
+			"spawnflags" "1"
+			"targetname" "trial_e_equip"
+			"weapon_smg1" "1"
+			"item_battery" "1"
+			"origin" "2256 880 -263"
+		}
+		"logic_player_branch"
+		{
+			"spawnflags" "0"
+			"targetname" "player_branch"
+			"InitialValue" "2"
+			"StrictEqualto" "0"
+			"OnTrue" "game_start,Trigger,,0,-1"
+			"OnTrue" "!self,Kill,,0.01,-1"
+			"origin" "0 0 100"
+		}
+		"trigger_player_count"
+		{
+			"model" "*40"
+			"targetname" "trial_a_hud"
+			"StartDisabled" "0"
+			"spawnflags" "1"
+			"OnAllPlayersEntered" "trial_a_hud,Disable,,0,-1"
+			"OnAllPlayersEntered" "trial_a_zap,PlaySound,,0,-1"
+			"OnAllPlayersEntered" "trial_a_sw_i,Enable,,0,-1"
+			"OnAllPlayersEntered" "trial_a_hinge,Break,,10,-1"
+			"OnAllPlayersEntered" "trial_a_explode,Explode,,10.05,-1"
+			"OnAllPlayersEntered" "trial_a_clip,Kill,,10,-1"
+			"OnAllPlayersEntered" "trial_a_dust,TurnOn,,10.05,-1"
+			"OnAllPlayersEntered" "trial_a_dust,TurnOff,,20,-1"
+			"OnAllPlayersEntered" "trial_a_door,Open,,12,-1"
+			"OnAllPlayersEntered" "trial_a_spawner,Enable,,13,-1"
+			"OnAllPlayersEntered" "trial_a_cam,Disable,,0,-1"
+			"OnAllPlayersEntered" "prelude_combine_t,Kill,,20,-1"
+			"OnAllPlayersEntered" "prelude_combine_t*,Kill,,20,-1"
+			"OnAllPlayersEntered" "prelude_phys,KillHierarchy,,10.05,-1"
+			"OnAllPlayersEntered" "trial_a_light,TurnOn,,10.05,-1"
+			"OnAllPlayersEntered" "prelude_laser*,Kill,,0,-1"
+			"OnAllPlayersEntered" "game_stageclear,Trigger,,0,-1"
+			"OnAllPlayersEntered" "game_cp1,Disable,,0,-1"
+			"OnAllPlayersEntered" "game_cp2,Enable,,0,-1"
+			"origin" "1264 -368 452"
+		}
+		"point_teleport"
+		{
+			"spawnflags" "18432"
+			"StartEnabled" "0"
+			"targetname" "game_cp1pt"
+			"TeleportDestination" "game_cp1t"
+			"radius" "256"
+			"angles" "0 0 0"
+			"origin" "1674.47 -1706.62 370" // 1674.47 -1706.62 360
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage6_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song1"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "8"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2056 931.922"
+		}
+		"ambient_generic"
+		{
+			"targetname" "intro_music_crows"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song12"
+			"health" "10"
+			"origin" "2272 -3296 -192"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "end_endsound"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song4"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "2048 -3200 -248"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage2_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song1"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2120 931.922"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage5_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep_song0"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "8"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2072 931.922"
+		}
+		"ambient_generic"
+		{
+			"targetname" "trial_e_fail"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_Ravenholm"
+			"health" "10"
+			"origin" "5232 6736 -359"
+		}
+		"ambient_generic"
+		{
+			"targetname" "trial_e_stage2music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep_song9"
+			"health" "10"
+			"origin" "5296 6648 -359"
+		}
+		"ambient_generic"
+		{
+			"targetname" "trial_e_stage5music"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song3"
+			"health" "10"
+			"origin" "5344 6648 -359"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "end_creditsound"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_credits_1"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "2048 -3184 -248"
+		}
+		"game_countdown_timer"
+		{
+			"targetname" "trial_e_timer"
+			"origin" "5232 6656 -359"
+		}
+		"logic_relay"
+		{
+			"spawnflags" "0"
+			"targetname" "trial_e_tutorial_stopnotify_oc_fix"
+			"OnTrigger" "trial_e_timer,SetTimerLabel,TIME LIMIT,0,-1"
+			"OnTrigger" "trial_e_timer,StartTimer,240,0,-1"
+			"OnTrigger" "trial_e_relay_fail,Trigger,,240,-1"
+			"origin" "2212 756 256"
+		}
+	//	"logic_relay"
+	//	{
+	//		"spawnflags" "0"
+	//		"targetname" "trial_e_relay_fail_oc_fix"
+	//		"OnTrigger" "trial_e_relay_fail,Trigger,,0,-1"
+	//		"OnTrigger" "trial_e_relay_fail,Enable,,0.1,-1"
+	//		"origin" "2212 756 512"
+	//	}
+		"prop_vehicle_jeep"
+	//	"prop_vehicle_jeep_episodic"
+		{
+			"vehiclescript" "scripts/vehicles/trialstruck.txt"
+		//	"vehiclescript" "scripts/vehicles/jeep_test.txt"
+			"targetname" "trial_e_truck1"
+			"solid" "6"
+			"skin" "0"
+			"model" "models/vehicles/8seattruck.mdl"
+		//	"model" "models/vehicles/truck.mdl"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 270 0"
+			"actionScale" "1"
+			"EnableGun" "0"
+			"PlayerOn" "trial_e_truck1_camera,EnableForActivatorOnly,,0,-1"
+			"PlayerOff" "trial_e_truck1_camera,DisableForActivatorOnly,,0,-1"
+			"PlayerOn" "trial_e_truck1_gui,Activate,,0,-1"
+			"PlayerOff" "trial_e_truck1_gui,Deactivate,,0,-1"
+			"PlayerOn" "cameramode_hudhint,ShowHudHint,,1,-1"
+		//	"PlayerOn" "cameramode_text,DisplayText,For Change Camera Mode Press Attack,1,-1"
+		//	"PlayerOff" "trial_e_truck1_compare,SetValue,0,0,-1"
+			"origin" "2548 423.68 -442.97"
+		}
+		"prop_vehicle_jeep"
+		{
+			"vehiclescript" "scripts/vehicles/trialstruck.txt"
+			"targetname" "trial_e_truck2"
+			"solid" "6"
+			"skin" "0"
+			"model" "models/vehicles/8seattruck.mdl"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 270 0"
+			"actionScale" "1"
+			"EnableGun" "0"
+			"PlayerOn" "trial_e_truck2_camera,EnableForActivatorOnly,,0,-1"
+			"PlayerOff" "trial_e_truck2_camera,DisableForActivatorOnly,,0,-1"
+			"PlayerOn" "trial_e_truck2_gui,Activate,,0,-1"
+			"PlayerOff" "trial_e_truck2_gui,Deactivate,,0,-1"
+			"PlayerOn" "cameramode_hudhint,ShowHudHint,,1,-1"
+		//	"PlayerOn" "cameramode_text,DisplayText,For Change Camera Mode Press Attack,1,-1"
+		//	"PlayerOff" "trial_e_truck2_compare,SetValue,0,0,-1"
+			"origin" "2818.06 424 -442.97"
+		}
+		"point_viewcontrol"
+		{
+			"targetname" "trial_e_truck1_camera"
+			"spawnflags" "1672"
+			"angles" "0 0 0"
+			"origin" "2618 443.68 -370"
+		}
+		"point_viewcontrol"
+		{
+			"targetname" "trial_e_truck2_camera"
+			"spawnflags" "1672"
+			"angles" "0 0 0"
+			"origin" "2888.06 444 -370"
+		}
+		"game_ui"
+		{
+			"targetname" "trial_e_truck1_gui"
+			"spawnflags" "64"
+			"FieldOfView" "-1.0"
+			"PressedAttack" "trial_e_truck1_compare,Compare,,0,-1"
+			"origin" "200 0 0"
+		}
+		"game_ui"
+		{
+			"targetname" "trial_e_truck2_gui"
+			"spawnflags" "64"
+			"FieldOfView" "-1.0"
+			"PressedAttack" "trial_e_truck2_compare,Compare,,0,-1"
+			"origin" "0 200 0"
+		}
+		"logic_compare"
+		{
+			"InitialValue" "0"
+			"CompareValue" "0"
+			"targetname" "trial_e_truck1_compare"
+			"OnEqualTo" "!self,SetValue,1,0,-1"
+			"OnGreaterThan" "!self,SetValue,0,0,-1"
+			"OnEqualTo" "cl_cmd,Command,thirdperson,0,-1"
+			"OnGreaterThan" "cl_cmd,Command,firstperson,0,-1"
+			"OnEqualTo" "cameramode_text,DisplayText,Thirdperson Mode,0,-1"
+			"OnGreaterThan" "cameramode_text,DisplayText,Firstperson Mode,0,-1"
+			"origin" "0 200 200"
+		}
+		"logic_compare"
+		{
+			"InitialValue" "0"
+			"CompareValue" "0"
+			"targetname" "trial_e_truck2_compare"
+			"OnEqualTo" "!self,SetValue,1,0,-1"
+			"OnGreaterThan" "!self,SetValue,0,0,-1"
+			"OnEqualTo" "cl_cmd,Command,thirdperson,0,-1"
+			"OnGreaterThan" "cl_cmd,Command,firstperson,0,-1"
+			"OnEqualTo" "cameramode_text,DisplayText,Thirdperson Mode,0,-1"
+			"OnGreaterThan" "cameramode_text,DisplayText,Firstperson Mode,0,-1"
+			"origin" "200 0 200"
+		}
+		"point_clientcommand"
+		{
+			"targetname" "cl_cmd"
+			"origin" "0 0 200"
+		}
+		"game_text_quick"
+		{
+			"y" "0.65"
+			"x" "-1"
+			"targetname" "cameramode_text"
+			"spawnflags" "0"
+			"message" "dummy"
+			"holdtime" "2"
+			"fxtime" "0.25"
+			"fadeout" "0.25"
+			"fadein" "0.5"
+			"effect" "0"
+			"color2" "0 0 0"
+			"color" "50 255 50"
+			"channel" "2"
+			"origin" "200 200 0"
+		}
+		"env_hudhint"
+		{
+			"targetname" "cameramode_hudhint"
+			"message" "%+attack% Toggle Camera"
+			"origin" "200 200 200"
+		}
+		"trigger_once"
+		{
+			"model" "*121"
+			"StartDisabled" "0"
+			"spawnflags" "8"
+			"filtername" "filter_triale_cargo1"
+			"OnTrigger" "trial_e_tutcounter,Add,1,0,-1"
+			"origin" "2692 428 -390"
+		}
+		"trigger_once"
+		{
+			"model" "*125"
+			"StartDisabled" "0"
+			"spawnflags" "8"
+			"filtername" "filter_triale_cargo2"
+			"OnTrigger" "trial_e_tutcounter,Add,1,0,-1"
+			"origin" "2692 428 -388"
+		}
+		"trigger_once"
+		{
+			"model" "*126"
+			"StartDisabled" "0"
+			"spawnflags" "8"
+			"filtername" "filter_triale_cargo3"
+			"OnTrigger" "trial_e_tutcounter,Add,1,0,-1"
+			"origin" "2692 428 -386"
+		}
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "trial_e_truck1_camera,SetParent,trial_e_truck1,0,-1"
+			"OnMapSpawn" "trial_e_truck2_camera,SetParent,trial_e_truck2,0,-1"
+			"origin" "2420 438 -400"
+		}
+		"weapon_healer"
+		{
+			"angles" "0 0 0"
+			"origin" "1973 -593 777"
+		}
+	}
+	SpawnItems {}
+}

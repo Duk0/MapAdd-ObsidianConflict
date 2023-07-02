@@ -1,0 +1,365 @@
+coop_missile_silo214
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+			"logic_auto" {}
+			"point_servercommand" {}
+			"point_clientcommand" {}
+		}
+		TargetName
+		{
+			"Punkte1" {}
+			"PunkteTeam1" {}
+			"logic-case-rebel-umwandler" {}
+			"zu_rebel_*" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-768 -8800 1"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-688 -8800 1"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-608 -8800 1"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-528 -8800 1"
+		}
+		"ai_relationship"
+		{
+			"StartActive" "1"
+			"Reciprocal" "1"
+			"rank" "99"
+			"target" "Npc_headcrab*"
+			"subject" "Npc_antlion*"
+			"disposition" "4"
+			"origin" "200 200 200"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 180 0"
+			"origin" "-5755 -329 -1872"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 180 0"
+			"origin" "-5755 -329 -1872"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 180 0"
+			"origin" "-5755 -389 -1872"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "1"
+			"angles" "0 180 0"
+			"origin" "-5755 -449 -1872"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 -90 0"
+			"origin" "-11737 -42 -1832"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 90 0"
+			"origin" "-6667 202 -2488"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "6"
+			"angles" "0 90 0"
+			"origin" "-6727 202 -2488"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 90 0"
+			"origin" "-6787 202 -2488"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "7"	
+			"angles" "0 90 0"
+			"origin" "-6847 202 -2488"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-6545 206 -2400"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-8719 -588 -2220"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 180 0"
+			"origin" "-8996 -817 -2220"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 180 0"
+			"origin" "-8996 -940 -2220"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-9661 -112 -2220"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-10120 238 -2220"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "-10519 1284 -2220"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-10509 -89 -2220"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 0 0"
+			"origin" "-13851 3832 -1836"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 0 0"
+			"origin" "-13851 3892 -1836"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "3"
+			"angles" "0 0 0"
+			"origin" "-13851 3952 -1836"
+		}
+		"weapon_crossbow"
+		{
+			"angles" "4 90 0"
+			"origin" "-12060 1408 -1480"
+		}
+		"weapon_ar2"
+		{
+			"angles" "0 90 30"
+			"origin" "-12052 3804 -1826"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 180 0"
+			"origin" "-11265 6614 -1933"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-12187 7389 -1933"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 -90 0"
+			"origin" "-12014 7389 -1933"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "-11470 7048 -1933"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "2"
+			"angles" "0 -90 0"
+			"origin" "-12175 7083 -1944"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-12301 6434 -1933"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-11901 7056 -1902"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-12441 9269 -2054"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-12235 9978 -2182"
+		}
+		"item_rpg_round"
+		{
+			"angles" "0 0 0"
+			"origin" "-12121 11057 -2454"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 90 0"
+			"origin" "-12194 9320 -1814"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 180 0"
+			"origin" "-12806 11923 -750"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-12651 11808 -974"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "-12757 12331 -974"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "-12591 12640 66"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-12529 12782 66"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-12529 12810 66"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-13843 12343 66"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 -90 0"
+			"origin" "-13824 13261 66"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-13121 11787 66"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"mapversion" "5"
+			}
+		}
+		TargetName
+		{
+			"Nur_Rebel_erlaubt"
+			{
+				"filterteam" "0"
+			}
+		//	"Endtext7"
+		//	{
+		//		"message" "Yours, Apprentice Dreadlord and dedo mraz for MapAdd :)"
+		//	}
+		}
+		Origin
+		{
+		//	"-3380 -1880 -1575.14"
+		//	{
+		//		"classname" "item_ammo_ar2"
+		//		"angles" "90 0 0"
+		//	}
+
+			"-6373.19 -995.322 -1878.63"
+			{
+				"classname" "item_ammo_357"
+				"angles" "0 0 0"
+			}
+
+			"-11800.8 -33.5219 -1802.73"
+			{
+				"classname" "item_rpg_round"
+				"angles" "0 0 0"
+			}
+
+			"-11791.8 -39.1282 -1780.72"
+			{
+				"classname" "item_box_buckshot"
+				"angles" "0 -90 0"
+			}
+
+			"-9007.1 844.983 -2239.72"
+			{
+				"classname" "item_box_buckshot"
+				"angles" "0 180 0"
+			}
+
+			"-10345.6 -825.23 -2239.72"
+			{
+				"classname" "item_box_buckshot"
+				"angles" "0 180 0"
+			}
+
+			"-6542.15 638 -2492"
+			{
+				"classname" "weapon_shotgun"
+				"angles" "0 0 90"
+			}
+
+			"-5133.52 -2324.3 -1666.2"
+			{
+				"classname" "item_ammo_crossbow"
+				"angles" "0 0 0"
+			}
+
+			"-9282.11 -640.847 -2238.83"
+			{
+				"classname" "item_ammo_ar2"
+				"angles" "90 0 0"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"weapon_physcannon" "1"
+		"weapon_healer" "1"
+		"item_battery" "4"
+		"item_box_buckshot" "1"
+		"item_ammo_smg1" "4"
+		"item_ammo_ar2" "2"
+		"item_ammo_357" "1"
+	}
+}

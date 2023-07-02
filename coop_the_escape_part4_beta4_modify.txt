@@ -1,0 +1,174 @@
+coop_the_escape_part4_beta4
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"logic_case_rebel" {}
+			"zu_combine_p" {}
+			"zu_combine_css" {}
+			"Punkte1" {}
+			"Punkte10" {}
+		}
+		Origin
+		{
+			"-14948.8 -7294 412" {}
+			"9664.01 -704.01 -360" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "kameraachse1,Toggle,,2,-1"
+			"OnMapSpawn" "zaehlerschieber,Toggle,,0,-1"
+			"OnMapSpawn" "kameraachse3,Toggle,,2,-1"
+		//	"OnMapSpawn" "debuginfo1,Display,,20,-1"
+			"OnMapSpawn" "kameraachse2,Toggle,,2,-1"
+			"OnMapSpawn" "Monitor,SetCamera,kamera1,3,-1"
+			"OnMapSpawn" "kameraachse5,Toggle,,2,-1"
+			"OnMapSpawn" "kameraachse4,Toggle,,2,-1"
+			"origin" "-14948 -7294 410"
+		}
+		"trigger_once"
+		{
+			"model" "*401"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnTrigger" "info_nextlevel,Display,,0,-1"
+		//	"OnTrigger" "sv_cmd,Command,changelevel coop_the_escape_part5_beta2,20,1"
+			"OnTrigger" "EndGame,EndGame,,20,1"
+			"origin" "9664.01 -704.01 -360"
+		}
+		"point_servercommand"
+		{
+			"targetname" "sv_cmd"
+			"origin" "-14980 -7320 410"
+		}
+		"trigger_push"
+		{
+			"model" "*302"
+			"spawnflags" "2"
+			"alternateticksfix" "0"
+			"speed" "100"
+			"pushdir" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "370 -1711 49.44"
+		}
+		"math_counter"
+		{
+			"max" "10"
+			"targetname" "manhack01_spawn_counter"
+			"OnHitMax" "knopf_manhack1,Lock,,0,-1"
+			"origin" "194 -1710 34"
+		}
+		"math_counter"
+		{
+			"max" "10"
+			"targetname" "manhack02_spawn_counter"
+			"OnHitMax" "npc_manhack_maker02,Disable,,0,-1"
+			"origin" "-9303 -546 250"
+		}
+		"player_weaponstrip"
+		{
+			"targetname" "weaponstrip"
+			"origin" "50 0 50"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"teamplay" "1"
+			}
+			"trigger_weapon_strip"
+			{
+				"KillWeapons" "1"
+			}
+		}
+		TargetName
+		{
+			"zu_combine_cs"
+			{
+				"OnTrigger" "!activator,SetTeam,2,0,-1"
+			}
+			"zu_rebel_f1"
+			{
+				"OnTrigger" "!activator,SetTeam,3,0,-1"
+			}
+			"npc-maker-helicopter"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"npc-maker-helicopter2"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"npc_manhack_maker01"
+			{
+			//	"spawnflags" "48"
+			//	"MaxLiveChildren" "-1"
+				"MaxNPCCount" "100"
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath manhack01_spawn_counter:Subtract:1:0:-1,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath knopf_manhack1:UnLock::0:-1,0,-1"
+				"OnSpawnNPC" "manhack01_spawn_counter,Add,1,0,-1"
+			}
+			"npc_manhack_maker02"
+			{
+			//	"spawnflags" "48"
+			//	"MaxLiveChildren" "-1"
+				"MaxNPCCount" "100"
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath manhack02_spawn_counter:Subtract:1:0:-1,0,-1"
+				"OnSpawnNPC" "!activator,AddOutput,OnDeath npc_manhack_maker02:Enable::0:-1,0,-1"
+				"OnSpawnNPC" "manhack02_spawn_counter,Add,1,0,-1"
+			}
+			"info_nextlevel"
+			{
+				"message" "Thx for playing !"
+			}
+			"rebelteleporterE"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+			"combineteleporterWE"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+		}
+		Origin
+		{
+			"-15360 -7608 468"
+			{
+				"OnStartTouch" "weaponstrip,Strip,,0,-1"
+			}
+			"-15376 -7744 468"
+			{
+				"OnStartTouch" "weaponstrip,Strip,,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_357" "1"
+		"weapon_physcannon"	"1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

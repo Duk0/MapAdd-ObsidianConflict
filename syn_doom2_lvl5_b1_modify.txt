@@ -1,0 +1,42 @@
+syn_doom2_lvl5_b1
+{
+	Remove
+	{
+		ClassName
+		{
+			"trigger_weapon_strip" {}
+		//	"trigger_noblock" {}
+		//	"weapon_melee" {}
+		}
+	}
+//	Add
+//	{
+//	}
+//	Modify
+//	{
+//		ClassName
+//		{
+//			"weapon_medkit"
+//			{
+//				"classname" "item_healthvial"
+//			}
+//			"npc_alien_grunt"
+//			{
+//				"classname" "monster_alien_grunt"
+//			}
+//		}
+//	}
+	SpawnItems
+	{
+	//	"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+	//	"weapon_357" "1"
+	//	"weapon_smg1" "1"
+	//	"weapon_shotgun" "1"
+		"item_ammo_pistol" "8"
+		"item_ammo_smg1" "5"
+		"item_ammo_357" "6"
+		"item_box_buckshot" "4"
+		"weapon_healer" "1"
+	}
+}

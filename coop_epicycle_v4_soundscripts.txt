@@ -1,0 +1,43 @@
+"wardogs_houseelectrocrop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#wardogs/houseelectrocrop.mp3"
+}
+
+"music_epicycle"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#epicycle/epicycle.mp3"
+}
+
+"music_hl1_24"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#music/hl1_song24.mp3"	
+}
+
+"music_song30"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#music/hl2_song30.mp3"
+}

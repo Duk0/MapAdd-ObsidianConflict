@@ -1,0 +1,21 @@
+"blame!_umw"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#blame!/umw.mp3"
+}
+
+"blame!_hc-gs"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#blame!/hc-gs.mp3"
+}

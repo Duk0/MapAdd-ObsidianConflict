@@ -1,0 +1,5 @@
+syn_trials4d
+{
+	"mp_falldamage" "1"
+	"mp_playercollide" "0"
+}

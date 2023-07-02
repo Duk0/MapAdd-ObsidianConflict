@@ -1,0 +1,113 @@
+syn_heat_wave
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"server" {}
+			"musik_3" {}
+			"musik_4" {}
+			"musik_5" {}
+			"musik_7" {}
+			"musik_9" {}
+			"musik_2" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-189 -309 697"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"origin" "-229 -201 705"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_3"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song3"
+			"health" "10"
+			"origin" "5720.55 -2594.11 -743.734"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_4"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_stinger27"
+			"health" "10"
+			"origin" "6096 -1827.01 -633.843"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_5"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_stinger_7"
+			"health" "10"
+			"origin" "7219 -1892.96 -691.378"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_7"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_15"
+			"health" "10"
+			"origin" "10049.1 -1367.19 -690.745"
+		}
+		"ambient_generic"
+		{
+			"targetname" "musik_9"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song2"
+			"health" "10"
+			"origin" "2460.72 485.899 270.882"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "musik_2"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song4"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"origin" "128.081 77.939 553.483"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_pistol" "1"
+		"weapon_crowbar" "1"
+		"weapon_physcannon" "1"
+		"weapon_smg1" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

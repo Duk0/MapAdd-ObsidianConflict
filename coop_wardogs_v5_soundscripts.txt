@@ -1,0 +1,32 @@
+"wardogs_wardogscrop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#wardogs/wardogscrop.mp3"
+}
+
+"wardogs_handinfection"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#wardogs/handinfection.mp3"
+}
+
+"wardogs_houseelectrocrop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#wardogs/houseelectrocrop.mp3"
+}

@@ -1,0 +1,43 @@
+"blame!_houseelectrocrop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#wardogs/houseelectrocrop.mp3"
+}
+
+"blame!_tbeat"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#blame!/tbeat.mp3"
+}
+
+"blame!_sync"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#blame!/sync.mp3"
+}
+
+"blame!_shark"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#blame!/shark.mp3"
+}

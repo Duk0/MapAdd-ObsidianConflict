@@ -1,0 +1,315 @@
+js_coop_acc_v6
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_combine" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"alien_hp" {}
+			"clan" {}
+		}
+	}
+	Add
+	{
+		"item_ammo_pistol"
+		{
+			"angles" "0 0 0"
+			"origin" "-320.036 342.04 -299.86"
+		}
+		"item_ammo_pistol"
+		{
+			"angles" "0 0 0"
+			"origin" "-335.036 342.04 -299.86"
+		}
+		"item_ammo_pistol"
+		{
+			"angles" "0 0 0"
+			"origin" "-350.036 342.04 -299.86"
+		}
+		"item_ammo_pistol"
+		{
+			"angles" "0 0 0"
+			"origin" "-365.036 342.04 -299.86"
+		}
+		"item_ammo_pistol"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 342.04 -299.86"
+		}
+		"item_ammo_pistol"
+		{
+			"angles" "0 0 0"
+			"origin" "-395.036 342.04 -299.86"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-320.036 283.518 -297.86"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-335.036 283.518 -297.86"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-350.036 283.518 -297.86"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-365.036 283.518 -297.86"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-380.036 283.518 -297.86"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "90 0 0"
+			"origin" "-395.036 283.518 -297.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-340.036 230.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-340.036 240.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-340.036 250.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-340.036 260.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 230.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 240.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 250.518 -298.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 260.518 -298.86"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-320.036 201.359 -298.86"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-335.036 201.359 -298.86"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-350.036 201.359 -298.86"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-365.036 201.359 -298.86"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 201.359 -298.86"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-395.036 201.359 -298.86"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-320.036 149.631 -298.86"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-335.036 149.631 -298.86"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-350.036 149.631 -298.86"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-365.036 149.631 -298.86"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-380.036 149.631 -298.86"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "-395.036 149.631 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-283.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-295.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-307.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-319.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-331.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-343.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-355.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-367.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-379.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-393.766 110.914 -298.86"
+		}
+		"weapon_frag"
+		{
+			"angles" "0 0 0"
+			"origin" "-405.766 110.914 -298.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-330.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-340.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-350.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-360.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-370.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-380.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-390.766 88.2094 -297.86"
+		}
+		"item_ammo_smg1_grenade"
+		{
+			"angles" "0 -90 0"
+			"origin" "-400.766 88.2094 -297.86"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 90 0"
+			"origin" "-410.766 40.53 -297.86"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 90 0"
+			"origin" "-390.766 40.53 -297.86"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 90 0"
+			"origin" "-370.766 40.53 -297.86"
+		}
+		"item_healthkit"
+		{
+			"angles" "0 0 0"
+			"origin" "-192 -354 -297.86"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "-187 -413 -297.86"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"item_battery" "2"
+		"item_ammo_crossbow" "1"
+		"item_ammo_ar2" "2"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

@@ -1,0 +1,50 @@
+coop_zombienation_v78
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"game_score" {}
+			"logic_auto" {}
+		}
+		TargetName
+		{
+			"makerebelcases" {}
+		//	"usedstripper" {}
+		}
+		Origin
+		{
+			
+		}
+	}
+	Add
+	{
+
+	}
+	Modify
+	{
+		ClassName
+		{
+			
+		}
+		TargetName
+		{
+			
+		}
+		Origin
+		{
+			
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"weapon_smg1" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

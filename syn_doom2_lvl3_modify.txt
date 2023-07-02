@@ -1,0 +1,131 @@
+syn_doom2_lvl3
+{
+	Remove
+	{
+		ClassName
+		{
+			"trigger_weapon_strip" {}
+			"game_end" {}
+		//	"weapon_mp5k" {}
+		//	"weapon_melee" {}
+		}
+		TargetName
+		{
+			"c_33" {}
+			"c_32" {}
+		}
+	}
+	Add
+	{
+		"npc_combine_s"
+		{
+			"tacticalvariant" "0"
+			"model" "models/combine_soldier.mdl"
+			"GrenadeLauncher" "0"
+			"NumGrenades" "5"
+			"additionalequipment" "weapon_shotgun"
+			"waitingtorappel" "No"
+			"wakesquad" "0"
+			"wakeradius" "0"
+			"sleepstate" "0"
+			"hintlimiting" "0"
+			"disableshadows" "0"
+			"disablereceiveshadows" "0"
+			"rendermode" "0"
+			"renderfx" "0"
+			"targetname" "c_33"
+			"physdamagescale" "1.0"
+			"spawnflags" "405252"
+			"rendercolor" "255 255 255"
+			"renderamt" "255"
+			"angles" "0 176 0"
+			"OnHalfHealth" "c_33,SetHealth,300,0,1"
+			"origin" "-2136.13 -341.17 13"
+		}
+		"npc_combine_s"
+		{
+			"tacticalvariant" "0"
+			"model" "models/combine_soldier.mdl"
+			"GrenadeLauncher" "0"
+			"NumGrenades" "5"
+			"additionalequipment" "weapon_shotgun"
+			"waitingtorappel" "No"
+			"wakesquad" "0"
+			"wakeradius" "0"
+			"sleepstate" "0"
+			"hintlimiting" "0"
+			"disableshadows" "0"
+			"disablereceiveshadows" "0"
+			"rendermode" "0"
+			"renderfx" "0"
+			"targetname" "c_32"
+			"physdamagescale" "1.0"
+			"spawnflags" "405252"
+			"rendercolor" "255 255 255"
+			"renderamt" "255"
+			"angles" "0 176 0"
+			"OnHalfHealth" "c_32,SetHealth,300,0,1"
+			"origin" "-2131.8 -513.445 13"
+		}
+		"weapon_scripted"
+		{
+			"angles" "0 0 0"
+			"fademindist" "-1"
+			"fadescale" "1"
+			"spawnflags" "0"
+			"customweaponscript" "custom_syn_mp5k"
+			"origin" "-1978.77 -432 40"
+		}
+		"point_servercommand"
+		{
+			"targetname" "end_next_map"
+			"origin" "-3736 -1876 118"
+		}
+	}
+	Modify
+	{
+	//	ClassName
+	//	{
+		//	"weapon_medkit"
+		//	{
+		//		"classname" "item_healthvial"
+		//	}
+		//	"item_battery"
+		//	{
+		//		"spawnflags" "-2147483647"
+		//	}
+	//	}
+		TargetName
+		{
+			"rel_1"
+			{
+				"OnTrigger" "end_next_map,Command,changelevel syn_doom2_lvl4,7,1"
+			}
+	//		"c_14"
+	//		{
+	//			"additionalequipment" "weapon_smg1"
+	//		}
+		}
+	}
+	SpawnItems
+	{
+
+	//	"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+	//	"weapon_357" "1"
+	//	"weapon_smg1" "1"
+	//	"weapon_shotgun" "1"
+		"item_ammo_pistol" "8"
+		"item_ammo_smg1" "5"
+		"item_ammo_357" "6"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+	SoundCache
+	{
+		"Base_BASE" "1"
+		"Base_SYN" "1"
+	//	"Base_HL1" "1"
+		"Base_NPC" "1"
+	}
+}

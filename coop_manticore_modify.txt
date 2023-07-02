@@ -1,0 +1,227 @@
+coop_manticore
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"trigger_weapon_strip" {}
+			"game_score" {}
+		}
+		TargetName
+		{
+			"musik1" {}
+			"musik2" {}
+			"musik4" {}
+			"musik5" {}
+			"musik6" {}
+			"musik7" {}
+			"musik8" {}
+			"musik10" {}
+			"musik11" {}
+			"musikfin1" {}
+			"musikfin2" {}
+			"final_song" {}
+		}
+		Origin
+		{
+			"35 -925 -228.5" {}
+		}
+	}
+	Add
+	{
+		"trigger_once"
+		{
+			"model" "*231"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnStartTouch" "zombie,PlaySound,,50,-1"
+			"origin" "35 -925 -228.5"
+		}
+		"ai_relationship"
+		{
+			"target" "npc_*"
+			"subject" "npc_antlion"
+			"Reciprocal" "1"
+			"StartActive" "1"
+			"rank" "0"
+			"radius" "0"
+			"disposition" "3"
+			"origin" "10 10 10"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik1"
+			"message" "song10"
+			"origin" "31.6231 -673 -1583.52"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik2"
+			"message" "song13"
+			"origin" "1289 -1669.45 -1579.76"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik4"
+			"message" "song_hl1_stinger27"
+			"origin" "1048.29 -532.996 -1208"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik5"
+			"message" "song31"
+			"origin" "-1255 -650.024 -2578.77"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik6"
+			"message" "song_d1_canals_13_helidead"
+			"origin" "1719 -248.261 -2545.74"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik7"
+			"message" "song29"
+			"origin" "1943.74 66.9379 -2823"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik8"
+			"message" "song6"
+			"origin" "2507.24 -211 -2420.71"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik10"
+			"message" "song26_trainstation1"
+			"origin" "2055 1168.67 -2386.44"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musik11"
+			"message" "song33"
+			"origin" "406.008 215.689 -2599"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"message" "song25"
+			"targetname" "musikfin1"
+			"origin" "1131.23 -993 -3029.67"
+		}
+		"ambient_generic"
+		{
+			"message" "song_hl1_10"
+			"spawnflags" "49"
+			"radius" "1250"
+			"cspinup" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"lforate" "0"
+			"lfotype" "0"
+			"spindown" "0"
+			"spinup" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"volstart" "0"
+			"preset" "0"
+			"health" "10"
+			"targetname" "final_song"
+			"origin" "719.929 -693 -3151.7"
+		}
+		"ambient_generic"
+		{
+			"health" "10"
+			"pitch" "100"
+			"pitchstart" "100"
+			"radius" "1250"
+			"spawnflags" "49"
+			"targetname" "musikfin2"
+			"message" "vo/coast/odessa/male01/nlo_cheer02.wav"
+			"origin" "1276.62 -1603 -3248.27"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+
+		}
+		TargetName
+		{
+
+		}
+		Origin
+		{
+			"304.5 -1110 -425"
+			{
+				"origin" "309.5 -1110 -425"
+				"movedir" "0 180 0"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"weapon_357" "1"
+		"weapon_frag" "1"
+		"weapon_smg1" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"weapon_healer" "1"
+	}
+}

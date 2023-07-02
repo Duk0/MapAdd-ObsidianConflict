@@ -1,0 +1,245 @@
+coop_the_escape_part1_beta19
+{
+	Remove
+	{
+		ClassName
+		{
+			"point_servercommand" {}
+			"point_clientcommand" {}
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"logic_case_rebel" {}
+			"zu_combine_p" {}
+			"zu_combine_css" {}
+		//	"zu_combine_cs" {}
+			"Punkte1" {}
+			"Punkte10" {}
+		}
+		Origin
+		{
+			"-12921.8 -4896.5 2972" {}
+			"-13284 8516 484" {}
+			"7696 10381 -1449" {}
+		}
+	}
+	Add
+	{
+		"logic_auto"
+		{
+			"spawnflags" "1"
+			"OnMapSpawn" "kameraachse1,Toggle,,2,-1"
+			"OnMapSpawn" "zaehlerschieber,Toggle,,0,-1"
+			"OnMapSpawn" "kameraachse3,Toggle,,2,-1"
+			"OnMapSpawn" "kameraachse2,Toggle,,2,-1"
+			"OnMapSpawn" "Strider00,SetTeam,2,0,-1"
+		//	"OnMapSpawn" "debuginfo1,Display,,20,-1"
+			"origin" "-12921.8 -4896.5 2962"
+		}
+		"func_clip_vphysics"
+		{
+			"model" "*62"
+			"spawnflags" "1036"
+			"StartDisabled" "0"
+			"origin" "-13284 8516 484"
+		}
+		"trigger_once"
+		{
+			"model" "*145"
+			"spawnflags" "1"
+			"StartDisabled" "0"
+			"OnTrigger" "info_nextlevel,Display,,0,-1"
+			"OnTrigger" "snd_mapchange,PlaySound,,0,-1"
+			"OnTrigger" "sv_cmd,Command,changelevel coop_the_escape_part2_beta6,20,1"
+			"origin" "7696 10381 -1449"
+		}
+		"point_servercommand"
+		{
+			"targetname" "sv_cmd"
+			"origin" "-11797 -5571 3112"
+		}
+		"ambient_generic"
+		{
+			"targetname" "snd_mapchange"
+			"pitch" "100"
+			"volstart" "10"
+			"message" "song6"
+		//	"message" "song8"
+			"spawnflags" "49"
+			"radius" "5000"
+			"pitchstart" "100"
+			"health" "10"
+			"origin" "7692 10387 -1349"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_box_buckshot"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 0 0"
+			"origin" "-2175 8465 -1316"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_box_buckshot"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 0 0"
+			"origin" "5330 9296 -1434"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_box_buckshot"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 -90 0"
+			"origin" "5096 11417 -1455"
+		}
+		"item_item_crate"
+		{
+			"ItemCount" "3"
+			"ItemClass" "item_box_buckshot"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"inertiaScale" "1.0"
+			"physdamagescale" "0.1"
+			"spawnflags" "256"
+			"angles" "0 -90 0"
+			"origin" "4525 8481 -644"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "1"
+			"angles" "0 0 0"
+			"origin" "-12541 12789 54"
+		}
+		"item_ammo_crate"
+		{
+			"AmmoType" "4"
+			"angles" "0 0 0"
+			"origin" "-12541 12849 54"
+		}
+		"item_box_buckshot"
+		{
+			"angles" "0 0 0"
+			"origin" "-13841 12344 62"
+		}
+		"player_weaponstrip"
+		{
+			"targetname" "weaponstrip"
+			"origin" "50 0 50"
+		}
+		"game_player_equip"
+		{
+			"targetname" "pl_equip"
+			"spawnflags" "1"
+			"weapon_stunstick" "1"
+			"origin" "0 0 0"
+		}
+	}
+	Modify
+	{
+		ClassName
+		{
+			"worldspawn"
+			{
+				"teamplay" "1"
+				"gametype" "0"
+			}
+		//	"npc_antlion_template_maker"
+		//	{
+		//		"workerspawnrate" "0"
+		//	}
+		}
+		TargetName
+		{
+			"zu_combine_cs"
+			{
+				"OnTrigger" "!activator,SetTeam,2,0,-1"
+			}
+			"zu_rebel_f1"
+			{
+				"OnTrigger" "!activator,SetTeam,3,0,-1"
+			}
+			"npc-maker-dropship"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"npc-maker-dropship_combine"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"npc-maker-dropship_strider"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			//	"OnSpawnNPC" "Strider01,SetTeam,2,0,-1"
+				"OnSpawnNPC" "npc_strider,SetTeam,2,0,-1"
+			}
+			"npc-maker-helicopter"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"npc-maker-helicopter2"
+			{
+				"OnSpawnNPC" "!activator,SetTeam,2,0,-1"
+			}
+			"Strider00"
+			{
+				"teamnumber" "2"
+			}
+			"rebelteleporterE"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+			"combineteleporterWE"
+			{
+				"OnEndTouch" "spawn_items_equip,EquipActivator,,0,-1"
+			}
+			"npc_antlion_waitingroom_maker"
+			{
+			//	"spawnflags" "1136"
+				"MaxNPCCount" "75"
+			}
+		}
+		Origin
+		{
+			"-6728 8816 -1369"
+			{
+				"origin" "-6728 8816 -1489"
+			}
+			"-13333 -5210.5 3028"
+			{
+				"OnStartTouch" "weaponstrip,Strip,,0,-1"
+			}
+			"-13349 -5346.5 3028"
+			{
+				"OnStartTouch" "weaponstrip,Strip,,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_physcannon"	"1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

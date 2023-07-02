@@ -1,0 +1,76 @@
+"syn_horror_intro"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm1.mp3"
+}
+
+"syn_horror_start"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm2.mp3"
+}
+
+"syn_horror_a2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm3.mp3"
+}
+
+"syn_horror_a3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm4.mp3"
+}
+
+"syn_horror_a4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm5.mp3"
+}
+
+"syn_horror_end"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm6.mp3"
+}
+
+"syn_horror_dyn_battle"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#syn_horror/bgm_dyn_battle.mp3"
+}

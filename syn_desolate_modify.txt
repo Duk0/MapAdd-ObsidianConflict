@@ -1,0 +1,86 @@
+syn_desolate
+{
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"origin" "1696 2048 64"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_frag"
+			"maxpieces" "10"
+		//	"ammomod" "1"
+			"origin" "1552 1968 340"
+		}
+		"item_item_crate"
+		{
+			"targetname" "itemcrate_hp"
+			"spawnflags" "256"
+			"physdamagescale" "0.1"
+			"ItemCount" "5"
+			"ItemClass" "item_healthkit"
+			"inertiaScale" "1.0"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 215 0"
+			"origin" "-971 1593 24"
+		}
+		"item_item_crate"
+		{
+			"spawnflags" "256"
+			"physdamagescale" "0.1"
+			"ItemCount" "2"
+			"ItemClass" "item_battery"
+			"inertiaScale" "1.0"
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 115 0"
+			"origin" "2239 1956 60"
+		}
+		"item_ammo_crate"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"AmmoType" "7"
+			"origin" "1856 1790 20"
+		}
+		"item_ammo_smg1"
+		{
+			"angles" "0 0 0"
+			"origin" "1143.5 1398 386"
+		}
+		"item_ammo_ar2"
+		{
+			"angles" "0 0 0"
+			"origin" "1139.2 2575 392"
+		}
+		"item_ammo_357"
+		{
+			"angles" "0 0 0"
+			"origin" "1969.6 2572.6 386"
+		}
+		"item_ammo_crossbow"
+		{
+			"angles" "0 0 0"
+			"origin" "1957.6 1399.9 387"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_pistol" "1"
+		"weapon_physcannon" "1"
+		"weapon_frag" "1"
+		"weapon_crowbar" "1"
+		"weapon_357" "1"
+		"weapon_crossbow" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

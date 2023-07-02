@@ -1,0 +1,67 @@
+syn_doom2_lvl1
+{
+	Remove
+	{
+		ClassName
+		{
+			"trigger_weapon_strip" {}
+			"game_end" {}
+		//	"weapon_melee" {}
+		}
+	//	TargetName
+	//	{
+	//	}
+	}
+	Add
+	{
+		"point_servercommand"
+		{
+			"targetname" "end_next_map"
+			"origin" "543 -2151 254"
+		}
+	}
+	Modify
+	{
+	//	ClassName
+	//	{
+		//	"npc_combine_s"
+		//	{
+		//		"spawnflags" "3852"
+		//	}
+		//	"npc_metropolice"
+		//	{
+		//		"spawnflags" "3844"
+		//	}
+		//	"weapon_medkit"
+		//	{
+		//		"classname" "item_healthvial"
+		//		"angles" "180 180 270"
+		//	}
+	//	}
+		TargetName
+		{
+			"rel_1"
+			{
+				"OnTrigger" "end_next_map,Command,changelevel syn_doom2_lvl2,7,1"
+			}
+	//		"c_1"
+	//		{
+	//			"additionalequipment" "weapon_pistol"
+	//		}
+	//		"c_15"
+	//		{
+	//			"additionalequipment" "weapon_smg1"
+	//		}
+	//		"c_17"
+	//		{
+	//			"additionalequipment" "weapon_smg1"
+	//		}	
+		}
+	}
+	SpawnItems
+	{
+		"item_ammo_pistol" "10"
+		"item_ammo_smg1" "4"
+		"weapon_healer" "1"
+	}
+}

@@ -1,0 +1,361 @@
+syn_trials4c
+{
+	Remove
+	{
+		ClassName
+		{
+			"info_player_start" {}
+		}
+		TargetName
+		{
+			"mission_stage7_music" {}
+			"mission_stage4_music" {}
+			"intro_music_battle" {}
+			"end_endsound" {}
+			"mission_stage6_music" {}
+			"trial_d_stinger" {}
+			"mission_stage8_music" {}
+			"mission_stage10_music" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp0"
+			"angles" "0 0 0"
+			"OnPlayerSpawn" "player_branch,Test,,0.1,-1"
+			"origin" "2784 -3712 -399"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp1"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "5152.14 -1541.02 -304"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp2"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1676.26 -2202.72 361"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp3"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "-441.711 -1160.94 60"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp4"
+			"StartDisabled" "1"
+			"angles" "0 0 0"
+			"origin" "-1890.45 -4201.06 -419"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp5"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1664.19 236.366 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp6"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "2660.1 3127.53 -319"
+		}
+		"info_player_deathmatch"
+		{
+			"targetname" "game_cp7"
+			"StartDisabled" "1"
+			"angles" "0 90 0"
+			"origin" "1785.72 4594.13 -1054.91"
+		}
+	//	"info_player_start"
+	//	{
+	//		"angles" "0 70 0"
+	//		"origin" "5102.66 -1470.28 -303"
+	//	}
+		"game_player_equip"
+		{
+			"weapon_smg1" "1"
+			"weapon_ar2" "1"
+			"targetname" "intro_equip"
+		//	"StartDisabled" "1"
+			"spawnflags" "1"
+			"origin" "5128 -1660 -296"
+		}
+		"game_player_equip"
+		{
+			"weapon_ar2" "1"
+			"targetname" "trial_h_equip"
+		//	"StartDisabled" "1"
+			"spawnflags" "1"
+			"origin" "1800 4476 -1046.91"
+		}
+		"logic_player_branch"
+		{
+			"spawnflags" "0"
+			"targetname" "player_branch"
+			"InitialValue" "2"
+			"StrictEqualto" "0"
+			"OnTrue" "game_start,Trigger,,0,-1"
+			"OnTrue" "!self,Kill,,0.01,-1"
+			"origin" "0 0 100"
+		}
+		"trigger_player_count"
+		{
+			"model" "*144"
+			"targetname" "prelude_hud"
+			"StartDisabled" "0"
+			"spawnflags" "1"
+			"OnAllPlayersEntered" "prelude_hud,Disable,,0,-1"
+			"OnAllPlayersEntered" "prelude_brush,Enable,,0,-1"
+			"OnAllPlayersEntered" "prelude_vo_conf,PlaySound,,0,-1"
+			"OnAllPlayersEntered" "prelude_stripper,Trigger,,3,-1"
+			"OnAllPlayersEntered" "prelude_cam,Disable,,0,-1"
+			"OnAllPlayersEntered" "game_stageclear,Trigger,,0,-1"
+			"OnAllPlayersEntered" "game_cp1,Disable,,0,-1"
+			"OnAllPlayersEntered" "game_cp2,Enable,,0,-1"
+			"origin" "5991.99 -1704 -72"
+		}
+		"trigger_player_count"
+		{
+			"model" "*172"
+			"targetname" "trial_a_hud"
+			"StartDisabled" "0"
+			"spawnflags" "1"
+			"OnAllPlayersEntered" "trial_a_hud,Disable,,0,-1"
+			"OnAllPlayersEntered" "game_stageclear,Trigger,,0,-1"
+			"OnAllPlayersEntered" "game_cp2,Disable,,0,-1"
+			"OnAllPlayersEntered" "game_cp3,Enable,,0,-1"
+			"OnAllPlayersEntered" "trial_a_hatch,Kill,,0,-1"
+			"OnAllPlayersEntered" "trial_a_lift_trigger,Enable,,0,-1"
+			"origin" "-432 -1412 -533"
+		}
+		"point_teleport"
+		{
+			"spawnflags" "18432"
+			"StartEnabled" "0"
+			"targetname" "game_cp1pt"
+			"TeleportDestination" "game_cp1t"
+			"radius" "256"
+			"angles" "0 0 0"
+			"origin" "4966.19 -1444.4 -294" // 4966.19 -1444.4 -304
+		}
+		"point_teleport"
+		{
+			"spawnflags" "18432"
+			"StartEnabled" "0"
+			"targetname" "game_cp2pt"
+			"TeleportDestination" "game_cp2t"
+			"radius" "256"
+			"angles" "0 0 0"
+			"origin" "1680 -2092 371" // 1680 -2092 361
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage7_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep_song1"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2040 931.922"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage4_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_17"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "8"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2088 931.922"
+		}
+		"ambient_generic"
+		{
+			"targetname" "intro_music_battle"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song27"
+			"health" "10"
+			"origin" "2912 -3872 -336"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "end_endsound"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song4"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "2688 -3776 -392"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage6_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song19"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "8"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2056 931.922"
+		}
+		"ambient_generic"
+		{
+			"targetname" "trial_d_stinger"
+			"spawnflags" "49"
+			"radius" "1250"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song_hl1_stinger_7"
+			"health" "10"
+			"origin" "1624 408.102 -242"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage8_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "song8"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -2016 888"
+		}
+		"ambient_generic"
+		{
+			"volstart" "0"
+			"targetname" "mission_stage10_music"
+			"spinup" "0"
+			"spindown" "0"
+			"spawnflags" "49"
+			"radius" "1250"
+			"preset" "0"
+			"pitchstart" "100"
+			"pitch" "100"
+			"message" "ep2_song3"
+			"lfotype" "0"
+			"lforate" "0"
+			"lfomodvol" "0"
+			"lfomodpitch" "0"
+			"health" "10"
+			"fadeoutsecs" "0"
+			"fadeinsecs" "0"
+			"cspinup" "0"
+			"origin" "1400 -1968 888"
+		}
+	}
+	Modify
+	{
+		TargetName
+		{
+			"intro_relay_end"
+			{
+				"OnTrigger" "game_cp0,Disable,,10,-1"
+				"OnTrigger" "game_cp1,Enable,,10,-1"
+				"OnTrigger" "game_cp1pt,Teleport,,10,-1"
+				"OnTrigger" "intro_equip,EquipAll,,10.5,-1"
+			}
+			"prelude_stripper"
+			{
+				"OnTrigger" "game_cp2pt,Teleport,,22,-1"
+			}
+		}
+		Origin
+		{
+			"-1944 -4192 -356"
+			{
+				"OnTrigger" "game_cp3,Disable,,0,-1"
+				"OnTrigger" "game_cp4,Enable,,0,-1"
+			}
+			"1698 408.1 -258"
+			{
+				"OnTrigger" "game_cp4,Disable,,0,-1"
+				"OnTrigger" "game_cp5,Enable,,0,-1"
+			}
+			"2560.8 3055.2 -256"
+			{
+				"OnTrigger" "game_cp5,Disable,,0,-1"
+				"OnTrigger" "game_cp6,Enable,,0,-1"
+			}
+			"2932 4200 -470"
+			{
+				"OnPressed" "game_cp6,Disable,,0,-1"
+				"OnPressed" "game_cp7,Enable,,0,-1"
+			}
+		}
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_healer" "1"
+	}
+}

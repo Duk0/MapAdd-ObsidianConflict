@@ -1,0 +1,110 @@
+syn_canal_escape_part2
+{
+	Remove
+	{
+		Origin
+		{
+			"7408.83 -2444.3 193" {}
+		}
+	}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 278 0"
+			"origin" "-394.444 296 72"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2006.99 318.263 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2007.59 337.462 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2006.98 358.66 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2013.73 385.845 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2016.17 414.721 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2033.66 324.512 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2034.55 355.327 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2041.55 379.071 171.715"
+		}
+		"item_healthkit"
+		{
+			"fadescale" "1"
+			"fademindist" "-1"
+			"angles" "0 0 0"
+			"origin" "2041.44 412.098 171.715"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_physcannon"
+			"maxpieces" "0"
+			"origin" "0 0 0"
+		}
+		"game_weapon_manager"
+		{
+			"weaponname" "weapon_crowbar"
+			"maxpieces" "0"
+			"origin" "0 10 0"
+		}
+	}
+	SpawnItems
+	{
+		"weapon_smg1" "1"
+		"weapon_shotgun" "1"
+		"weapon_pistol" "1"
+		"weapon_physcannon" "1"
+		"weapon_frag" "1"
+		"weapon_crowbar" "1"
+		"weapon_ar2" "1"
+		"weapon_357" "1"
+		"item_ammo_pistol_large" "1"
+		"item_ammo_smg1_large" "1"
+		"item_ammo_ar2" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"weapon_healer" "1"
+	}
+}

@@ -1,0 +1,21 @@
+"red_keops_loop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#lofty/coop_red_keops_loop.wav"
+}
+
+"red_keops_full"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"		"100"
+
+	"soundlevel"	"0"
+
+	"wave"		"*#lofty/red_keops_full.mp3"
+}
